@@ -66,7 +66,7 @@ h5 {
 }
 
 .home__header {
-  background-color: rgba(0, 0, 0, 0.45);
+  background-color: rgba(67, 67, 67, 0.64);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -154,7 +154,7 @@ h5 {
 }
 
 .home__background .home__shadow {
-  background-color: rgba(0, 0, 0, 0.45);
+  background-color: rgba(67, 67, 67, 0.64);
   width: 1890px;
   height: 550px;
   overflow: hidden;
