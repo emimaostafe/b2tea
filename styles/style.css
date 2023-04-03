@@ -147,3 +147,13 @@ h5 {
 .header__actions {
   display: flex;
 }
+
+.home__image {
+  background-size: cover;
+  background-image: url("../media/home.jpg");
+  width: 1890px;
+  height: 800px;
+  overflow: hidden;
+  max-width: 1890px;
+  max-height: 800px;
+}
