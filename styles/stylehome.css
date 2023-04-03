@@ -162,6 +162,12 @@ h5 {
   max-height: 550px;
 }
 
+.head__text__overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .home__background .home__text__label__first {
   position: absolute;
   width: 811px;
@@ -177,6 +183,28 @@ h5 {
   align-items: center;
 }
 
+.home__background .home__text__label__second {
+  top: 20%;
+  position: absolute;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 41px;
+  letter-spacing: 0em;
+
+  color: #ffffff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .empty {
   height: 60px;
+}
+
+.center {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
