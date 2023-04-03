@@ -66,16 +66,15 @@ h5 {
 }
 
 .header {
+  background-color: rgba(0, 0, 0, 0.45);
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 40px;
   height: 61px;
-  background: rgba(255, 255, 255, 0.8);
 }
 
 .header--transparent {
-  background: rgba(0, 0, 0, 0.01);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -120,15 +119,15 @@ h5 {
 }
 
 .header__search__icon:hover {
-  background: rgba(0, 0, 0, 0.25);
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .header__cart__icon:hover {
-  background: rgba(0, 0, 0, 0.25);
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .header__menu__icon:hover {
-  background: rgba(0, 0, 0, 0.25);
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .header__logo h5 {
@@ -137,7 +136,7 @@ h5 {
   line-height: 38px;
   font-weight: 600;
   font-size: 25px;
-  color: #17391b;
+  color: white;
 }
 
 .header__actions {
