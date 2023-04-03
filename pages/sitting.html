@@ -44,35 +44,222 @@
 </head>
 <body>
   <h1>Welcome to our coffee shop!</h1>
+  <p>Please choose a table to sit at by clicking on it.</p>
+  <style>
+   
+    .table rect {
+  cursor: pointer;
+  transition: fill 0.3s ease;
+}
 
+.table rect:hover {
+  fill: #8119c1;
+}
+
+.table rect:active {
+  fill: #c11919;
+}
+
+.table circle {
+  cursor: pointer;
+  transition: fill 0.3s ease;
+}
+
+.table circle:hover {
+  fill: #8119c1;
+}
+
+.table circle:active {
+  fill: #c11919;
+}
+.table-container1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .table-container2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .table-container3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.table {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.table-shape {
+        position: relative;
+    }
+
+  
+  </style>
   <div class="seating-area">
+
+    <div class="table-container1">
+
     <div class="table">
-        <div class="table-shape ">
-            <svg width="400" height="180">
-                <!-- table -->
-                <rect x="45" y="45" width="90" height="90"
-                style="fill:#273E2B;" />
-                
-                <!-- seats -->
-                <rect x="0" y="75" width="30" height="30"
-                style="fill:#273E2B;" />
-                <rect x="75" y="0" width="30" height="30"
-                style="fill:#273E2B;" />
-                <rect x="75" y="150" width="30" height="30"
-                style="fill:#273E2B;" />
-                <rect x="150" y="75" width="30" height="30"
-                style="fill:#273E2B;" />
-            </svg>
+        <a href="menu.html">
+        <div class="table-shape">
+          <svg width="400" height="180">
+            <!-- table -->
+            <circle cx="90" cy="90" r="45" fill="#5B7256" />
+          
+            <!-- seats -->
+            <circle cx="45" cy="45" r="15" fill="#273E2B" />
+            <circle cx="135" cy="45" r="15" fill="#273E2B" />
+            <circle cx="45" cy="135" r="15" fill="#273E2B" />
+            <circle cx="135" cy="135" r="15" fill="#273E2B" />
+            
+          </svg>
         </div>
+    </a>
+      </div>
+
+      <div class="table">
+        <a href="menu.html">
+        <div class="table-shape">
+          <svg width="400" height="180">
+            <!-- table -->
+            <rect x="45" y="45" width="90" height="90" fill="#273E2B" />
+    
+            <!-- seats -->
+            <rect x="0" y="75" width="30" height="30" />
+            <rect x="75" y="0" width="30" height="30" />
+            <rect x="75" y="150" width="30" height="30" />
+            <rect x="150" y="75" width="30" height="30" />
+          </svg>
+        </div>
+        </a>
+      </div>
+    
+      <div class="table">
+        <a href="menu.html">
+        <div class="table-shape">
+          <svg width="400" height="180">
+            <!-- table -->
+            <circle cx="90" cy="90" r="45" fill="#5B7256" />
+    
+            <!-- seats -->
+            <circle cx="45" cy="45" r="15" fill="#273E2B" />
+            <circle cx="135" cy="45" r="15" fill="#273E2B" />
+            <circle cx="45" cy="135" r="15" fill="#273E2B" />
+            <circle cx="135" cy="135" r="15" fill="#273E2B" />
+
+          </svg>
+        </div>
+        </a> 
+      </div>
+     
+
+     
+
+    </div><!--container-->
+
+    <div class="table-container2">
+
+        <div class="table">
+            <a href="menu.html">
+            <div class="table-shape">
+              <svg width="400" height="180">
+                <!-- table -->
+                <rect x="45" y="45" width="90" height="90" fill="#273E2B" />
+              
+                <!-- seats -->
+                <rect x="0" y="75" width="30" height="30" />
+                <rect x="75" y="0" width="30" height="30" />
+                <rect x="75" y="150" width="30" height="30" />
+                <rect x="150" y="75" width="30" height="30" />
+              </svg>
+            </div>
+            </a>
+          </div>
+    
+          <div class="table">
+            <a href="menu.html">
+            <div class="table-shape">
+              <svg width="400" height="180">
+                <!-- table -->
+                <circle cx="90" cy="90" r="45" fill="#5B7256" />
+        
+                <!-- seats -->
+                <circle cx="45" cy="45" r="15" fill="#273E2B" />
+                <circle cx="135" cy="45" r="15" fill="#273E2B" />
+                 <circle cx="45" cy="135" r="15" fill="#273E2B" />
+                <circle cx="135" cy="135" r="15" fill="#273E2B" />
+
+              </svg>
+            </div>
+            </a>
+          </div>
+        
+          <div class="table">
+            <a href="menu.html">
+            <div class="table-shape">
+              <svg width="400" height="180">
+                <!-- table -->
+                <rect x="45" y="45" width="90" height="90" fill="#273E2B" />
+        
+                <!-- seats -->
+                <rect x="0" y="75" width="30" height="30" />
+                <rect x="75" y="0" width="30" height="30" />
+                <rect x="75" y="150" width="30" height="30" />
+                <rect x="150" y="75" width="30" height="30" />
+              </svg>
+            </div>
+            </a>
+          </div>
+    
+        </div><!--container-->
+
+
+    <div class="table-container3">
+            <div class="table">
+                <div class="table-shape">
+                    <svg width="905" height="180">
+                        <!-- table -->
+                        <rect x="100" y="75" width="495" height="45" fill="#273E2B" />
+                        <!-- seats -->
+                        <a href="menu.html">
+                        <rect x="135" y="30" width="30" height="30" />
+                        </a>
+                        <a href="menu.html">
+                        <rect x="265" y="30" width="30" height="30" />
+                        </a>
+                        <a href="menu.html">
+                        <rect x="395" y="30" width="30" height="30" />
+                        </a>
+                        <a href="menu.html">
+                        <rect x="525" y="30" width="30" height="30" />
+                        </a>
+                    </svg>
+                </div>
+            </div>
+           
+           
+           
+        
+    </div>
+
+        </div>
+
     </div>
       
 
 
-    <!-- Add more tables here -->
+  
 
-  </div>
 
-  <p>Please choose a table to sit at by clicking on it.</p>
+
+  <p>There is nowere to sit? We're sorry. You can still palce a take out order <a href="home.html">here</a></p>
 
 </body>
 </html>
