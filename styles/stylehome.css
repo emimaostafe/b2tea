@@ -1,68 +1,200 @@
-@font-face {
-  color: #17391b;
-  font-family: "Poppins";
-  src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLDz8Z1xlFQ.woff2);
+html,
+body {
+  width: 100%;
+  height: 100%;
 }
 
-* {
-  font-family: "Poppins";
-  font-style: normal;
+body {
+  background-color: var(--white);
 }
 
 ul {
   list-style: none;
 }
 
-.footer {
-  background: #d8d8d8;
-  display: flex;
-}
+/* #section Footer */
 
-.footer__content {
-  background: #d8d8d8;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
 
-.footer__content .section {
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  align-items: center;
-  margin: 50px 0;
-  width: 25%;
-  min-height: 200px;
-}
 
-.footer__content .section .logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.footer__content .section .logo .text {
-  font-style: normal;
-  font-weight: 600;
-  font-size: 30px;
-  line-height: 45px;
-
-  color: #17391b;
-}
-
-.footer__content .section .title {
-  text-transform: uppercase;
-  text-align: center;
-}
-
-.footer__content .section:not(:last-child) {
-  border-right: 1px solid #c4c4c4;
-}
+/* #endsection */
 
 p,
 div,
 h5 {
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-style: normal;
+}
+
+.headers {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  height: 61px;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.header--transparent {
+  background: rgba(0, 0, 0, 0.01);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  height: 61px;
+}
+
+.header__menu__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+
+  border-radius: 100%;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.header__search__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+
+  border-radius: 100%;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.header__cart__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+
+  border-radius: 100%;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.header__search__icon:hover {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.header__cart__icon:hover {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.header__menu__icon:hover {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.header__logo h5 {
+  padding: 0;
+  margin: 0;
+  line-height: 38px;
+  font-weight: 600;
+  font-size: 25px;
+  color: #17391b;
+}
+
+.header__actions {
+  display: flex;
+}
+
+.serving {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.serve__in .serve__in__image {
+  background-size: cover;
+  background-image: url('../media/coffee-cup-coffee-shop.jpg');
+  position: relative;
+  opacity: 0.8;
+  border-radius: 10px;
+  height: 306px;
+  width: 567px;
+  left: 0px;
+  top: 0px;
+  border-radius: 10px;
+}
+
+.take__out .take__out__image {
+  background-size: cover;
+  background-image: url('../media/young-woman-sweater-with-cup-coffee-nature.jpg');
+  position: relative;
+  opacity: 0.8;
+  border-radius: 10px;
+  height: 306px;
+  width: 567px;
+  left: 0px;
+  top: 0px;
+  border-radius: 10px;
+}
+
+.serve__in .serve__in__image .text {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 37.98%;
+  bottom: 37.5%;
+
+  font-weight: 600;
+  font-size: 65px;
+  line-height: 68px;
+  text-align: center;
+
+  color: #ffffff;
+  z-index: 1;
+}
+
+.take__out .take__out__image .text {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 37.98%;
+  bottom: 37.5%;
+
+  font-weight: 600;
+  font-size: 65px;
+  line-height: 68px;
+  text-align: center;
+
+  color: #ffffff;
+  z-index: 1;
+}
+
+.shadow {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 10px;
+  height: 306px;
+  width: 567px;
+  left: 0px;
+  top: 0px;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 0;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .home__header {
@@ -92,6 +224,7 @@ h5 {
   border-radius: 100%;
   cursor: pointer;
   transition: 0.25s;
+  color: white;
 }
 
 .home__header__search__icon {
@@ -145,21 +278,10 @@ h5 {
 
 .home__background {
   background-size: cover;
-  background-image: url("../media/home.jpg");
-  width: 1890px;
+  background-image: url('../media/home.jpg');
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(../media/home.jpg);
   height: 550px;
   overflow: hidden;
-  max-width: 1890px;
-  max-height: 550px;
-}
-
-.home__background .home__shadow {
-  background-color: rgba(67, 67, 67, 0.64);
-  width: 1890px;
-  height: 550px;
-  overflow: hidden;
-  max-width: 1890px;
-  max-height: 550px;
 }
 
 .head__text__overlay {

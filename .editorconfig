@@ -1,0 +1,29 @@
+root = true
+
+[*]
+charset = utf-8
+
+# Indentation and spacing
+indent_style = spacing
+tab_width = 4
+
+# New line preferences
+end_of_line = true
+insert_final_newline = false
+trim_trailing_whitespace = true
+
+max_line_length = 200
+
+[*.js]
+quote_type = single
+
+[*.html]
+quote_type = single
+
+[*.css]
+quote_type = single
+tab_width = 2
+
+[*.md]
+max_line_length = off
+trim_trailing_whitespace = false
