@@ -61,10 +61,6 @@ h5 {
   text-align: center;
 }
 
-.footer__content .section:not(:last-child) {
-  border-right: 1px solid #c4c4c4;
-}
-
 /* #endregion */
 
 /* #region Home Header */
@@ -143,42 +139,26 @@ h5 {
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(../media/home.jpg);
   height: 550px;
   overflow: hidden;
-}
-
-.head__text__overlay {
-  display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .home__background .home__text__label__first {
-  position: absolute;
-  width: 811px;
   height: 91.23px;
   font-weight: 600;
   font-size: 120px;
   line-height: 180px;
-
   color: #ffffff;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
 }
 
 .home__background .home__text__label__second {
-  top: 20%;
-  position: absolute;
   font-size: 30px;
   font-weight: 300;
   line-height: 41px;
   letter-spacing: 0em;
-
   color: #ffffff;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
 }
 /* #endregion */
 
@@ -276,23 +256,26 @@ h5 {
 
 .serve__in .serve__in__image {
   background-size: cover;
-  background-image: url('../media/coffee-cup-coffee-shop.jpg');
+  background-image: url('../media/masa-ceai-dark.jpg');
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(../media/masa-ceai-dark.jpg);
   position: relative;
   opacity: 0.8;
   border-radius: 10px;
   height: 306px;
-  width: 567px;
+  width: 467px;
   left: 0px;
 }
 
 .take__out .take__out__image {
   background-size: cover;
   background-image: url('../media/young-woman-sweater-with-cup-coffee-nature.jpg');
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)), url(../media/young-woman-sweater-with-cup-coffee-nature.jpg));
+  
   position: relative;
   opacity: 0.8;
   border-radius: 10px;
   height: 306px;
-  width: 567px;
+  width: 467px;
 }
 
 .serve__in .serve__in__image .text {
