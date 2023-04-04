@@ -69,20 +69,11 @@ h5 {
 
 /* #region Home Header */
 .home__header {
-  background-color: rgba(67, 67, 67, 0.64);
+  background-color: transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 40px;
-  height: 61px;
-}
-
-.home__header--transparent {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 40px;
-  height: 61px;
+  height: 50px;
 }
 
 .home__header__menu__icon {
@@ -91,7 +82,6 @@ h5 {
   align-items: center;
   height: 30px;
   width: 30px;
-
   border-radius: 100%;
   cursor: pointer;
   transition: 0.25s;
@@ -104,10 +94,10 @@ h5 {
   align-items: center;
   height: 30px;
   width: 30px;
-
   border-radius: 100%;
   cursor: pointer;
   transition: 0.25s;
+  color: white;
 }
 
 .home__header__cart__icon {
@@ -116,10 +106,10 @@ h5 {
   align-items: center;
   height: 30px;
   width: 30px;
-
   border-radius: 100%;
   cursor: pointer;
   transition: 0.25s;
+  color: white;
 }
 
 .home__header__search__icon:hover {
