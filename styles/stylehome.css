@@ -19,182 +19,55 @@ h5 {
   font-style: normal;
 }
 
+/* #region Footer */
 
-/* #region Headers */
-
-.headers {
-  background: rgba(0, 0, 0, 0.05);
+.footer {
+  background: #d8d8d8;
+  display: flex;
 }
 
-.header {
+.footer__content {
+  background: #d8d8d8;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  height: 40px;
-  height: 61px;
-  background: rgba(255, 255, 255, 0.8);
+  width: 100%;
+  color: var(--primary);
 }
 
-.header--transparent {
-  background: rgba(0, 0, 0, 0.01);
+.footer__content .section {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  flex-direction: column;
   align-items: center;
-  height: 40px;
-  height: 61px;
+  min-height: 200px;
 }
 
-.header__menu__icon {
+.footer__content .section .logo {
   display: flex;
+  align-items: center;
   justify-content: center;
-  align-items: center;
-  height: 30px;
-  width: 30px;
-
-  border-radius: 100%;
-  cursor: pointer;
-  transition: 0.25s;
 }
-
-.header__search__icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 30px;
-  width: 30px;
-
-  border-radius: 100%;
-  cursor: pointer;
-  transition: 0.25s;
-}
-
-.header__cart__icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 30px;
-  width: 30px;
-
-  border-radius: 100%;
-  cursor: pointer;
-  transition: 0.25s;
-}
-
-.header__search__icon:hover {
-  background: rgba(0, 0, 0, 0.25);
-}
-
-.header__cart__icon:hover {
-  background: rgba(0, 0, 0, 0.25);
-}
-
-.header__menu__icon:hover {
-  background: rgba(0, 0, 0, 0.25);
-}
-
-.header__logo h5 {
-  padding: 0;
-  margin: 0;
-  line-height: 38px;
+.footer__content .section .logo .text {
+  font-style: normal;
   font-weight: 600;
-  font-size: 25px;
+  font-size: 30px;
+  line-height: 45px;
+
   color: #17391b;
 }
 
-.header__actions {
-  display: flex;
+.footer__content .section .title {
+  text-transform: uppercase;
+  text-align: center;
 }
+
+.footer__content .section:not(:last-child) {
+  border-right: 1px solid #c4c4c4;
+}
+
 /* #endregion */
 
-.serving {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.serve__in .serve__in__image {
-  background-size: cover;
-  background-image: url('../media/coffee-cup-coffee-shop.jpg');
-  position: relative;
-  opacity: 0.8;
-  border-radius: 10px;
-  height: 306px;
-  width: 567px;
-  left: 0px;
-  top: 0px;
-  border-radius: 10px;
-}
-
-.take__out .take__out__image {
-  background-size: cover;
-  background-image: url('../media/young-woman-sweater-with-cup-coffee-nature.jpg');
-  position: relative;
-  opacity: 0.8;
-  border-radius: 10px;
-  height: 306px;
-  width: 567px;
-  left: 0px;
-  top: 0px;
-  border-radius: 10px;
-}
-
-.serve__in .serve__in__image .text {
-  position: absolute;
-  left: 0%;
-  right: 0%;
-  top: 37.98%;
-  bottom: 37.5%;
-
-  font-weight: 600;
-  font-size: 65px;
-  line-height: 68px;
-  text-align: center;
-
-  color: #ffffff;
-  z-index: 1;
-}
-
-.take__out .take__out__image .text {
-  position: absolute;
-  left: 0%;
-  right: 0%;
-  top: 37.98%;
-  bottom: 37.5%;
-
-  font-weight: 600;
-  font-size: 65px;
-  line-height: 68px;
-  text-align: center;
-
-  color: #ffffff;
-  z-index: 1;
-}
-
-.shadow {
-  position: absolute;
-  display: flex;
-  justify-content: space-around;
-  border-radius: 10px;
-  height: 306px;
-  width: 567px;
-  left: 0px;
-  top: 0px;
-  background: rgba(0, 0, 0, 0.35);
-  z-index: 0;
-}
-
-.text-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
+/* #region Home Header */
 .home__header {
   background-color: rgba(67, 67, 67, 0.64);
   display: flex;
@@ -317,6 +190,147 @@ h5 {
   justify-content: center;
   align-items: center;
 }
+/* #endregion */
+
+/* #region Default Header*/
+.headers {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  height: 61px;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.header--transparent {
+  background: rgba(0, 0, 0, 0.01);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  height: 61px;
+}
+
+.header__menu__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+
+  border-radius: 100%;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.header__search__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+
+  border-radius: 100%;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.header__cart__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+
+  border-radius: 100%;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.header__search__icon:hover {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.header__cart__icon:hover {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.header__menu__icon:hover {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.header__logo h5 {
+  padding: 0;
+  margin: 0;
+  line-height: 38px;
+  font-weight: 600;
+  font-size: 25px;
+  color: #17391b;
+}
+
+.header__actions {
+  display: flex;
+}
+/* #endregion */
+
+/* #region Serving options */
+.serving {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.serve__in .serve__in__image {
+  background-size: cover;
+  background-image: url('../media/coffee-cup-coffee-shop.jpg');
+  position: relative;
+  opacity: 0.8;
+  border-radius: 10px;
+  height: 306px;
+  width: 567px;
+  left: 0px;
+}
+
+.take__out .take__out__image {
+  background-size: cover;
+  background-image: url('../media/young-woman-sweater-with-cup-coffee-nature.jpg');
+  position: relative;
+  opacity: 0.8;
+  border-radius: 10px;
+  height: 306px;
+  width: 567px;
+}
+
+.serve__in .serve__in__image .text {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 37.98%;
+  font-weight: 600;
+  font-size: 65px;
+  line-height: 68px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.take__out .take__out__image .text {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 37.98%;
+  bottom: 37.5%;
+  font-weight: 600;
+  font-size: 65px;
+  line-height: 68px;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* #endregion */
 
 .empty {
   height: 60px;
@@ -327,4 +341,39 @@ h5 {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.footer__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__content .section {
+  width: 100%;
+}
+
+@media (min-width: 568px) {
+  .container {
+    width: 500px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 700px;
+  }
+
+  .footer__content {
+    flex-direction: row;
+  }
+
+  .footer__content .section {
+    width: 25%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1024px;
+  }
 }
