@@ -1,3 +1,4 @@
+
 h1 {
 	text-align: center;
 }
@@ -8,13 +9,13 @@ table {
     width: 85%;
     background-color: #cedcc6;
     border-color: #17391B;
+ 
 }
 
 table th,
 table td {
-	padding: 8px;
+    padding: 10px 20px;
 	text-align: center;
-   
     border: 1px solid #ccc;
   
 }
@@ -23,7 +24,7 @@ table td {
     background-color:  #b4c5aa;
     border-radius: 10px;
     text-align: left;
-    padding: 8px;
+    padding: 5px;
 }
 table th {
 	background-color: transparent;
@@ -53,12 +54,14 @@ button {
 
 
 .container {
-	max-width: 700px;
+	max-width: 500px;
 	margin:  auto;
 	padding: 20px;
     background-color: #cedcc6;
 }
+
 .pay-button, 
+.home-button,
 .menu-button {
     display: block;
     margin: 20px auto;
@@ -75,6 +78,35 @@ button {
 }
 
 .pay-button:hover,
+.home-button:hover,
 .menu-button:hover {
     background-color: #17391B;
 }
+.container {
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+.success-table {
+    margin: 50px auto;
+    width: 70%;
+    background-color: #b4c5aa;
+    border-collapse: collapse;
+    border-radius: 10px;
+}
+
+.success-table td {
+    padding: 20px;
+    font-size: 24px;
+    border-radius: 10px;
+}
+.success-table thead{
+    border-radius: 10px;
+}
+
+
