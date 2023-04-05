@@ -147,3 +147,102 @@ h5 {
 .header__actions {
   display: flex;
 }
+
+.home__image {
+  background-size: cover;
+  background-image: url("../media/home.jpg");
+  width: 1890px;
+  height: 800px;
+  overflow: hidden;
+  max-width: 1890px;
+  max-height: 800px;
+}
+
+.serving {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.serve__in .serve__in__image {
+  background-size: cover;
+  background-image: url("../media/coffee-cup-coffee-shop.jpg");
+  position: relative;
+  opacity: 0.8;
+  border-radius: 10px;
+  height: 306px;
+  width: 567px;
+  left: 0px;
+  top: 0px;
+  border-radius: 10px;
+}
+
+.take__out .take__out__image {
+  background-size: cover;
+  background-image: url("../media/young-woman-sweater-with-cup-coffee-nature.jpg");
+  position: relative;
+  opacity: 0.8;
+  border-radius: 10px;
+  height: 306px;
+  width: 567px;
+  left: 0px;
+  top: 0px;
+  border-radius: 10px;
+}
+
+.serve__in .serve__in__image .text {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 37.98%;
+  bottom: 37.5%;
+
+  font-weight: 600;
+  font-size: 65px;
+  line-height: 68px;
+  text-align: center;
+
+  color: #ffffff;
+  z-index: 1;
+}
+
+.take__out .take__out__image .text {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 37.98%;
+  bottom: 37.5%;
+
+  font-weight: 600;
+  font-size: 65px;
+  line-height: 68px;
+  text-align: center;
+
+  color: #ffffff;
+  z-index: 1;
+}
+
+.shadow {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 10px;
+  height: 306px;
+  width: 567px;
+  left: 0px;
+  top: 0px;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 0;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
