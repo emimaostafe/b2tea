@@ -6,24 +6,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 40px;
   height: 61px;
   background: rgba(255, 255, 255, 0.8);
 }
 
-.header--transparent {
-  background: rgba(0, 0, 0, 0.01);
+.header__menu {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 40px;
-  height: 61px;
+  align-items: start;
+  justify-content: center;
 }
 
 .header__menu__icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 30px;
   width: 30px;
 
@@ -69,20 +62,17 @@
 }
 
 .header__logo h5 {
-  padding: 0;
-  margin: 0;
   line-height: 38px;
   font-weight: 600;
   font-size: 25px;
   color: #17391b;
+  display: flex;
+  align-items: center;
 }
 
 .header__actions {
   display: flex;
-}
-
-.menu_header_page {
-  background: #f8fef0;
+  align-items: end;
 }
 
 .menu_header_page h1 {
@@ -111,7 +101,7 @@
 .images1 {
   display: flex;
   flex-wrap: wrap;
-  margin: 50 400px;
+  margin: 50 400px; 
   padding: 30px;
 }
 
