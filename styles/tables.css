@@ -53,7 +53,8 @@ table {
       display: none;
     }
   }
-  @media screen and (max-width: 768px) {
+
+  @media screen and (max-width: 850px) {
     .table-container1,
     .table-container2,
     .table-container3 {   
