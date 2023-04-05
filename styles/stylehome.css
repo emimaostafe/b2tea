@@ -23,16 +23,12 @@ h5 {
 
 .footer__content {
   background: var(--white);
-  width: 100%;
-  height: 250px;
   display: flex;
-  align-items: center;
+  justify-content: space-evenly;
 }
 
 .footer__content .section {
-  text-align: center;
   flex-direction: column;
-  vertical-align: top;
 }
 
 .footer__content .section .logo {
@@ -41,17 +37,13 @@ h5 {
   align-items: center;
   font-weight: 600;
   font-size: 30px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  margin-left: 5px;
-  margin-right: 5px;
 }
 
 .footer__content .logo .text {
   font-style: normal;
   font-weight: 600;
   font-size: 30px;
-  line-height: 45px;
+  line-height: 4;
   color: #17391b;
   text-align: center;
 }
@@ -80,7 +72,6 @@ h5 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 50px;
 }
 
 .home__header__menu__icon {
@@ -95,16 +86,28 @@ h5 {
   color: white;
 }
 
-.home__header__search__icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 30px;
-  width: 30px;
-  border-radius: 100%;
+.home__header__search__icon:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3));
+  pointer-events: none;
   cursor: pointer;
-  transition: 0.25s;
-  color: white;
+}
+
+.home__header__search__icon {
+  border-radius: 10%;
+  position: relative;
+  background: transparent;
+  border: none;
+  padding: 5px 10px;
+  font-size: 16px;
+  color: #fff;
+  width: 200px;
+  cursor: pointer;
 }
 
 .home__header__cart__icon {
@@ -117,22 +120,11 @@ h5 {
   cursor: pointer;
   transition: 0.25s;
   color: white;
-}
-
-.home__header__search__icon:hover {
-  background: rgba(255, 255, 255, 0.5);
-}
-
-.home__header__cart__icon:hover {
-  background: rgba(255, 255, 255, 0.5);
-}
-
-.home__header__menu__icon:hover {
-  background: rgba(255, 255, 255, 0.5);
+  margin-left: 20px;
 }
 
 .home__header__logo h5 {
-  padding: 0;
+  padding: 10px;
   margin: 0;
   line-height: 38px;
   font-weight: 600;
@@ -159,21 +151,15 @@ h5 {
 }
 
 .home__background .home__text__label__first {
-  height: 91.23px;
   font-weight: 800;
   font-size: 140px;
-  line-height: 180px;
   color: #ffffff;
-  text-align: center;
 }
 
 .home__background .home__text__label__second {
   font-size: 30px;
   font-weight: 300;
-  line-height: 41px;
-  letter-spacing: 0em;
   color: #ffffff;
-  text-align: center;
 }
 /* #endregion */
 
@@ -222,6 +208,18 @@ h5 {
   border-radius: 100%;
   cursor: pointer;
   transition: 0.25s;
+}
+
+.search button {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px 10px;
 }
 
 .header__cart__icon {
@@ -276,9 +274,10 @@ h5 {
   position: relative;
   opacity: 0.8;
   border-radius: 10px;
-  height: 306px;
-  width: 467px;
+  height: 256px;
+  width: 417px;
   left: 0px;
+  cursor: pointer;
 }
 
 .take__out .take__out__image {
@@ -289,8 +288,9 @@ h5 {
   position: relative;
   opacity: 0.8;
   border-radius: 10px;
-  height: 306px;
-  width: 467px;
+  height: 256px;
+  cursor: pointer;
+  width: 417px;
 }
 
 .serve__in .serve__in__image .text {
@@ -320,6 +320,48 @@ h5 {
 
 /* #endregion */
 
+/* #region Consumer Favorites */
+
+.customerfavs {
+  background: var(--grey);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.customerfavs__text {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0em;
+}
+
+.picture1 {
+  background-image: url('../media/home.jpg');
+}
+
+.picture2 {
+  background-image: url('../media/home.jpg');
+}
+
+.picture3 {
+  background-image: url('../media/home.jpg');
+}
+
+.card {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.25)), url(../media/home.jpg);
+  overflow: hidden;
+  background-size: cover;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 15px;
+  width: 226px;
+  height: 347px;
+  cursor: pointer;
+}
+
+/* #endregion */
 .empty {
   height: 60px;
 }
@@ -333,7 +375,6 @@ h5 {
 
 @media (min-width: 568px) {
   .container {
-    width: 500px;
   }
 }
 
