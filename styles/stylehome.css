@@ -66,7 +66,7 @@ h5 {
 
 /* #endregion */
 
-/* #region Home Header */
+/* 
 
 .home__background {
   background-size: cover;
@@ -98,6 +98,7 @@ h5 {
   cursor: pointer;
   transition: 0.25s;
   color: white;
+
 }
 
 .home__header__search__icon:before {
@@ -163,10 +164,21 @@ h5 {
   font-size: 30px;
   font-weight: 300;
   color: #ffffff;
-}
-/* #endregion */
+}*/
 
 /* #region Default Header*/
+.background {
+  background-size: cover;
+  background-image: url('../media/home.jpg');
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.25)), url(../media/home.jpg);
+  height: 550px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
 .headers {
   background: rgba(0, 0, 0, 0.05);
 }
@@ -174,20 +186,10 @@ h5 {
 .header {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
-  height: 40px;
-  height: 61px;
+  height: 60px;
   background: rgba(255, 255, 255, 0.8);
-}
-
-.header--transparent {
-  background: rgba(0, 0, 0, 0.01);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 40px;
-  height: 61px;
 }
 
 .header__menu__icon {
@@ -196,7 +198,6 @@ h5 {
   align-items: center;
   height: 30px;
   width: 30px;
-
   border-radius: 100%;
   cursor: pointer;
   transition: 0.25s;
@@ -214,7 +215,7 @@ h5 {
   transition: 0.25s;
 }
 
-.search button {
+.search {
   background: transparent;
   border: none;
   color: #fff;
@@ -262,6 +263,26 @@ h5 {
 .header__actions {
   display: flex;
 }
+
+.text {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  justify-content: space-between;
+}
+
+.text__label__first {
+  font-weight: 800;
+  font-size: 140px;
+  color: #ffffff;
+}
+
+.text__label__second {
+  font-size: 30px;
+  font-weight: 300;
+  color: #ffffff;
+}
+
 /* #endregion */
 
 /* #region Serving options */
