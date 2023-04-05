@@ -67,9 +67,23 @@ h5 {
 /* #endregion */
 
 /* #region Home Header */
+
+.home__background {
+  background-size: cover;
+  background-image: url('../media/home.jpg');
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.25)), url(../media/home.jpg);
+  height: 550px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+
 .home__header {
   background-color: transparent;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
@@ -132,31 +146,20 @@ h5 {
   color: white;
 }
 
-.home__header__actions {
-  display: flex;
-}
-
-.home__background {
-  background-size: cover;
-  background-image: url('../media/home.jpg');
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.25)), url(../media/home.jpg);
-  height: 550px;
-  overflow: hidden;
-  justify-content: center;
-  align-items: center;
-}
-
 .home_text {
+  display: flex;
+  flex-direction: column;
   position: absolute;
+  justify-content: space-between;
 }
 
-.home__background .home__text__label__first {
+.home__text__label__first {
   font-weight: 800;
   font-size: 140px;
   color: #ffffff;
 }
 
-.home__background .home__text__label__second {
+.home__text__label__second {
   font-size: 30px;
   font-weight: 300;
   color: #ffffff;
@@ -170,6 +173,7 @@ h5 {
 
 .header {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   height: 40px;
