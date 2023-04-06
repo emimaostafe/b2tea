@@ -3,7 +3,7 @@
     font-family: "Poppins";
     src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLDz8Z1xlFQ.woff2);
   }
-  
+
   * {
     font-family: "Poppins";
     font-style: normal;
@@ -118,22 +118,14 @@
 
 .start_menu {
     background:#AAC497;
-    height: 1769px;
+    height: 2500px;
     width: 1500px;
     left: 1253px;
     right: 1253px;
     top: -219px;
-    /* border-radius: 0px; */
 
 }
 
-.images1 {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 50 400px;
-    padding: 30px;
-
-}
 
 .photo {
     max-width: 31.333%;
@@ -142,9 +134,17 @@
 }
 
 .photo img {
-    width: 120%;
+   width: 120%;
     height: 107%;
     border-radius: 15px;
+}
+
+.images1 {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 50 400px;
+  padding: 30px;
+
 }
 
 .images2 {
@@ -161,18 +161,39 @@
     padding: 30px;
 }
 
-.text-image {
+.images4 {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 50 400px;
+  padding: 30px;
+}
+
+.images5 {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 50 400px;
+  padding: 30px;
+}
+
+.images6 {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 50 400px;
+  padding: 30px;
+}
+
+.text-image1 {
    position: absolute; 
    top: 300px; 
-   width: 20%;
+   max-width: 20%;
    padding-left: 1%;
    margin-left: 1%;
-   height: 14%;
+   max-height: 14%;
    background: #a1a39f5c;
    border-radius: 15px;
   }
 
-  .name_tea h2 {
+  .name_tea1 h2 {
     font-family: "Poppins";
     font-style: normal;
     font-size: medium;
@@ -180,7 +201,7 @@
     margin-top: 2%;
   }
 
-  .info_tea p{
+  .info_tea1 p{
     margin-top: -15px;
     font-family: "Poppins";
     font-style: normal;
@@ -188,10 +209,211 @@
 
   }
 
-  .price_tea p{
+  .price_tea1 p{
     margin-top: -40px;
     margin-left: 80%;
     color: white;
     font-weight: bold;
 
+  }
+
+  .header__cart__icon_image1{
+    color: white;
+    margin-top: -200px;
+    margin-left: 90%;
+
+  }
+
+
+
+  .text-image2 {
+    position: absolute; 
+    top: 600px; 
+    width: 20%;
+    padding-left: 1%;
+    margin-left: 1%;
+    height: 14%;
+    background: #a1a39f5c;
+    border-radius: 15px;
+   }
+
+  .name_tea2 h2 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-size: medium;
+    color: white;
+    margin-top: 2%;
+  }
+
+  .info_tea2 p{
+    margin-top: -15px;
+    font-family: "Poppins";
+    font-style: normal;
+    color: #F8FEF0;
+
+  }
+
+  .price_tea2 p{
+    margin-top: -40px;
+    margin-left: 80%;
+    color: white;
+    font-weight: bold;
+
+  }
+
+  .text-image3 {
+    position: absolute; 
+    top: 900px; 
+    width: 20%;
+    padding-left: 1%;
+    margin-left: 1%;
+    height: 14%;
+    background: #a1a39f5c;
+    border-radius: 15px;
+   }
+
+  .name_tea3 h2 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-size: medium;
+    color: white;
+    margin-top: 2%;
+  }
+
+  .info_tea3 p{
+    margin-top: -15px;
+    font-family: "Poppins";
+    font-style: normal;
+    color: #F8FEF0;
+
+  }
+
+  .price_tea3 p{
+    margin-top: -40px;
+    margin-left: 80%;
+    color: white;
+    font-weight: bold;
+
+  }
+
+  .text-image4 {
+    position: absolute; 
+    top: 1200px; 
+    width: 20%;
+    padding-left: 1%;
+    margin-left: 1%;
+    height: 14%;
+    background: #a1a39f5c;
+    border-radius: 15px;
+   }
+
+  .name_tea4 h2 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-size: medium;
+    color: white;
+    margin-top: 2%;
+  }
+
+  .info_tea4 p{
+    margin-top: -15px;
+    font-family: "Poppins";
+    font-style: normal;
+    color: #F8FEF0;
+
+  }
+
+  .price_tea4 p{
+    margin-top: -40px;
+    margin-left: 80%;
+    color: white;
+    font-weight: bold;
+
+  }
+
+  .text-image5 {
+    position: absolute; 
+    top: 1500px; 
+    width: 20%;
+    padding-left: 1%;
+    margin-left: 1%;
+    height: 14%;
+    background: #a1a39f5c;
+    border-radius: 15px;
+   }
+
+  .name_tea5 h2 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-size: medium;
+    color: white;
+    margin-top: 2%;
+  }
+
+  .info_tea5 p{
+    margin-top: -15px;
+    font-family: "Poppins";
+    font-style: normal;
+    color: #F8FEF0;
+
+  }
+
+  .price_tea5 p{
+    margin-top: -40px;
+    margin-left: 80%;
+    color: white;
+    font-weight: bold;
+
+  }
+
+  .text-image6 {
+    position: absolute; 
+    top: 1800px; 
+    width: 20%;
+    padding-left: 1%;
+    margin-left: 1%;
+    height: 14%;
+    background: #a1a39f5c;
+    border-radius: 15px;
+   }
+
+  .name_tea6 h2 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-size: medium;
+    color: white;
+    margin-top: 2%;
+  }
+
+  .info_tea6 p{
+    margin-top: -15px;
+    font-family: "Poppins";
+    font-style: normal;
+    color: #F8FEF0;
+
+  }
+
+  .price_tea6 p{
+    margin-top: -40px;
+    margin-left: 80%;
+    color: white;
+    font-weight: bold;
+
+  }
+
+  .header__cart__icon_image1:hover {
+    background: rgba(216, 215, 215, 0.25);
+  }
+
+  .header__cart__icon_image1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 30px;
+  
+    border-radius: 100%;
+    cursor: pointer;
+    transition: 0.25s;
+    background: aliceblue;
   }
