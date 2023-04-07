@@ -1,0 +1,341 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+p,
+div,
+h5 {
+  font-family: 'Poppins';
+  font-style: normal;
+}
+
+/* #region Footer */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+footer ul {
+  margin: 0;
+  padding: 0;
+}
+
+.footer-section {
+  height: 100%;
+  flex-direction: column;
+}
+
+.footer-section .logo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.footer-section .logo .text {
+  color: var(--white);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 4;
+  color: #17391b;
+  text-align: center;
+}
+
+.footer-section .content {
+  font-size: 15px;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.title {
+  color: var(--white);
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0em;
+}
+
+@media (min-width: 768px) {
+  footer {
+    flex-direction: row;
+  }
+}
+
+/* #endregion */
+
+/* #region Default Header*/
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 80px;
+}
+
+.icon-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.icon-item:hover {
+  background: rgba(0, 0, 0, 0.07);
+}
+
+.icon-item i {
+  font-size: 22px;
+}
+
+.brand h5 {
+  padding: 0;
+  margin: 0;
+  line-height: 38px;
+  font-weight: 600;
+  font-size: 25px;
+  color: #17391b;
+}
+
+.actions {
+  display: flex;
+}
+
+.meniu-coborator {
+  width: 300px;
+  background: #fff;
+  position: absolute;
+
+  display: none;
+  transition: var(--transition);
+  padding-bottom: 30px;
+}
+
+.meniu-coborator .menu {
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.options {
+  padding: 0;
+  margin: 0;
+}
+
+.options li {
+  padding: 5px 15px;
+  transform: var(--transition);
+}
+.options li:hover {
+  background: rgba(0, 0, 0, 0.07);
+}
+
+.options a {
+  color: var(--primary);
+}
+
+header #menu-trigger:hover + .meniu-coborator,
+.meniu-coborator:hover {
+  display: block;
+  position: absolute;
+  top: 0;
+}
+
+/* #endregion */
+
+/* #region Main Image */
+
+.main-image {
+  background-size: cover;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../media/home.jpg);
+  height: 550px;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  text-align: center;
+}
+
+.main-image {
+  display: flex;
+  color: #ffffff;
+}
+
+.main-image .title {
+  font-weight: 900;
+  font-size: 60px;
+}
+
+.main-image .subtitle {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  .main-image .title {
+    font-size: 100px;
+  }
+}
+
+/* #endregion */
+
+/* #region Serving options */
+.serving {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.option {
+  background-size: cover;
+  position: relative;
+  border-radius: var(--border-radius);
+  height: 256px;
+  width: 417px;
+  left: 0px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.option:hover {
+  opacity: 0.8;
+}
+
+.option .text {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 37.98%;
+  bottom: 37.5%;
+  font-weight: 600;
+  font-size: 65px;
+  line-height: 68px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.serve-in {
+  background-image: linear-gradient(to top, rgba(200, 200, 200, 0.1), rgba(200, 200, 200, 0.1)), url(../media/serve-in.jpg);
+}
+
+.take-out {
+  background-image: linear-gradient(to top, rgba(200, 200, 200, 0.1), rgba(200, 200, 200, 0.1)), url(../media/take-out.jpg);
+}
+
+@media (min-width: 1200px) {
+  .serving {
+    justify-content: space-between;
+  }
+
+  .option {
+    height: 300px;
+    width: 477px;
+  }
+}
+
+/* #endregion */
+
+/* #region Consumer Favorites */
+
+.favorites .title {
+  color: var(--primary);
+  font-weight: 900;
+  font-size: 35px;
+  line-height: 55px;
+  letter-spacing: 20px;
+  padding-bottom: 100px;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
+
+.card {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  overflow: hidden;
+  min-width: 300px;
+  height: 400px;
+  transition: var(--transition);
+  border-radius: var(--border-radius);
+}
+
+.card:hover {
+  opacity: 0.8;
+}
+
+.card .description {
+  font-size: 22px;
+}
+
+.picture {
+  width: 100%;
+  height: inherit;
+  background-size: cover;
+  border-radius: var(--border-radius);
+}
+
+.tea-1 {
+  background-image: url('../media/cana-sticla-ceai.jpg');
+}
+
+.tea-2 {
+  background-image: url('../media/iced-tea.jpg');
+}
+
+.tea-3 {
+  background-image: url('../media/filtru-ceai.jpg');
+}
+
+@media (min-width: 768px) {
+  .cards {
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 1200px) {
+  .cards {
+    flex-direction: row;
+  }
+}
+
+/* #endregion */
+
+.center {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
