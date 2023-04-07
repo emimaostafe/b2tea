@@ -1,12 +1,13 @@
 
 h1 {
 	text-align: center;
+   font-size: 36px;
 }
 
 table {
 	border-collapse: collapse;
 	margin: 20px auto;
-    width: 85%;
+    width: 90%;
     background-color: #cedcc6;
     border-color: #17391B;
  
@@ -54,8 +55,8 @@ button {
 
 
 .container {
-	max-width: 500px;
-	margin:  auto;
+	max-width: 700px;
+	margin:  20px auto;
 	padding: 20px;
     background-color: #cedcc6;
 }
@@ -82,15 +83,7 @@ button {
 .menu-button:hover {
     background-color: #17391B;
 }
-.container {
-    margin: 20px auto;
-    max-width: 600px;
-    text-align: center;
-}
 
-h1 {
-    font-size: 36px;
-}
 
 .success-table {
     margin: 50px auto;
