@@ -1,19 +1,11 @@
-h1{
-  text-align: center;
-}
-p {
-  font-size: 30px;
-  font-weight: 500;
-  text-align: center;
-}
 .table rect,
 .table circle {
     cursor: pointer;
     transition: fill 0.3s ease;
 }
 
-.table rect:hover,
-.table circle:hover {
+#rect-table:hover,
+#round-table:hover {
     fill: #8119c1;
 }
 
@@ -27,72 +19,25 @@ p {
 .table-container3 {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-around;;
 }
-  
-  table th {
-    background-color: #f2f2f2;
-  }
- 
 .table-shape svg{
-  width:250px;
+  width:400px;
    height:180px;
 }
-.table-shape svg rect{
-  width:120px;
-   height:120px;
-}
-.table-shape svg circle{
-  r: 55px;
-}
-@media screen and (max-width: 920px) {
-  seating-area {   
-    display: flex;
-    justify-content:center;
-    flex-direction: column;
-  }
-  .table-shape svg {
-    width: 190px;
-    height: 150px;
-  }
- 
-  @media screen and (min-width: 800px) {
-    seating-area {   
-      display: flex;
-      justify-content:space-evenly;
-      flex-direction: column;
-    }
-    .table-shape svg {
-      width: 130px;
-      height: 130px;
-    }
-    .table-shape svg rect{
-      width: 150px;
-      height: 130px;
-    }
-    .table-shape svg circle{
-      r: 40px;
-    }
-  }
- 
-  @media screen and (mi-width: 410px) {
-    seating-area {   
-      display: flex;
-      justify-content:flex-start;
-      flex-direction: column;
-    }
-    .table-shape svg {
-      width: 115px;
-      height: 115px;
-    }
-    .table-shape svg rect{
-      width: 70px;
-      height: 70px;
-    }
-    .table-shape svg circle{
-      r: 25px;
-    }
-  }
- 
 
+#round-table{
+  r:45px;
+  cx:90px;
+  cy:90px;
+  fill:#5B7256;
 }
+#rect-table{
+  x:45px;
+  y:45px;
+  width:90px;
+  height:90px;
+  fill:#273E2B; 
+}
+  
+  
