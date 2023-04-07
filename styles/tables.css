@@ -1,5 +1,11 @@
-.table rect,
-.table circle {
+
+p{
+  font-size: larger;
+  text-align: center;
+}
+
+#rect-table,
+#round-table {
     cursor: pointer;
     transition: fill 0.3s ease;
 }
@@ -9,8 +15,8 @@
     fill: #8119c1;
 }
 
-.table rect:active,
-.table circle:active {
+#rect-table:active,
+#round-table:active {
     fill: #c11919;
 }
 
@@ -22,7 +28,7 @@
   justify-content: space-around;;
 }
 .table-shape svg{
-  width:400px;
+  width:200px;
    height:180px;
 }
 
@@ -37,7 +43,9 @@
   y:45px;
   width:90px;
   height:90px;
-  fill:#273E2B; 
+  fill:#5B7256; 
 }
-  
+#seat{
+  fill:#273E2B;
+}
   
