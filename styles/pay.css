@@ -1,4 +1,6 @@
-
+body{
+    background-color:#ecebbd;
+  }
 h1 {
 	text-align: center;
    font-size: 36px;
@@ -8,7 +10,7 @@ table {
 	border-collapse: collapse;
 	margin: 20px auto;
     width: 90%;
-    background-color: #cedcc6;
+    background-color: #8da97b;
     border-color: #17391B;
  
 }
@@ -22,7 +24,7 @@ table td {
 }
 .item {
    
-    background-color:  #b4c5aa;
+    background-color:  #708c5a;
     border-radius: 10px;
     text-align: left;
     padding: 5px;
@@ -58,7 +60,7 @@ button {
 	max-width: 700px;
 	margin:  20px auto;
 	padding: 20px;
-    background-color: #cedcc6;
+    background-color: #8da97b;
 }
 
 .pay-button, 
@@ -88,9 +90,9 @@ button {
 .success-table {
     margin: 50px auto;
     width: 70%;
-    background-color: #b4c5aa;
+    background-color: #708c5a;
     border-collapse: collapse;
-    border-radius: 10px;
+  
 }
 
 .success-table td {
