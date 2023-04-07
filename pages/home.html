@@ -15,59 +15,115 @@
 </head>
 
 <body>
-    <div class="home">
+    <div class="container">
+        <header>
+            <div id="menu-trigger" class="menu">
+                <div class="icon-item"><i class="ri-menu-line"></i></div>
+            </div>
+
+            <div class="meniu-coborator">
+                <div class="menu">
+                    <div class="icon-item"><i class="ri-close-line"></i></div>
+                </div>
+
+                <ul class="options">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Prices</a></li>
+                    <li><a href="#">Menu option 3
+
+                         
+                    </a></li>
+                    <li><a href="#">Menu option 4</a></li>
+                    <li><a href="#">Menu option 5</a></li>
+                </li>
+            </div>
+
+            <div class="brand">
+                <h5><span>&lt;code&gt;</span> brew</h5>
+            </div>
+            <div class="actions">
+                <div class="icon-item search"><i class="ri-search-line"></i></div>
+                <div class="icon-item cart"><i class="ri-shopping-bag-line"></i></div>
+            </div>
+
+        </header>
+
+    </div>
+
+    <div class="pb-80">
         <div class="container">
-            <div class="header">
-                <div class="header__menu">
-                    <div class="header__menu__icon"><i class="ri-menu-line"></i></div>
-                </div>
-                <div class="header__logo">
-                    <h5>&lt;byte&gt; blend</h5>
-                </div>
-                <div class="header__actions">
-                    <div class="header__search__icon"><i class="ri-search-line"></i></div>
-                    <div class="header__cart__icon"><i class="ri-shopping-bag-line"></i></div>
-                </div>
+            <div class="main-image">
+                <div class="title">ORGANIC TEA</div>
+                <div class="subtitle">Sip sustainably, code creatively</div>
             </div>
-            <div class="background">
-                <div class="text">
-                    <div class="text__label">
-                        <div class="text__label__first center">ORGANIC TEA</div>
-                        <div class="text__label__second center">Sip sustainably, code creatively</div>
-                    </div>
-                </div>
+        </div>
+    </div>
 
-            </div>
-
-
-            <div class="empty"></div>
-
+    <section class="bg-secondary">
+        <div class="container">
             <div class="serving">
-                <div class="serve__in">
-                    <div class="serve__in__image">
-                        <div class="text">SERVE IN</div>
-                    </div>
+                <div class="option serve-in">
+                    <div class="text">SERVE IN</div>
                 </div>
 
-                <div class="take__out">
-                    <div class="take__out__image">
-                        <div class="text">TAKE OUT</div>
-                    </div>
+                <div class="option take-out">
+                    <div class="text">TAKE OUT</div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="empty"></div>
+    <section>
+        <div class="container">
+            <div class="favorites">
+                <div class="title">THE MOST WANTED</div>
+                <div class="cards">
+                    <div class="card">
+                        <div class="picture tea-1"></div>
+                        <p class="description">Hot ginger lemon</p>
+                    </div>
+                    <div class="card">
+                        <div class="picture tea-2"></div>
+                        <p class="description">Iced peach infusion</p>
+                    </div>
+                    <div class="card">
+                        <div class="picture tea-3"></div>
+                        <p class="description">Energizing forest fruits</p>
+                    </div>
+                    <div class="card">
+                        <div class="picture tea-2"></div>
+                        <p class="description">Iced peach infusion</p>
+                    </div>
+                    <div class="card">
+                        <div class="picture tea-3"></div>
+                        <p class="description">Energizing forest fruits</p>
+                    </div>
+                    <div class="card">
+                        <div class="picture tea-1"></div>
+                        <p class="description">Hot ginger lemon</p>
+                    </div>
+                    <div class="card">
+                        <div class="picture tea-1"></div>
+                        <p class="description">Hot ginger lemon</p>
+                    </div>
+                    <div class="card">
+                        <div class="picture tea-2"></div>
+                        <p class="description">Iced peach infusion</p>
+                    </div>
+                    <div class="card">
+                        <div class="picture tea-3"></div>
+                        <p class="description">Energizing forest fruits</p>
+                    </div>
 
-            <div class="customerfavs">
-                <div class="picture1 card"></div>
-                <div class="picture2 card"></div>
-                <div class="picture3 card"></div>
+                </div>
             </div>
+        </div>
+    </section>
 
-            <div class="empty"></div>
-
-            <div class="footer__content">
-                <div class="section">
+    <section class="bg-primary">
+        <div class="container">
+            <footer>
+                <div class="footer-section">
                     <p class="title">ABOUT US</p>
                     <div class="content">
                         <p class="description">
@@ -81,28 +137,30 @@
                         </p>
                     </div>
                 </div>
-                <div class="section">
+                <div class="footer-section">
                     <p class="title">Contact</p>
                     <div class="content">
                         <p class="address">Str. General Henri Mathias Berthelot Nr. 16, Iași </p>
-                        <p href="mailto:byteblend@gmail.com">byteblend@gmail.com</p>
+                        <p href="mailto:codebrew@gmail.com">codebrew@gmail.com</p>
                     </div>
                 </div>
-                <div class="section">
-                    <p class="title">Links</p>
+                <div class="footer-section">
+                    <div class="top">
+                        <p class="title">Links</p>
+                    </div>
                     <div class="content">
-                        <p class="links">
-                        <p>Home </br>
-                            Menu </br>
-                            Serve In</br>
-                            Take Out </br>
-                            Receipt </p>
-                        </p>
+                        <ul>
+                            <li><a href="/home">Home</a></li>
+                            <li><a href="/menu">Menu</a></li>
+                            <li><a href="/serve-in">Serve In</a></li>
+                            <li><a href="/take-out">Take Out</a></li>
+                            <li><a href="/receipt">Receipt</a></li>
+                        </ul>
                     </div>
                 </div>
-            </div>
+            </footer>
         </div>
-    </div>
+        </div>
 </body>
 
 </html>
