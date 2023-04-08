@@ -178,9 +178,9 @@ header #menu-trigger:hover + .meniu-coborator,
 
 /* #region Main Image */
 
-.main-image, .menu-image {
+.landing {
   background-size: cover;
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../media/home-official.jpg);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
   height: 550px;
   overflow: hidden;
 
@@ -192,27 +192,31 @@ header #menu-trigger:hover + .meniu-coborator,
   text-align: center;
 }
 
-.menu-image {
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../media/close-up-barista-serving-with-face-protection.jpg);
-}
-
-.main-image, .menu-image {
+.landing {
   display: flex;
   color: #ffffff;
 }
 
-.main-image, .menu-image .title {
+.landing .title {
   font-weight: 900;
   font-size: 60px;
 }
 
-.main-image, .menu-image .subtitle {
+.landing .subtitle {
   font-size: 30px;
   font-weight: 500;
 }
 
+.main-image {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../media/home-official.jpg);
+}
+
+.menu-image {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../media/trandafiri.jpg);
+}
+
 @media (min-width: 768px) {
-  .main-image, .menu-image .title {
+  .landing .title {
     font-size: 100px;
   }
 }
@@ -279,7 +283,8 @@ header #menu-trigger:hover + .meniu-coborator,
 
 /* #region Consumer Favorites */
 
-.page-title, .title {
+.page-title,
+.favorites .title {
   color: var(--primary);
   font-weight: 900;
   font-size: 35px;
