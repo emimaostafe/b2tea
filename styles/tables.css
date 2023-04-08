@@ -1,16 +1,24 @@
-.table rect,
-.table circle {
+body{
+  background-color:#ecebbd;
+}
+p{
+  font-size: larger;
+  text-align: center;
+}
+
+#rect-table,
+#round-table {
     cursor: pointer;
     transition: fill 0.3s ease;
 }
 
-.table rect:hover,
-.table circle:hover {
+#rect-table:hover,
+#round-table:hover {
     fill: #8119c1;
 }
 
-.table rect:active,
-.table circle:active {
+#rect-table:active,
+#round-table:active {
     fill: #c11919;
 }
 
@@ -19,49 +27,26 @@
 .table-container3 {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;;
+}
+.table-shape svg{
+  width:200px;
+   height:180px;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 16px;
-    margin-bottom: 20px;
-  }
-  
-  table th, table td {
-    border: 1px solid #ddd;
-    padding: 8px;
-  }
-  
-  table th {
-    background-color: #f2f2f2;
-  }
-  
-@media screen and (max-width: 768px) {
-    table {
-      font-size: 14px;
-      margin-bottom: 10px;
-    }
-    
-    table th, table td {
-      padding: 3px;
-    }
-    
-    table th:nth-child(1),
-    table td:nth-child(1) {
-      display: none;
-    }
-  }
-
-  @media screen and (max-width: 850px) {
-    .table-container1,
-    .table-container2,
-    .table-container3 {   
-      display: flex;
-      flex-wrap:nowrap;
-      justify-content: flex-start;
-    }
-   
-  }
-  
+#round-table{
+  r:45px;
+  cx:90px;
+  cy:90px;
+  fill:#5B7256;
+}
+#rect-table{
+  x:45px;
+  y:45px;
+  width:90px;
+  height:90px;
+  fill:#5B7256; 
+}
+#seat{
+  fill:#273E2B;
+}

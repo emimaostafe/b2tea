@@ -183,29 +183,29 @@ padding: 30px;
 }
 
 .text-image1 {
-position: absolute; 
-top: 300px; 
-max-width: 20%;
-padding-left: 1%;
-margin-left: 1%;
-max-height: 14%;
-background: #a1a39f5c;
-border-radius: 15px;
-}
+   position: absolute; 
+   top: 300px; 
+   max-width: 20%;
+   padding-left: 1%;
+   margin-left: 1%;
+   max-height: 14%;
+   background: #a1a39f5c;
+   border-radius: 15px;
+  }
 
-.name_tea1 h2 {
- font-family: "Poppins";
- font-style: normal;
- font-size: medium;
- color: white;
- margin-top: 2%;
-}
+  .name_tea1 h2 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-size: medium;
+    color: white;
+    margin-top: 2%;
+  }
 
-.info_tea1 p{
- margin-top: -15px;
- font-family: "Poppins";
- font-style: normal;
- color: #F8FEF0;
+  .info_tea1 p{
+    margin-top: -15px;
+    font-family: "Poppins";
+    font-style: normal;
+    color: #F8FEF0;
 
 }
 
@@ -215,14 +215,14 @@ border-radius: 15px;
  color: white;
  font-weight: bold;
 
-}
+  }
 
-.header__cart__icon_image1{
- color: white;
- margin-top: -200px;
- margin-left: 90%;
+  .header__cart__icon_image1{
+    color: white;
+    margin-top: -200px;
+    margin-left: 90%;
 
-}
+  }
 
 
 
@@ -405,15 +405,15 @@ border-radius: 15px;
  background: rgba(216, 215, 215, 0.25);
 }
 
-.header__cart__icon_image1{
- display: flex;
- justify-content: center;
- align-items: center;
- height: 100px;
- width: 30px;
-
- border-radius: 100%;
- cursor: pointer;
- transition: 0.25s;
- background: aliceblue;
-}
+  .header__cart__icon_image1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 30px;
+  
+    border-radius: 100%;
+    cursor: pointer;
+    transition: 0.25s;
+    background: aliceblue;
+  }
