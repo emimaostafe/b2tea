@@ -279,8 +279,7 @@ header #menu-trigger:hover + .meniu-coborator,
 
 /* #region Consumer Favorites */
 
-.page-title,
-.favorites .title {
+.page-title, .title {
   color: var(--primary);
   font-weight: 900;
   font-size: 35px;
