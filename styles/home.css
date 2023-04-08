@@ -368,8 +368,8 @@ header #menu-trigger:hover + .meniu-coborator,
   box-shadow: 0px 0px 3px 0px;
 }
 
-.tea-menu .card .top {
-  background-image: url('https://picsum.photos/350/350');
+.tea-menu .card .top_1 {
+  background-image: url('../media/JasmineTea.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   height: 200px;
@@ -377,6 +377,170 @@ header #menu-trigger:hover + .meniu-coborator,
 
   padding: var(--size-m);
 }
+
+.tea-menu .card .top_2 {
+  background-image: url('../media/Matcha.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 200px;
+  max-height: 200px;
+
+  padding: var(--size-m);
+}
+.tea-menu .card .top_3 {
+  background-image: url('../media/Sencha.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 200px;
+  max-height: 200px;
+
+  padding: var(--size-m);
+}
+
+.tea-menu .card .top_4 {
+  background-image: url('../media/Dragonwell.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 200px;
+  max-height: 200px;
+
+  padding: var(--size-m);
+}
+.tea-menu .card .top_5 {
+  background-image: url('../media/Gunpowder.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 200px;
+  max-height: 200px;
+
+  padding: var(--size-m);
+}
+.tea-menu .card .top_6 {
+  background-image: url('../media/Gyokuro.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 200px;
+  max-height: 200px;
+
+  padding: var(--size-m);
+}
+
+.tea-menu .card .top_7 {
+  background-image: url('../media/SilverNeedle.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 200px;
+  max-height: 200px;
+
+  padding: var(--size-m);
+}
+
+.tea-menu .card .top_8 {
+  background-image: url('../media/WhitePeony.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 200px;
+  max-height: 200px;
+
+  padding: var(--size-m);
+}
+.tea-menu .card .top_9 {
+  background-image: url('../media/ShouMei.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 200px;
+  max-height: 200px;
+
+  padding: var(--size-m);
+}
+.tea-menu .card .top_10 {
+  background-image: url('../media/DarjeelingWhite.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 200px;
+  max-height: 200px;
+
+  padding: var(--size-m);
+}
+.tea-menu .card .top_11 {
+  background-image: url('../media/CeylonWhite.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 200px;
+  max-height: 200px;
+
+  padding: var(--size-m);
+}
+.tea-menu .card .top_12 {
+  background-image: url('../media/AfricanWhite.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 200px;
+  max-height: 200px;
+
+  padding: var(--size-m);
+}
+
+.tea-menu .card .top_13 {
+  background-image: url('../media/Assam.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 200px;
+  max-height: 200px;
+
+  padding: var(--size-m);
+}
+
+.tea-menu .card .top_14 {
+  background-image: url('../media/Darjeeling.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 200px;
+  max-height: 200px;
+
+  padding: var(--size-m);
+}
+
+.tea-menu .card .top_15 {
+  background-image: url('../media/EarlGrey.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 200px;
+  max-height: 200px;
+
+  padding: var(--size-m);
+}
+
+.tea-menu .card .top_16 {
+  background-image: url('../media/Nimbu.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 200px;
+  max-height: 200px;
+
+  padding: var(--size-m);
+}
+
+.tea-menu .card .top_17 {
+  background-image: url('../media/Keemun.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 200px;
+  max-height: 200px;
+
+  padding: var(--size-m);
+}
+
+.tea-menu .card .top_18 {
+  background-image: url('../media/Pu-Erh.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 200px;
+  max-height: 200px;
+
+  padding: var(--size-m);
+}
+
 
 .tea-menu .card .bottom {
   padding: var(--size-l);
@@ -415,6 +579,10 @@ header #menu-trigger:hover + .meniu-coborator,
 .tea-menu .card .description {
   font-size: 13px;
   margin-bottom: var(--size-s);
+}
+
+.tea-menu .page-title .subtitle{
+  font-size: x-small;
 }
 
 .tea-menu .card .details {
