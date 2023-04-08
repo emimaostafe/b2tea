@@ -1,48 +1,62 @@
-body{
-  background-color:#ecebbd;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
 p{
+  font-family: 'Poppins', sans-serif;
   font-size: larger;
   text-align: center;
 }
+a{
+  font-family: 'Poppins', sans-serif;
+  color: #000;
+}
+a:hover{
+  font-family: 'Poppins', sans-serif;
+  color: #446349;
+}
 
+h1{
+  text-align: center;
+}
+.unavailable {
+  pointer-events: none; /* disable click */
+  opacity: 0.3; /* make it appear grayed out */
+  text-decoration:line-through;
+}
 #rect-table,
-#round-table {
+#round-table{
     cursor: pointer;
     transition: fill 0.3s ease;
 }
 
 #rect-table:hover,
-#round-table:hover {
-    fill: #8119c1;
+#round-table:hover
+ {
+    fill: #314731;
 }
 
-#rect-table:active,
-#round-table:active {
-    fill: #c11919;
-}
 
 .table-container1,
 .table-container2,
 .table-container3 {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;;
+  
+  background-color: #c4d7c0;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
 }
+
 .table-shape svg{
   width:200px;
    height:180px;
 }
 
 #round-table{
-  r:45px;
-  cx:90px;
-  cy:90px;
+ 
   fill:#5B7256;
 }
 #rect-table{
-  x:45px;
-  y:45px;
+
   width:90px;
   height:90px;
   fill:#5B7256; 
