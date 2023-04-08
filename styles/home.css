@@ -326,7 +326,7 @@ header #menu-trigger:hover + .meniu-coborator,
 @media (min-width: 768px) {
   .favorites .cards {
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-wrap: wrap;
   }
 }
@@ -344,9 +344,10 @@ header #menu-trigger:hover + .meniu-coborator,
 .tea-menu .cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: var(--size-xl);
+  justify-content: space-evenly;
+  align-items: center;
   padding: var(--size-m);
+  row-gap: var(--size-xl);
   /* background: rgba(23, 23, 55, 0.1); */
 }
 
