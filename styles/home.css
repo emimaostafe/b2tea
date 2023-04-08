@@ -24,6 +24,15 @@ footer {
   flex-direction: column;
 }
 
+footer a {
+  color: var(--secondary);
+}
+
+footer a:hover {
+  color: var(--white);
+  border-color: var(--white);
+}
+
 footer ul {
   margin: 0;
   padding: 0;
@@ -169,7 +178,7 @@ header #menu-trigger:hover + .meniu-coborator,
 
 /* #region Main Image */
 
-.main-image {
+.main-image, .menu-image {
   background-size: cover;
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../media/home-official.jpg);
   height: 550px;
@@ -183,23 +192,27 @@ header #menu-trigger:hover + .meniu-coborator,
   text-align: center;
 }
 
-.main-image {
+.menu-image {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../media/close-up-barista-serving-with-face-protection.jpg);
+}
+
+.main-image, .menu-image {
   display: flex;
   color: #ffffff;
 }
 
-.main-image .title {
+.main-image, .menu-image .title {
   font-weight: 900;
   font-size: 60px;
 }
 
-.main-image .subtitle {
+.main-image, .menu-image .subtitle {
   font-size: 30px;
   font-weight: 500;
 }
 
 @media (min-width: 768px) {
-  .main-image .title {
+  .main-image, .menu-image .title {
     font-size: 100px;
   }
 }
@@ -225,11 +238,12 @@ header #menu-trigger:hover + .meniu-coborator,
   cursor: pointer;
   transition: var(--transition);
 }
+
 .option:hover {
   opacity: 0.8;
 }
 
-.option .text {
+.option .text a {
   position: absolute;
   left: 0%;
   right: 0%;
@@ -541,7 +555,6 @@ header #menu-trigger:hover + .meniu-coborator,
   padding: var(--size-m);
 }
 
-
 .tea-menu .card .bottom {
   padding: var(--size-l);
   color: black;
@@ -581,7 +594,7 @@ header #menu-trigger:hover + .meniu-coborator,
   margin-bottom: var(--size-s);
 }
 
-.tea-menu .page-title .subtitle{
+.tea-menu .page-title .subtitle {
   font-size: x-small;
 }
 
