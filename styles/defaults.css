@@ -16,9 +16,18 @@
   --primary: #17391b;
   --secondary: #aac49766;
   --grey: #d8d8d8;
-  --transition: 0.15s;
-  --border-radius: 15px;
-  --border-radius-m: 25px;
+
+  --transparent-dark: rgba(0, 0, 0, 0.5);
+  --light: rgba(255, 255, 255, 0.75);
+
+  --size-xs: 5px;
+  --size-s: 10px;
+  --size-m: 15px;
+  --size-l: 25px;
+  --size-xl: 50px;
+
+  --radius: 15px;
+  --transition: 0.25s;
 }
 
 section {
@@ -48,6 +57,10 @@ a:hover {
 
 .bg-secondary {
   background: var(--secondary);
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
 
 /* #region Screen: from 0px to 767px */
