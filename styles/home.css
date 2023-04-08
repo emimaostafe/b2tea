@@ -149,6 +149,11 @@ header {
   background: rgba(0, 0, 0, 0.07);
 }
 
+.options .active {
+  color: var(--primary);
+  font-weight: bold;
+}
+
 .options a {
   color: var(--primary);
 }
@@ -307,30 +312,15 @@ header #menu-trigger:hover + .meniu-coborator,
 }
 
 .tea-1 {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-image: url('../media/cana-sticla-ceai.jpg');
 }
 
 .tea-2 {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-image: url('../media/iced-tea.jpg');
 }
 
 .tea-3 {
   background-image: url('../media/filtru-ceai.jpg');
-}
-
-.overlay {
-  background-color: #ffffffb5;
-  padding: 15% 36%;
-  border-radius: var(--radius);
-  bottom: 0px;
 }
 
 @media (min-width: 768px) {
