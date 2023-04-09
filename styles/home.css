@@ -195,9 +195,18 @@ header #menu-trigger:hover + .meniu-coborator,
   font-size: 60px;
 }
 
+.subtitle,
 .landing .subtitle {
-  font-size: 30px;
+  text-align: center;
+  font-size: 40px;
   font-weight: 500;
+  font-family: 'Lora';
+  text-transform: none;
+  letter-spacing: 5px;
+}
+
+.subtitle .small {
+  font-size: 16px;
 }
 
 .main-image {
@@ -275,6 +284,9 @@ header #menu-trigger:hover + .meniu-coborator,
 /* #endregion */
 
 /* #region Consumer Favorites */
+.page-title .title .small {
+  font-size: 20px;
+}
 
 .page-title,
 .favorites .title {
