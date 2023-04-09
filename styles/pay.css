@@ -193,3 +193,9 @@ button {
 .succes .subtitle {
   font-size: 20px;
 }
+
+@media (max-width: 426px) {
+  .inputs {
+    flex-direction: column;
+  }
+}

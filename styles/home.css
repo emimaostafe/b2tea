@@ -217,6 +217,14 @@ header #menu-trigger:hover + .meniu-coborator,
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../media/trandafiri.jpg);
 }
 
+@media (max-width: 426px) {
+  .tea-menu .cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+}
+
 @media (min-width: 768px) {
   .landing .title {
     font-size: 100px;
