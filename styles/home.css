@@ -459,6 +459,22 @@ header #menu-trigger:hover + .meniu-coborator,
   background-image: url('../media/Pu-Erh.jpg');
 }
 
+.top_19{
+  background-image: url('../media/nu-ma-uita.jpg');
+}
+.top_20{
+  background-image: url('../media/iced-tea.jpg');
+}
+
+.top_21{
+  background-image: url('../media/apple-spice.jpg');
+}
+
+.top_22{
+  background-image: url('../media/apple-spice.jpg');
+}
+
+
 .tea-menu .card .bottom {
   padding: var(--size-l);
   color: black;
