@@ -1,36 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
-p{
+p {
   font-family: 'Poppins', sans-serif;
   font-size: larger;
   text-align: center;
 }
-a{
+a {
   font-family: 'Poppins', sans-serif;
   color: #000;
 }
-a:hover{
+a:hover {
   font-family: 'Poppins', sans-serif;
   color: #446349;
 }
 
-h1{
+h1 {
   text-align: center;
 }
+
 .unavailable {
   pointer-events: none;
-  opacity: 0.3; 
-  text-decoration:line-through;
+  opacity: 0.3;
+  text-decoration: line-through;
 }
+
 #rect-table,
-#round-table{
-    cursor: pointer;
-    transition: fill 0.3s ease;
+#round-table {
+  cursor: pointer;
+  transition: fill 0.3s ease;
 }
 
 #rect-table:hover,
-#round-table:hover
- {
-    fill: #314731;
+#round-table:hover {
+  fill: #314731;
 }
 
 .table-container1,
@@ -46,32 +47,31 @@ h1{
   justify-content: space-around;
 }
 
-.table-shape svg{
-  width:200px;
-   height:180px;
+.table-shape svg {
+  width: 200px;
+  height: 180px;
 }
 
-#round-table{
- 
-  fill:#5B7256;
+#round-table {
+  fill: #5b7256;
 }
-#rect-table{
 
-  width:90px;
-  height:90px;
-  fill:#5B7256; 
+#rect-table {
+  width: 90px;
+  height: 90px;
+  fill: #5b7256;
 }
-#seat{
-  fill:#273E2B;
+
+#seat {
+  fill: #273e2b;
 }
-.container .seating-area{
+
+.container .seating-area {
   background-color: #c4d7c0;
   padding: 30px;
 }
 
 .seating-image {
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../media/tea-1.jpg);
-  height: 300px;
-
-  
+  height: 368px;
 }
