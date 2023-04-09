@@ -5,7 +5,9 @@ Sa se implementeze o aplicatie Web care – via un API Web REST – simuleaza o 
 Componența echipei
 -- 
 Emima Ostafe 
+- 
 Dumitriu Oana Florentina 
+- 
 Vlaișan Flavia
 
 
