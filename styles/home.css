@@ -9,13 +9,6 @@ ul {
   list-style: none;
 }
 
-p,
-div,
-h5 {
-  font-family: 'Poppins';
-  font-style: normal;
-}
-
 /* #region Footer */
 
 footer {
@@ -178,9 +171,9 @@ header #menu-trigger:hover + .meniu-coborator,
 
 /* #region Main Image */
 
-.main-image, .menu-image {
+.landing {
   background-size: cover;
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../media/home-official.jpg);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
   height: 550px;
   overflow: hidden;
 
@@ -192,27 +185,31 @@ header #menu-trigger:hover + .meniu-coborator,
   text-align: center;
 }
 
-.menu-image {
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../media/close-up-barista-serving-with-face-protection.jpg);
-}
-
-.main-image, .menu-image {
+.landing {
   display: flex;
   color: #ffffff;
 }
 
-.main-image, .menu-image .title {
+.landing .title {
   font-weight: 900;
   font-size: 60px;
 }
 
-.main-image, .menu-image .subtitle {
+.landing .subtitle {
   font-size: 30px;
   font-weight: 500;
 }
 
+.main-image {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../media/home-official.jpg);
+}
+
+.menu-image {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../media/trandafiri.jpg);
+}
+
 @media (min-width: 768px) {
-  .main-image, .menu-image .title {
+  .landing .title {
     font-size: 100px;
   }
 }
@@ -286,7 +283,7 @@ header #menu-trigger:hover + .meniu-coborator,
   font-size: 35px;
   line-height: 55px;
   letter-spacing: 20px;
-  padding-bottom: 100px;
+  padding-bottom: 70px;
   text-align: center;
 }
 
@@ -358,19 +355,17 @@ header #menu-trigger:hover + .meniu-coborator,
 .tea-menu .cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  padding: var(--size-m);
   row-gap: var(--size-xl);
-  /* background: rgba(23, 23, 55, 0.1); */
 }
 
 .tea-menu .card {
   display: flex;
   flex-direction: column;
 
-  width: 280px;
-  height: 350px;
+  width: 300px;
+  height: 370px;
 
   box-shadow: 0px 0px 1px 0px;
 
@@ -382,177 +377,74 @@ header #menu-trigger:hover + .meniu-coborator,
   box-shadow: 0px 0px 3px 0px;
 }
 
-.tea-menu .card .top_1 {
+.top {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 200px;
+  max-height: 200px;
+
+  padding: var(--size-m);
+}
+
+.top_1 {
   background-image: url('../media/JasmineTea.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 200px;
-  max-height: 200px;
-
-  padding: var(--size-m);
 }
-
-.tea-menu .card .top_2 {
+.top_2 {
   background-image: url('../media/Matcha.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 200px;
-  max-height: 200px;
-
-  padding: var(--size-m);
 }
-.tea-menu .card .top_3 {
+.top_3 {
   background-image: url('../media/Sencha.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 200px;
-  max-height: 200px;
-
-  padding: var(--size-m);
 }
-
-.tea-menu .card .top_4 {
+.top_4 {
   background-image: url('../media/Dragonwell.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 200px;
-  max-height: 200px;
-
-  padding: var(--size-m);
 }
-.tea-menu .card .top_5 {
+.top_5 {
   background-image: url('../media/Gunpowder.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 200px;
-  max-height: 200px;
-
-  padding: var(--size-m);
 }
-.tea-menu .card .top_6 {
+.top_6 {
   background-image: url('../media/Gyokuro.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 200px;
-  max-height: 200px;
-
-  padding: var(--size-m);
 }
-
-.tea-menu .card .top_7 {
+.top_7 {
   background-image: url('../media/SilverNeedle.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 200px;
-  max-height: 200px;
-
-  padding: var(--size-m);
 }
-
-.tea-menu .card .top_8 {
+.top_8 {
   background-image: url('../media/WhitePeony.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 200px;
-  max-height: 200px;
-
-  padding: var(--size-m);
 }
-.tea-menu .card .top_9 {
+.top_9 {
   background-image: url('../media/ShouMei.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 200px;
-  max-height: 200px;
-
-  padding: var(--size-m);
 }
-.tea-menu .card .top_10 {
+.top_10 {
   background-image: url('../media/DarjeelingWhite.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 200px;
-  max-height: 200px;
-
-  padding: var(--size-m);
 }
-.tea-menu .card .top_11 {
+.top_11 {
   background-image: url('../media/CeylonWhite.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 200px;
-  max-height: 200px;
-
-  padding: var(--size-m);
 }
-.tea-menu .card .top_12 {
+.top_12 {
   background-image: url('../media/AfricanWhite.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 200px;
-  max-height: 200px;
-
-  padding: var(--size-m);
 }
 
-.tea-menu .card .top_13 {
+.top_13 {
   background-image: url('../media/Assam.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 200px;
-  max-height: 200px;
-
-  padding: var(--size-m);
 }
 
-.tea-menu .card .top_14 {
+.top_14 {
   background-image: url('../media/Darjeeling.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 200px;
-  max-height: 200px;
-
-  padding: var(--size-m);
 }
 
-.tea-menu .card .top_15 {
+.top_15 {
   background-image: url('../media/EarlGrey.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 200px;
-  max-height: 200px;
-
-  padding: var(--size-m);
 }
 
-.tea-menu .card .top_16 {
+.top_16 {
   background-image: url('../media/Nimbu.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 200px;
-  max-height: 200px;
-
-  padding: var(--size-m);
 }
 
-.tea-menu .card .top_17 {
+.top_17 {
   background-image: url('../media/Keemun.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 200px;
-  max-height: 200px;
-
-  padding: var(--size-m);
 }
 
-.tea-menu .card .top_18 {
+.top_18 {
   background-image: url('../media/Pu-Erh.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 200px;
-  max-height: 200px;
-
-  padding: var(--size-m);
 }
 
 .tea-menu .card .bottom {

@@ -1,0 +1,103 @@
+.favorites {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: var(--size-m);
+  row-gap: var(--size-xl);
+}
+
+.favorite-card {
+  background-image: url('https://picsum.photos/350/350');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: var(--size-m);
+
+  width: 350px;
+  height: 350px;
+
+  border-radius: var(--radius);
+  transition: var(--transition);
+}
+.favorite-card:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 8px 0px;
+}
+
+.favorite-bottom {
+  border-radius: var(--radius);
+  background: var(--transparent-dark);
+}
+
+.favorite-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--size-s);
+}
+
+.fav-info {
+  padding: var(--size-m);
+  color: white;
+}
+
+.fav-title {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  margin-bottom: var(--size-s);
+}
+
+.fav-description {
+  font-size: 13px;
+  margin-bottom: var(--size-s);
+}
+
+.fav-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fav-rating {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--size-s);
+}
+
+.fav-stars {
+  font-size: 25px;
+}
+
+.fav-score,
+.fav-price {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.fav-card-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fav-card-btn__icon {
+  font-size: 22px;
+
+  width: 46px;
+  height: 46px;
+
+  border-radius: 100%;
+  background: var(--light);
+  transition: var(--transition);
+}
+.fav-card-btn__icon:hover {
+  background: white;
+}
