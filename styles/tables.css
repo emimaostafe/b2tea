@@ -17,8 +17,8 @@ h1{
   text-align: center;
 }
 .unavailable {
-  pointer-events: none; /* disable click */
-  opacity: 0.3; /* make it appear grayed out */
+  pointer-events: none;
+  opacity: 0.3; 
   text-decoration:line-through;
 }
 #rect-table,
@@ -39,8 +39,9 @@ h1{
 .table-container3 {
   display: flex;
   flex-wrap: wrap;
-  
-  background-color: #c4d7c0;
+  width: 70%;
+  margin: 50px auto;
+
   align-items: center;
   flex-direction: row;
   justify-content: space-around;
@@ -63,4 +64,8 @@ h1{
 }
 #seat{
   fill:#273E2B;
+}
+.container .seating-area{
+  background-color: #c4d7c0;
+  padding: 30px;
 }
