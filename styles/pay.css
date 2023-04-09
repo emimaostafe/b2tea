@@ -41,8 +41,8 @@ h1 {
 }
 
 .sweetener,
-.caffeine,
-.milk {
+.milk,
+.caffeine {
   justify-content: column;
   padding: 15px;
 }
