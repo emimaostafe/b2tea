@@ -56,8 +56,8 @@ p {
 }
 
 .gallery-image {
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../media/gallery-image.jpg);
-  height: 268px;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../media/poetry-lovers.jpg);
+  height: 368px;
   padding: 50px;
 }
 
