@@ -96,9 +96,34 @@ button {
 .succes{
     margin: 50px auto;
     width: 60%;
-    background-color: #c4d7c0;
     padding: 30px;
-    border-radius: 10px;
 }
 
+.landing .pay-image{
+  background-size: cover;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+  height: 250px;
+  overflow: hidden;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0px;
+  text-align: center;
+  
+}
+.pay-image {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../media/trandafiri.jpg);
+  height: 200px;
+  
+}
+.landing .pay-image .subtitle{
+  font-size: 20px;
+}
+.subtitle, .landing .subtitle{
+  font-size: 30px;
+}
+.succes .subtitle{
+  font-size:20px;
+}
