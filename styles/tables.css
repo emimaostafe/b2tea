@@ -83,7 +83,7 @@ h1{
   text-align: center;
 }
 .seating-image {
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../media/trandafiri.jpg);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../media/tea-1.jpg);
   height: 350px;
   
 }
