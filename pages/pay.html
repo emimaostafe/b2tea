@@ -4,12 +4,10 @@
 <head>
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-
-    <title>B2Tea</title>
-
     <link rel="stylesheet" href="../styles/defaults.css">
     <link rel="stylesheet" href="../styles/home.css">
     <link rel="stylesheet" href="../styles/pay.css">
+
 
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet">
     <!-- <script src='main.js'></script> -->
@@ -50,46 +48,123 @@
         </header>
     </div>
 
-    <head>
-        <title>Payment Chart</title>
+    <div class="container">
+        <div class="landing pay-image">
+            <div class="title">MY ORDER</div>
+        </div>
+    </div>
 
-    </head>
+    <div class="container">
+        <div class="extras">
+            <div class="subtitle">extras</div>
 
-    <body>
-        <div class="container">
-            <div class="landing pay-image">
-                <div class="subtitle">Your Receipt</div>
-           </div>
+            <div class="extra">
+
+                <!-- <div class="size">
+                    <h2>Beverage Size</h2>
+                    <div class="inputs">
+                        <input type="radio" name="radio0" id="small" value="small"><label class="small-label"
+                            for="small">Small</label>
+                        <input type="radio" name="radio0" id="medium" value="medium"><label class="medium-label"
+                            for="medium">Medium</label>
+                        <input type="radio" name="radio0" id="large" value="large"><label class="large-label"
+                            for="large">Large</label>
+                    </div>
+                </div> -->
+
+                <div class="sweetener">
+                    <h2>Sweetener</h2>
+                    <div class="inputs">
+                        <input type="radio" name="radio1" id="sugar" value="sugar"><label class="sugar-label"
+                            for="sugar">Sugar</label>
+                        <input type="radio" name="radio1" id="honey" value="honey"><label class="honey-label"
+                            for="honey">Honey</label>
+                        <input type="radio" name="radio1" id="nosugar" value="nosugar"><label class="nosugar-label"
+                            for="nosugar">None</label>
+                    </div>
+                </div>
+
+
+                <div class="sweetener">
+                    <h2>Milk</h2>
+                    <div class="inputs">
+                        <input type="radio" name="radio3" id="diary" value="diary"><label class="diary-label four col"
+                            for="diary">Diary</label>
+                        <input type="radio" name="radio3" id="vegetal" value="vegetal"><label
+                            class="vegetal-label four col" for="vegetal">Vegetal</label>
+                        <input type="radio" name="radio3" id="nomilk" value="nomilk"><label
+                            class="nomilk-label four col" for="nomilk">None</label>
+                    </div>
+                </div>
+
+
+                <div class="caffeine">
+                    <h2>Caffeine level</h2>
+                    <div class="inputs">
+                        <input type="radio" name="radio4" id="light" value="light"><label class="light-label four col"
+                            for="light">Light</label>
+                        <input type="radio" name="radio4" id="regular" value="regular"><label
+                            class="regular-label four col" for="regular">Regular</label>
+                        <input type="radio" name="radio4" id="strong" value="strong"><label
+                            class="strong-label four col" for="strong">Intense</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
         <div class="receipt">
 
+            <div class="subtitle">receipt</div>
             <div class="section">
                 <div class="product">
-                    <div class="name">Item 1</div>
-                    <div class="description">description</div>
+                    <div class="name">Apple Delight</div>
+                    <div class="description">honey, none, light</div>
                 </div>
-                <div class="price">10 lei</div>
+                <div class="price">18 lei</div>
             </div>
+
 
             <div class="section">
                 <div class="product">
-                    <div class="name">Item 2</div>
-                    <div class="description">description</div>
+                    <div class="name">Iced Orange</div>
+                    <div class="description">sugar, none, light</div>
                 </div>
-                <div class="price">15 lei</div>
+                <div class="price">25 lei</div>
             </div>
+
 
             <div class="section">
                 <div class="product">
-                    <div class="name">Item 3</div>
-                    <div class="description">description</div>
+                    <div class="name">Matcha</div>
+                    <div class="description">sugar, vegetal, regular</div>
                 </div>
-                <div class="price">5 lei</div>
+                <div class="price">21 lei</div>
             </div>
+
+
             <div class="section">
+                <div class="product">
+                    <div class="name">Earl Grey</div>
+                    <div class="description">small, none, intense</div>
+                </div>
+                <div class="price">14 lei</div>
+            </div>
+
+
+            <div class="end-section">
                 <div class="total">
                     <div class="name">Total:</div>
                 </div>
-                <div class="total-price">30 lei</div>
+                <div class="total-price">78 lei</div>
+            </div>
+            
+            <div class="section">
+                <div class="product">
+                    <div class="name">Data and time</div>
+                </div>
+                <div class="price">04/04/2023</div>
+                <div class="price">13:15</div>
             </div>
             <div class="section">
                 <div class="product">
