@@ -117,10 +117,12 @@ button {
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../media/rec.jpg);
   height: 200px;
   
+  
 }
 .bye-image {
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../media/bye.jpg);
   height: 300px;
+ 
   
 }
 .landing .pay-image .subtitle{
