@@ -69,3 +69,21 @@ h1{
   background-color: #c4d7c0;
   padding: 30px;
 }
+.landing .seating-image{
+  background-size: cover;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+  height: 250px;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0px;
+  text-align: center;
+}
+.seating-image {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../media/trandafiri.jpg);
+  height: 350px;
+  
+}
