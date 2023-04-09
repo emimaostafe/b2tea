@@ -11,66 +11,55 @@
     <link rel="stylesheet" href="../styles/home.css">
     <link rel="stylesheet" href="../styles/modal.css">
 
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet">
     <!-- <script src='main.js'></script> -->
 </head>
 
 <body>
+
     <div class="container">
+        <h1>Extras</h1>
+        <form class="extra cf">
 
-        <div class="container">
-            <div class="modal">
 
-                <div class="modal-section">
-                    <div class="item">Size</div>
-                    <div class="options">
-                        <input id="caffeinw-low" type="radio" name="caffeine" value="low" />
-                        <label for="caffeine-medium">Slaba</label>
-                        <input id="caffeinw-low" type="radio" name="caffeine" value="low" />
-                        <label for="caffeine-medium">Medie</label>
-                        <input id="caffeinw-low" type="radio" name="caffeine" value="low" />
-                        <label for="caffeine-medium">Tare</label>
-                    </div>
-                </div>
+            <section class="sweetener cf">
+                <h2>Sweetener</h2>
+                <input type="radio" name="radio1" id="sugar" value="sugar"><label class="sugar-label four col"
+                    for="sugar">Sugar</label>
+                <input type="radio" name="radio1" id="honey" value="honey" checked><label class="honey-label four col"
+                    for="honey">Honey</label>
+                <input type="radio" name="radio1" id="nosugar" value="nosugar"><label class="nosugar-label four col"
+                    for="nosugar">None</label>
+            </section>
 
-                <div class="modal-section">
-                    <div class="item">Sweetener</div>
-                    <div class="options">
-                        <input id="caffeinw-low" type="radio" name="caffeine" value="low" />
-                        <label for="caffeine-medium">Slaba</label>
-                        <input id="caffeinw-low" type="radio" name="caffeine" value="low" />
-                        <label for="caffeine-medium">Medie</label>
-                        <input id="caffeinw-low" type="radio" name="caffeine" value="low" />
-                        <label for="caffeine-medium">Tare</label>
-                    </div>
-                </div>
 
-                <div class="modal-section">
-                    <div class="item">Milk</div>
-                    <div class="options">
-                        <input id="caffeinw-low" type="radio" name="caffeine" value="low" />
-                        <label for="caffeine-medium">Slaba</label>
-                        <input id="caffeinw-low" type="radio" name="caffeine" value="low" />
-                        <label for="caffeine-medium">Medie</label>
-                        <input id="caffeinw-low" type="radio" name="caffeine" value="low" />
-                        <label for="caffeine-medium">Tare</label>
-                    </div>
-                </div>
+            <section class="milk cf">
+                <h2>Milk</h2>
+                <input type="radio" name="radio3" id="diary" value="diary"><label class="diary-label four col"
+                    for="diary">Diary</label>
+                <input type="radio" name="radio3" id="vegetal" value="vegetal"><label class="vegetal-label four col"
+                    for="vegetal">Vegetal</label>
+                <input type="radio" name="radio3" id="nomilk" value="nomilk"><label class="nomilk-label four col"
+                    for="nomilk">None</label>
+            </section>
 
-                <div class="modal-section">
-                    <div class="item">Caffeine</div>
-                    <div class="options">
-                        <input id="caffeinw-low" type="radio" name="caffeine" value="low" />
-                        <label for="caffeine-medium">Slaba</label>
-                        <input id="caffeinw-low" type="radio" name="caffeine" value="low" />
-                        <label for="caffeine-medium">Medie</label>
-                        <input id="caffeinw-low" type="radio" name="caffeine" value="low" />
-                        <label for="caffeine-medium">Tare</label>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+            <section class="caffeine cf">
+                <h2>Caffeine level</h2>
+                <input type="radio" name="radio4" id="light" value="light"><label class="light-label four col"
+                    for="light">Light</label>
+                <input type="radio" name="radio4" id="regular" value="regular"><label class="regular-label four col"
+                    for="regular">Regular</label>
+                <input type="radio" name="radio4" id="strong" value="strong"><label class="strong-label four col"
+                    for="strong">Intense</label>
+            </section>
+
+
+
+            <input class="submit" type="submit" value="Submit">
+        </form>
     </div>
+
 </body>
 
 </html>

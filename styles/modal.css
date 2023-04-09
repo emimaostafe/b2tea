@@ -1,128 +1,128 @@
-:root {
-    --white: #f8fef0;
-    --primary: #17391b;
-    --secondary: #aac49766;
-    --grey: #d8d8d8;
-    --transition: 0.15s;
-    --border-radius: 15px;
-    --border-radius-m: 25px;
-    --error: #f33737;
-    --success: #51ad44;
-    --light-blue: #036ed3;
-    --dark-blue: #0e4980;
-  }
-  
-  .modal {
-    height: 350px;
-    width: 350px;
-    padding: 10px;
-    background-color: var(--grey);
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 4px;
-  }
-  
-  .modal-section {
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    padding: 5px;
-    gap: 4px;
-    padding-bottom: 6px;
-  }
-  
-  
-  .options {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .options-confirm {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-  }
-  
-  .option input[type="radio"] {
-    background: yellow;
-    border: 1px solid green;
-    padding: 2px 10px;
-  }
-  
-  .options label + input[type="radio"]:checked {
-    background: pink;
-  }
-  
-  .options label {
-    background: red;
-    border: 1px solid green;
-    padding: 2px 10px;
-  }
-  
-  
-  label {
-    width: 90px;
-    color: var(--primary);
-    background-color: var(--white);
-    padding: 7px 18px;
-    font-size: 14px;
-    border-radius: 25px;
-    border: none;
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
-    justify-content: center;
-  }
-  
-  input [type=radio]:checked + label {
-    background: green;
-    font-style: italic;
-  }
-  
-  .container {
-    display: flex;
-    width: 1000px;
-    height: 1000px;
-    background-color: gray;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  
-  .item {
-    color: var(--primary);
-    font-size: 15px;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-family: 'Poppins', sans-serif;
-  }
-  
-  
-  
-  .cancel {
-    width: 90px;
-    background-color: var(--secondary);
-    color: var(--primary);
-    padding: 7px 18px;
-    font-size: 14px;
-    border-radius: 25px;
-    border: none;
-    text-align: center;
-  }
-  
-  .confirm {
-    width: 90px;
-    background-color: var(--success);
-    color: var(--primary);
-    padding: 7px 18px;
-    font-size: 14px;
-    border-radius: 25px;
-    border: none;
-    text-align: center;
-  }
-  
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  color: #333;
+  background-color: #eee;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 200;
+}
+
+h1 {
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #2fcc71;
+  max-width: 40%;
+  margin: 20px auto;
+}
+
+/* CONTAINERS */
+
+.container {
+  max-width: auto;
+  width: 100%;
+  margin: 0 auto;
+}
+.four {
+  width: 32.26%;
+  max-width: 32.26%;
+}
+
+/* COLUMNS */
+
+.col {
+  display: block;
+  float: left;
+  margin: 1% 0 1% 1.6%;
+}
+
+.col:first-of-type {
+  margin-left: 0;
+}
+
+/* CLEARFIX */
+
+.cf:before,
+.cf:after {
+  content: ' ';
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1;
+}
+
+.extra .sweetener input,
+.extra .milk input,
+.extra .caffeine input {
+  display: none;
+}
+
+.extra label {
+  position: relative;
+  color: #fff;
+  background-color: #aaa;
+  font-size: 26px;
+  text-align: center;
+  height: 150px;
+  line-height: 150px;
+  display: block;
+  cursor: pointer;
+  border: 3px solid transparent;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.extra .plan input:checked + label,
+.extra .payment-plan input:checked + label,
+.extra .payment-type input:checked + label {
+  border: 3px solid #333;
+  background-color: #2fcc71;
+}
+
+.extra .milk input:checked + label:after,
+.extra .sweetener input:checked + label:after,
+.extra .caffeine input:checked + label:after {
+  content: '\2713';
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 100%;
+  border: 2px solid #333;
+  background-color: #2fcc71;
+  z-index: 999;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+}
+
+.submit {
+  padding: 15px 60px;
+  display: inline-block;
+  border: none;
+  margin: 20px 0;
+  background-color: #2fcc71;
+  color: #fff;
+  border: 2px solid #333;
+  font-size: 18px;
+  -webkit-transition: transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+}
+
+.submit:hover {
+  cursor: pointer;
+  transform: rotateX(360deg);
+}
