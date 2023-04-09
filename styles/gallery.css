@@ -66,7 +66,7 @@ p {
     
   }
   .gallery-image {
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../media/trandafiri.jpg);
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../media/gallery-image.jpg);
     height: 150px;
     padding:50px;
     
