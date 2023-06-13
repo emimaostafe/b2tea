@@ -1,38 +1,25 @@
 <?php
 
-header('Content-Type: application/json');
+// Your API endpoint
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Retrieve the request data
+    $requestData = json_decode(file_get_contents('php://input'), true);
 
-//API endpoints
-$endpoints = array(
-    'home' => array(
-        'url' => '/home',
-        'method' => 'GET',
-        'handler' => 'getHomePage'
-    )
-);
+    // Validate and process the request data
+    // ...
 
-// Handle the API request
-$requestUrl = $_SERVER['REQUEST_URI'];
-$requestMethod = $_SERVER['REQUEST_METHOD'];
+    // Prepare the response data
+    $responseData = [
+        'message' => 'API request successful',
+        'data' => $requestData
+    ];
 
-foreach ($endpoints as $endpoint) {
-    if ($requestUrl === $endpoint['url'] && $requestMethod === $endpoint['method']) {
-        $handler = $endpoint['handler'];
-        $response = $handler();
-        echo json_encode($response);
-        exit();
-    }
+    // Send the JSON response
+    header('Content-Type: application/json');
+    echo json_encode($responseData);
+} else {
+    // Handle unsupported HTTP methods
+    header('HTTP/1.1 405 Method Not Allowed');
+    header('Allow: POST');
+    echo '405 Method Not Allowed';
 }
-
-//Handle home endpoint
-function getHomePage() {
-
-    $fileContents = file_get_contents('pages/home.html');
-
-
-    return array(
-        'status' => 'success',
-        'data' => $fileContents
-    );
-}
-?>
