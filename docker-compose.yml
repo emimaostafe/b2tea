@@ -1,0 +1,10 @@
+services:
+  db:
+    image: postgres:latest
+    container_name: web
+    environment:
+      POSTGRES_DB: web
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: student
+    ports:
+      - "5432:5432"
