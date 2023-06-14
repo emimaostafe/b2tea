@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Prepare the response data
     $responseData = [
         'message' => 'API request successful',
-        'data' => $requestData
+        //'data' => $requestData
     ];
 
     // Send the JSON response

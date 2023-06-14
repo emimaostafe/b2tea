@@ -11,548 +11,115 @@
     <link rel="stylesheet" href="../styles/home.css">
 
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet">
-    <!-- <script src='main.js'></script> -->
+    <script src="../app/scripts/addtocart.js"></script>
 </head>
 
 <body>
+<div class="container">
+    <header>
+        <div id="menu-trigger" class="menu">
+            <div class="icon-item"><i class="ri-menu-line"></i></div>
+        </div>
+
+        <div class="meniu-coborator">
+            <div class="menu">
+                <div class="icon-item"><i class="ri-close-line"></i></div>
+            </div>
+
+            <ul class="options">
+                <li><a href="../pages/index.html">Home</a></li>
+                <li><a href="../pages/newmenu.html">Menu</a></li>
+                <li><a href="../pages/seating.html">Serve In</a></li>
+                <li><a href="../pages/newmenu.html">Take Out</a></li>
+                <li><a href="../pages/pay.html">Payment</a></li>
+                <li><a href="../pages/gallery.html">Gallery</a></li>
+            </ul>
+        </div>
+
+        <div class="brand">
+            <h5><span>&lt;code&gt;</span> brew</h5>
+        </div>
+        <div class="actions">
+            <a href="../pages/pay.html" class="icon-item">
+                <i class="ri-shopping-bag-line"></i>
+            </a>
+        </div>
+
+    </header>
+</div>
+
+<div class="pb-80">
     <div class="container">
-        <header>
-            <div id="menu-trigger" class="menu">
-                <div class="icon-item"><i class="ri-menu-line"></i></div>
-            </div>
-
-            <div class="meniu-coborator">
-                <div class="menu">
-                    <div class="icon-item"><i class="ri-close-line"></i></div>
-                </div>
-
-                <ul class="options">
-                    <li><a href="../pages/index.html">Home</a></li>
-                    <li><a href="../pages/newmenu.html">Menu</a></li>
-                    <li><a href="../pages/seating.html">Serve In</a></li>
-                    <li><a href="../pages/newmenu.html">Take Out</a></li>
-                    <li><a href="../pages/pay.html">Payment</a></li>
-                    <li><a href="../pages/gallery.html">Gallery</a></li>
-                </ul>
-            </div>
-
-            <div class="brand">
-                <h5><span>&lt;code&gt;</span> brew</h5>
-            </div>
-            <div class="actions">
-                <!-- <div class="icon-item search"><i class="ri-search-line"></i></div> -->
-                <a href="../pages/pay.html" class="icon-item">
-                    <i class="ri-shopping-bag-line"></i>
-                </a>
-            </div>
-
-        </header>
-    </div>
-
-    <div class="pb-80">
-        <div class="container">
-            <div class="landing menu-image">
-                <div class="title">OUR PRODUCTS</div>
-                <!-- <div class="subtitle">Sip sustainably, code creatively</div> -->
-            </div>
+        <div class="landing menu-image">
+            <div class="title">OUR PRODUCTS</div>
         </div>
     </div>
+</div>
 
-    <section class="tea-menu container">
-        <div class="page-title subtitle">Green Tea</div>
-        <div class="cards">
-            <div class="card">
-                <div class="top top top_1">
-                    <div class="actions">
-                        <div class="btn btn__icon"><i class="ri-shopping-cart-line"></i></div>
-                    </div>
-                </div>
-                <div class="bottom">
-                    <div class="info">
-                        <div class="title">
-                            <div class="text">Jasmine</div>
-                            <div class="price">15 lei</div>
-                        </div>
-                        <div class="description">The jasmine flowers infuse the tea with a delicate floral fragrance and
-                            a slightly sweet taste.</div>
+<section class="tea-menu container">
+    <div class="page-title subtitle">Green Tea</div>
+    <div class="cards">
+        <div class="card">
+            <div class="top top top_1">
+                <div class="actions">
+                    <div class="btn btn__icon" onclick="addToCart('Jasmine', '15 lei')">
+                        <i class="ri-shopping-cart-line"></i>
                     </div>
                 </div>
             </div>
-
-            <div class="card">
-                <div class="top top top_2">
-                    <div class="actions">
-                        <div class="btn btn__icon"><i class="ri-shopping-cart-line"></i></div>
+            <div class="bottom">
+                <div class="info">
+                    <div class="title">
+                        <div class="text">Jasmine</div>
+                        <div class="price">15 lei</div>
                     </div>
-                </div>
-                <div class="bottom">
-                    <div class="info">
-                        <div class="title">
-                            <div class="text">Matcha</div>
-                            <div class="price">20 lei</div>
-                        </div>
-                        <div class="description">This is a frothy, soft drink that has a strong, grassy taste and is
-                            high in caffeine. Perfect for a boost of energy.</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="top top top_3">
-                    <div class="actions">
-                        <div class="btn btn__icon"><i class="ri-shopping-cart-line"></i></div>
-                    </div>
-                </div>
-                <div class="bottom">
-                    <div class="info">
-                        <div class="title">
-                            <div class="text">Sencha</div>
-                            <div class="price">15 lei</div>
-                        </div>
-                        <div class="description"> This is the most popular Japanese green tea, and it has a fresh,
-                            grassy taste with a slightly bitter aftertaste.</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="top top top_4">
-                    <div class="actions">
-                        <div class="btn btn__icon"><i class="ri-shopping-cart-line"></i></div>
-                    </div>
-                </div>
-                <div class="bottom">
-                    <div class="info">
-                        <div class="title">
-                            <div class="text">Dragonwell</div>
-                            <div class="price">20 lei</div>
-                        </div>
-                        <div class="description">
-                            This is a Chinese green tea that has a nutty, slightly sweet taste. It's made by pan-firing
-                            the tea
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="top top top_5">
-                    <div class="actions">
-                        <div class="btn btn__icon"><i class="ri-shopping-cart-line"></i></div>
-                    </div>
-                </div>
-                <div class="bottom">
-                    <div class="info">
-                        <div class="title">
-                            <div class="text">Gunpowder</div>
-                            <div class="price">18 lei</div>
-                        </div>
-                        <div class="description">Chinese green tea with leaves tightly rolled into little pellets.It has
-                            a smoky, slightly bitter taste.</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="top top_6">
-                    <div class="actions">
-                        <div class="btn btn__icon"><i class="ri-shopping-cart-line"></i></div>
-                    </div>
-                </div>
-                <div class="bottom">
-                    <div class="info">
-                        <div class="title">
-                            <div class="text">Gyokuro</div>
-                            <div class="price">25 lei</div>
-                        </div>
-                        <div class="description">This is a Japanese green tea that is grown in the shade, which gives it
-                            a sweet, delicate flavor.</div>
-                    </div>
+                    <div class="description">The jasmine flowers infuse the tea with a delicate floral fragrance and
+                        a slightly sweet taste.</div>
                 </div>
             </div>
         </div>
-    </section>
 
-    <section class="tea-menu container">
-        <div class="page-title subtitle">White Tea</div>
-        <div class="cards">
-            <div class="card">
-                <div class="top top_7">
-                    <div class="actions">
-                        <div class="btn btn__icon"><i class="ri-shopping-cart-line"></i></div>
-                    </div>
-                </div>
-                <div class="bottom">
-                    <div class="info">
-                        <div class="title">
-                            <div class="text">Silver Needle</div>
-                            <div class="price">25 lei</div>
-                        </div>
-                        <div class="description">This is China's most famous white tea,
-                            consisting only of the bud of the tea plant with a floral taste.</div>
+        <div class="card">
+            <div class="top top top_2">
+                <div class="actions">
+                    <div class="btn btn__icon" onclick="addToCart('Matcha', '20 lei')">
+                        <i class="ri-shopping-cart-line"></i>
                     </div>
                 </div>
             </div>
-
-            <div class="card">
-                <div class="top top_8">
-                    <div class="actions">
-                        <div class="btn btn__icon"><i class="ri-shopping-cart-line"></i></div>
+            <div class="bottom">
+                <div class="info">
+                    <div class="title">
+                        <div class="text">Matcha</div>
+                        <div class="price">20 lei</div>
                     </div>
-                </div>
-                <div class="bottom">
-                    <div class="info">
-                        <div class="title">
-                            <div class="text">White Peony</div>
-                            <div class="price">20 lei</div>
-                        </div>
-                        <div class="description">It has a stronger taste with a light nutty flavor made from the first
-                            two leaves of the tea plant</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="top top_9">
-                    <div class="actions">
-                        <div class="btn btn__icon"><i class="ri-shopping-cart-line"></i></div>
-                    </div>
-                </div>
-                <div class="bottom">
-                    <div class="info">
-                        <div class="title">
-                            <div class="text">Shou Mei</div>
-                            <div class="price">20 lei</div>
-                        </div>
-                        <div class="description">made from the third or fourth leaf of the tea plant, it has a bolder
-                            taste with woody and floral notes.</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="top top_10">
-                    <div class="actions">
-                        <div class="btn btn__icon"><i class="ri-shopping-cart-line"></i></div>
-                    </div>
-                </div>
-                <div class="bottom">
-                    <div class="info">
-                        <div class="title">
-                            <div class="text">Darjeeling White</div>
-                            <div class="price">17 lei</div>
-                        </div>
-                        <div class="description">
-                            It has a light, fruity aroma with a touch of floral notes and a sweet and persistent
-                            aftertaste.
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="top top_11">
-                    <div class="actions">
-                        <div class="btn btn__icon"><i class="ri-shopping-cart-line"></i></div>
-                    </div>
-                </div>
-                <div class="bottom">
-                    <div class="info">
-                        <div class="title">
-                            <div class="text">Ceylon White</div>
-                            <div class="price">18 lei</div>
-                        </div>
-                        <div class="description">It has a subtle, delicate taste with a light, sweet finish and a floral
-                            aroma.</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="top top_12">
-                    <div class="actions">
-                        <div class="btn btn__icon"><i class="ri-shopping-cart-line"></i></div>
-                    </div>
-                </div>
-                <div class="bottom">
-                    <div class="info">
-                        <div class="title">
-                            <div class="text">African White</div>
-                            <div class="price">22 lei</div>
-                        </div>
-                        <div class="description">This tea is grown in Kenya and is known for its bold taste with a hint
-                            of nuts and a sweet finish.</div>
-                    </div>
+                    <div class="description">Made from specially grown and processed green tea leaves, Matcha has a
+                        rich flavor and is packed with antioxidants.</div>
                 </div>
             </div>
         </div>
-    </section>
 
-    <section class="tea-menu container">
-        <div class="page-title subtitle">Black Tea</div>
-        <div class="cards">
-            <div class="card">
-                <div class="top top_13">
-                    <div class="actions">
-                        <div class="btn btn__icon"><i class="ri-shopping-cart-line"></i></div>
-                    </div>
-                </div>
-                <div class="bottom">
-                    <div class="info">
-                        <div class="title">
-                            <div class="text">Assam</div>
-                            <div class="price">22 lei</div>
-                        </div>
-                        <div class="description">This tea is known for its full-bodied, strong taste, making it a
-                            popular choice for breakfast tea blends.</div>
+        <div class="card">
+            <div class="top top top_3">
+                <div class="actions">
+                    <div class="btn btn__icon" onclick="addToCart('Sencha', '18 lei')">
+                        <i class="ri-shopping-cart-line"></i>
                     </div>
                 </div>
             </div>
-
-            <div class="card">
-                <div class="top top_14">
-                    <div class="actions">
-                        <div class="btn btn__icon"><i class="ri-shopping-cart-line"></i></div>
+            <div class="bottom">
+                <div class="info">
+                    <div class="title">
+                        <div class="text">Sencha</div>
+                        <div class="price">18 lei</div>
                     </div>
-                </div>
-                <div class="bottom">
-                    <div class="info">
-                        <div class="title">
-                            <div class="text">Darjeeling</div>
-                            <div class="price">20 lei</div>
-                        </div>
-                        <div class="description">This tea has a delicate, floral and fruity taste. It is often referred
-                            to as the "champagne of teas".</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="top top_15">
-                    <div class="actions">
-                        <div class="btn btn__icon"><i class="ri-shopping-cart-line"></i></div>
-                    </div>
-                </div>
-                <div class="bottom">
-                    <div class="info">
-                        <div class="title">
-                            <div class="text">Earl Grey</div>
-                            <div class="price">23 lei</div>
-                        </div>
-                        <div class="description">Made by blending black tea with oil of bergamot, a citrus fruit. It has
-                            a distinctive, floral and citrusy taste.</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="top top_16">
-                    <div class="actions">
-                        <div class="btn btn__icon"><i class="ri-shopping-cart-line"></i></div>
-                    </div>
-                </div>
-                <div class="bottom">
-                    <div class="info">
-                        <div class="title">
-                            <div class="text">Nimbu</div>
-                            <div class="price">25 lei</div>
-                        </div>
-                        <div class="description">
-                            It is a refreshing and soothing drink that can be consumed hot or cold and is commonly.
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="top top_17">
-                    <div class="actions">
-                        <div class="btn btn__icon"><i class="ri-shopping-cart-line"></i></div>
-                    </div>
-                </div>
-                <div class="bottom">
-                    <div class="info">
-                        <div class="title">
-                            <div class="text">Keemun</div>
-                            <div class="price">18 lei</div>
-                        </div>
-                        <div class="description">It has a rich, full-bodied taste with a vinous and fruity aroma. It is
-                            often used in breakfast tea blends.</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="top top_18">
-                    <div class="actions">
-                        <div class="btn btn__icon"><i class="ri-shopping-cart-line"></i></div>
-                    </div>
-                </div>
-                <div class="bottom">
-                    <div class="info">
-                        <div class="title">
-                            <div class="text">Pu-Erh</div>
-                            <div class="price">22 lei</div>
-                        </div>
-                        <div class="description">Pu-erh tea is known for its unique earthy, woody, and sometimes sweet
-                            flavor.</div>
-                    </div>
+                    <div class="description">Sencha is a traditional Japanese green tea with a refreshing taste and
+                        vibrant green color.</div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <section class="tea-menu container">
-        <div class="page-title subtitle">Other pecialties</div>
-        <div class="cards">
-            <div class="card">
-                <div class="top top_19">
-                    <div class="actions">
-                        <div class="btn btn__icon"><i class="ri-shopping-cart-line"></i></div>
-                    </div>
-                </div>
-                <div class="bottom">
-                    <div class="info">
-                        <div class="title">
-                            <div class="text">Forget me not</div>
-                            <div class="price">27 lei</div>
-                        </div>
-                        <div class="description">A delicate herbal tea with a subtle floral flavor, made from
-                            the blue blossoms of the forget-me-not plant.</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="top top_20">
-                    <div class="actions">
-                        <div class="btn btn__icon"><i class="ri-shopping-cart-line"></i></div>
-                    </div>
-                </div>
-                <div class="bottom">
-                    <div class="info">
-                        <div class="title">
-                            <div class="text">Iced orange</div>
-                            <div class="price">20 lei</div>
-                        </div>
-                        <div class="description">A refreshing iced tea made with orange slices, creating a drink perfect for warm days.</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="top top_21">
-                    <div class="actions">
-                        <div class="btn btn__icon"><i class="ri-shopping-cart-line"></i></div>
-                    </div>
-                </div>
-                <div class="bottom">
-                    <div class="info">
-                        <div class="title">
-                            <div class="text">Apple delight</div>
-                            <div class="price">23 lei</div>
-                        </div>
-                        <div class="description">A warm and aromatic tea made from pieces of dried apples,
-                            infused with cinnamon and a hint of sweetness.</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="top top_22">
-                    <div class="actions">
-                        <div class="btn btn__icon"><i class="ri-shopping-cart-line"></i></div>
-                    </div>
-                </div>
-                <div class="bottom">
-                    <div class="info">
-                        <div class="title">
-                            <div class="text">Travel lover</div>
-                            <div class="price">25 lei</div>
-                        </div>
-                        <div class="description">
-                            A rustic, mysterious blend of spices and herbs with a hint
-                                notes of mint and berries.
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="top top_23">
-                    <div class="actions">
-                        <div class="btn btn__icon"><i class="ri-shopping-cart-line"></i></div>
-                    </div>
-                </div>
-                <div class="bottom">
-                    <div class="info">
-                        <div class="title">
-                            <div class="text">Prickly Pear </div>
-                            <div class="price">25 lei</div>
-                        </div>
-                        <div class="description">With pears in it, the tea has a naturally sweet and pleasant taste and is one of those rare fruit teas.</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="top top_24">
-                    <div class="actions">
-                        <div class="btn btn__icon"><i class="ri-shopping-cart-line"></i></div>
-                    </div>
-                </div>
-                <div class="bottom">
-                    <div class="info">
-                        <div class="title">
-                            <div class="text">Berry Blast</div>
-                            <div class="price">22 lei</div>
-                        </div>
-                        <div class="description">With this fruit tea infused with berries, you will feel an explosion of fruity flavors in your mouth.</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="bg-primary">
-        <div class="container">
-            <footer>
-                <div class="footer-section">
-                    <p class="title">ABOUT US</p>
-                    <div class="content">
-                        <p class="description">
-                            Tech passionate girls <br>
-                            Cozy & calm places seekers
-                        </p>
-                        <p class="names">
-                        <p>Emima Ostafe <br>
-                            Florentina Dumitriu <br>
-                            Flavia Vlaisan</p>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <p class="title">Contact</p>
-                    <div class="content">
-                        <p class="address">Str. General Henri Mathias Berthelot Nr. 16, Iași </p>
-                        <p>codebrew@gmail.com</p>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <p class="title">Links</p>
-                    <div class="content">
-                        <ul>
-                            <li><a href="../pages/index.html">Home</a></li>
-                            <li><a href="../pages/newmenu.html">Menu</a></li>
-                            <li><a href="../pages/seating.html">Serve In</a></li>
-                            <li><a href="../pages/newmenu.html">Take Out</a></li>
-                            <li><a href="../pages/pay.html">Payment</a></li>
-                            <li><a href="../pages/gallery.html">Gallery</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </footer>
-        </div>
-    </section>
+    </div>
+</section>
 </body>
 
 </html>
