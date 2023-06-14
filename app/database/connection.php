@@ -14,5 +14,5 @@ try {
     echo "Connection failed: " . $e->getMessage();
     die();
 }
-
+//localStorage.getItem('cartItems')
 ?>

@@ -44,9 +44,10 @@ document.addEventListener("DOMContentLoaded", function() {
                     // Success callback
                     console.log("Order saved successfully!");
                     // Clear the cart after the order is saved
-                    localStorage.removeItem("cartItems");
+                   // localStorage.removeItem("cartItems");
                     // Redirect to the "goodbye.html" page
                     window.location.href = "goodbye.html";
+
                 } else {
                     // Error callback
                     console.error("Failed to save the order!");
