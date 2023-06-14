@@ -18,10 +18,18 @@ if (preg_match('/\.(?:png|jpg|jpeg|gif|css|js)$/', $_SERVER["REQUEST_URI"])) {
         // Send the JSON response
         header('Content-Type: application/json');
         echo json_encode($responseData);
+    } elseif ($_SERVER['REQUEST_METHOD'] === 'GET') {
+        // Handle GET requests
+        $responseData = [
+            'message' => 'API GET request successful'
+        ];
+        // Send the JSON response
+        header('Content-Type: application/json');
+        echo json_encode($responseData);
     } else {
         // Handle other HTTP methods
         header('HTTP/1.1 405 Method Not Allowed');
-        header('Allow: POST');
+        header('Allow: POST, GET');
         echo '405 Method Not Allowed';
     }
 }

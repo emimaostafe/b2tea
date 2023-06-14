@@ -1,7 +1,7 @@
 services:
   db:
     image: postgres:latest
-    container_name: web
+    container_name: webx
     environment:
       POSTGRES_DB: web
       POSTGRES_USER: postgres
