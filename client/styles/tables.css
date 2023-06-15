@@ -72,6 +72,6 @@ h1 {
 }
 
 .seating-image {
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../media/tea-1.jpg);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(tea-1.jpg);
   height: 368px;
 }

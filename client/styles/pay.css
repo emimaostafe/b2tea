@@ -28,7 +28,7 @@ h1 {
   color: var(--primary);
 }
 
-.extra, .extra_products {
+.extra {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,7 +41,7 @@ h1 {
   font-size: 36px;
 }
 
-.extra label, .extra_products label {
+.extra label {
   color: var(--primary);
   background-color: rgb(254, 255, 244);
   font-size: 20px;
@@ -57,20 +57,13 @@ h1 {
 
 .extra .sweetener input,
 .extra .milk input,
-.extra .caffeine input, 
-.extra_products .extra_sweetener input,
-.extra_products .extra_milk input,
-.extra_products .extra_caffeine input   {
+.extra .caffeine input {
   display: none;
 }
 
 .extra .milk input:checked + label,
 .extra .sweetener input:checked + label,
-.extra .caffeine input:checked + label,
-.extra_products .extra_sweetener input:checked + label,
-.extra_products .extra_milk input:checked + label, 
-.extra_products .extra_caffeine input:checked + label
-{
+.extra .caffeine input:checked + label {
   background-color: var(--primary);
   color: var(--white);
   font-weight: 700;
@@ -78,10 +71,7 @@ h1 {
 
 .sweetener,
 .milk,
-.caffeine,
-.extra_milk,
-.extra_sweetener,
-.extra_caffeine {
+.caffeine {
   justify-content: column;
   padding: 15px;
 }
@@ -182,12 +172,12 @@ button {
 }
 
 .pay-image {
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../media/trandafiri.jpg);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(trandafiri.jpg);
   height: 368px;
 }
 
 .bye-image {
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../media/masa-ceainic-natura.jpg);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(masa-ceainic-natura.jpg);
   height: 368px;
 }
 
