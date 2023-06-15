@@ -22,3 +22,6 @@
     require_once('pages/home/footer.html');
 
 ?>
+
+</body>
+</html>
