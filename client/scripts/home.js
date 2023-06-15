@@ -1,5 +1,3 @@
-// script.js
-
 window.addEventListener('DOMContentLoaded', (event) => {
     const menuTrigger = document.getElementById('menu-trigger');
     const menuContainer = document.querySelector('.meniu-coborator');
