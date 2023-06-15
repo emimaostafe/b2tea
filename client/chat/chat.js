@@ -7,7 +7,7 @@ function displayMessage(message) {
     chatContainer.appendChild(messageElement);
   }
   
-  // Funcție pentru verificarea validității mesajului
+
 // Funcție pentru verificarea validității mesajului
 function isValidMessage(message) {
     const validOptions = ["/ceai", "/cafea", "/suc", "/apa"]; // Opțiunile valide
@@ -15,7 +15,23 @@ function isValidMessage(message) {
     // Verifică dacă mesajul începe cu "/vreau"
     if (message.startsWith("/vreau")) {
       const selectedOption = message.split("/")[2]; // Obține opțiunea selectată
+
+      // Verifică dacă opțiunea selectată se regăsește în opțiunile valide
+      if (validOptions.includes("/" + selectedOption)) {
+        return true; // Mesajul este valid
+      } else if (selectedOption === "cafea") {
+        // Dacă opțiunea selectată este "cafea", afișează subopțiunile valide
+        const subOptions = ["/costa", "/lavazza", "/doncaffe", "/jacobs"];
   
+        // Verifică dacă mesajul conține o subopțiune validă
+        if (subOptions.includes(message)) {
+          return true; // Mesajul este valid
+        }
+      }
+    }
+    else {
+      const selectedOption = message.split("/")[1];
+
       // Verifică dacă opțiunea selectată se regăsește în opțiunile valide
       if (validOptions.includes("/" + selectedOption)) {
         return true; // Mesajul este valid
