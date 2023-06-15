@@ -1,11 +1,12 @@
 <?php
 
+require_once("config.php");
+
 class BaseService {
     protected $rootUrl;
 
     public function __construct() {
-        $config = include('config.php');
-        $this->rootUrl = $config['apiUrl'];
+        $this->$rootUrl = API_URL;
     }
 
     public function getData($url) {

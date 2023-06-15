@@ -1,7 +1,5 @@
 <?php
 
-$config = [
-    'apiUrl' => 'http://localhost:8123',
-];
+define('API_URL', 'http://localhost:8123');
 
 ?>

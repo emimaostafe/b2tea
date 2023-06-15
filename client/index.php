@@ -21,6 +21,8 @@
     require_once('pages/home/favorites.php');
     require_once('pages/home/footer.html');
 
+    /*    echo "<script>alert('" . "Test" . "');</script>"; */
+
 ?>
 
 </body>
