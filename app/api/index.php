@@ -1,8 +1,6 @@
 <?php
 
 // Your API endpoint
-
-
 $method=$_SERVER['REQUEST_METHOD'];
 $url=$_SERVER['REQUEST_URI'];
 echo $method . " " . $url;
