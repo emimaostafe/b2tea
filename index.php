@@ -1,7 +1,7 @@
 <?php
 
 require_once 'connection.php';
-header('Access-Control-Allow-Origin: http://localhost:8000');
+header('Access-Control-Allow-Origin: http://localhost:8123');
 
 // Serve static files
 if (preg_match('/\.(?:png|jpg|jpeg|gif|css|js)$/', $_SERVER["REQUEST_URI"])) {

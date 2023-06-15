@@ -1,6 +1,10 @@
 <?php
 
 // Your API endpoint
+$method=$_SERVER['REQUEST_METHOD'];
+$url=$_SERVER['REQUEST_URI'];
+echo $method . " " . $url;
+echo $url.split("/")[];
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Retrieve the request data
     $requestData = json_decode(file_get_contents('php://input'), true);
