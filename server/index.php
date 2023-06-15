@@ -48,13 +48,37 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
          echo json_encode($products);
      }
 
-    else if ($_SERVER['REQUEST_URI'] === '/api/products/23') {
+       echo json_encode($product);
+    }else if ($_SERVER['REQUEST_URI'] === '/api/products/23') {
+             $product = ['id' => 23, 'name' => 'ceai de tei', 'price' => 20];
 
-        $product = ['id' => 23, 'name' => 'ceai de tei', 'price' => 20];
+             header('Content-Type: application/json');
+
+
+
+    // POST orders // cu informatiile corespunzatoare (productId, preferences) => orderId
+    // orderId - comanda nr. <orderId> este in preparare
+
+    // GET orders/{id}
+    //
+
+    else if ($_SERVER['REQUEST_URI'] === '/api/orders/45') {
+        $order = [
+            'id' => 45,
+            'products' => [
+                ['id'=> 11, 'sugar'=> 'low', 'caffeine'=> 'high', 'milk' => 'none'],
+                ['id'=> 12, 'sugar'=> 'high', 'caffeine'=> 'low', 'milk' => 'all'],
+            ],
+            'price' => 132
+        ];
 
         header('Content-Type: application/json');
-        echo json_encode($product);
+        echo json_encode($order);
     }
+
+
+
+
 
     else {
         echo 'Ha ha ha! Nu primesti nimic!';
