@@ -1,9 +1,6 @@
 let cartItems = [];
 
 function addToCart(itemName, itemPrice) {
-    const storedCartItems = localStorage.getItem('cartItems');
-    const cartItems = storedCartItems ? JSON.parse(storedCartItems) : [];
-
     const item = {
         name: itemName,
         price: itemPrice,
@@ -22,6 +19,9 @@ function updateCart() {
 }
 
 window.onload = function () {
+    const storedCartItems = localStorage.getItem('cartItems');
+    cartItems = storedCartItems ? JSON.parse(storedCartItems) : [];
+
     const cartButtons = document.querySelectorAll(".btn__icon");
     cartButtons.forEach(function (button) {
         button.addEventListener("click", function () {
