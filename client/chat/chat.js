@@ -7,20 +7,62 @@ function displayMessage(message) {
     chatContainer.appendChild(messageElement);
   }
   
-  // Funcție pentru tratarea trimiterii unui mesaj
+ // Funcție pentru tratarea trimiterii unui mesaj
+function sendMessage(event) {
+    event.preventDefault();
+    const messageInput = document.getElementById('message-input');
+    const message = messageInput.value.trim(); // Elimină spațiile de la început și de la sfârșit
+  
+    if (isValidMessage(message)) { // Verifică dacă mesajul este valid
+      displayMessage(message);
+    } else {
+      displayErrorMessage('Mesajul nu este valid.'); // Afișează eroarea în chat
+    }
+  
+    messageInput.value = '';
+  }
+// Funcție pentru verificarea validității mesajului
+function isValidMessage(message) {
+    const validOptions = ["/ceai", "/cafea", "/suc", "/apa"]; // Opțiunile valide
+  
+    // Verifică dacă mesajul începe cu "/vreau"
+    if (message.startsWith("/vreau")) {
+      const selectedOption = message.split(" ")[1]; // Obține opțiunea selectată
+  
+      // Verifică dacă opțiunea selectată se regăsește în opțiunile valide
+      if (validOptions.includes(selectedOption)) {
+        return true; // Mesajul este valid
+      }
+    }
+  
+    return false; // Mesajul nu este valid
+  }
+  
   // Funcție pentru tratarea trimiterii unui mesaj
   function sendMessage(event) {
     event.preventDefault();
     const messageInput = document.getElementById('message-input');
     const message = messageInput.value.trim(); // Elimină spațiile de la început și de la sfârșit
   
-    if (message !== '') { // Verifică dacă mesajul nu este gol
+    if (isValidMessage(message)) { // Verifică dacă mesajul este valid
       displayMessage(message);
+    } else {
+      displayErrorMessage('Mesajul nu este valid.'); // Afișează eroarea în chat
     }
   
     messageInput.value = '';
   }
   
-  // Ascultă evenimentul de submit al formularului de chat
+
+  // Funcție pentru afișarea unui mesaj de eroare în chat
+function displayErrorMessage(errorMessage) {
+    const chatContainer = document.getElementById('chat-container');
+    const errorElement = document.createElement('li');
+    errorElement.className = 'error-message';
+    errorElement.textContent = errorMessage;
+    chatContainer.appendChild(errorElement);
+  }
+  
+  
   const chatForm = document.getElementById('chat-form');
   chatForm.addEventListener('submit', sendMessage);
