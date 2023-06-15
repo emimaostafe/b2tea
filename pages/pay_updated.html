@@ -12,6 +12,9 @@
 
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet">
     <!-- <script src='main.js'></script> -->
+    <script src="../app/scripts/pay.js"></script>
+    <script src="../app/scripts/addtocart.js"></script>
+
 </head>
 
 <body>
@@ -56,177 +59,13 @@
     </div>
 
     <div class="container">
-        <div class="extras">
-            <div class="subtitle">extras</div>
-
-            <div class="extra">
-
-                <!-- <div class="size">
-                    <h2>Beverage Size</h2>
-                    <div class="inputs">
-                        <input type="radio" name="radio0" id="small" value="small"><label class="small-label"
-                            for="small">Small</label>
-                        <input type="radio" name="radio0" id="medium" value="medium"><label class="medium-label"
-                            for="medium">Medium</label>
-                        <input type="radio" name="radio0" id="large" value="large"><label class="large-label"
-                            for="large">Large</label>
-                    </div>
-                </div> -->
-
-                <div class="sweetener">
-                    <h2>Sweetener</h2>
-                    <div class="inputs">
-                        <input type="radio" name="radio1" id="sugar" value="sugar"><label class="sugar-label"
-                            for="sugar">Sugar</label>
-                        <input type="radio" name="radio1" id="honey" value="honey"><label class="honey-label"
-                            for="honey">Honey</label>
-                        <input type="radio" name="radio1" id="nosugar" value="nosugar"><label class="nosugar-label"
-                            for="nosugar">None</label>
-                    </div>
-                </div>
-
-
-                <div class="milk">
-                    <h2>Milk</h2>
-                    <div class="inputs">
-                        <input type="radio" name="radio3" id="diary" value="diary"><label class="diary-label four col"
-                            for="diary">Diary</label>
-                        <input type="radio" name="radio3" id="vegetal" value="vegetal"><label
-                            class="vegetal-label four col" for="vegetal">Vegetal</label>
-                        <input type="radio" name="radio3" id="nomilk" value="nomilk"><label
-                            class="nomilk-label four col" for="nomilk">None</label>
-                    </div>
-                </div>
-
-
-                <div class="caffeine">
-                    <h2>Caffeine level</h2>
-                    <div class="inputs">
-                        <input type="radio" name="radio4" id="light" value="light"><label class="light-label four col"
-                            for="light">Light</label>
-                        <input type="radio" name="radio4" id="regular" value="regular"><label
-                            class="regular-label four col" for="regular">Regular</label>
-                        <input type="radio" name="radio4" id="strong" value="strong"><label
-                            class="strong-label four col" for="strong">Intense</label>
-                    </div>
-                </div>
-            </div>
-        </div>
-
 
         <div class="receipt">
 
-            <div class="subtitle">receipt</div>
             <div class="section">
-                <div class="product">
-                    <div class="name">Apple Delight</div>
-                    <div class="extras">
-                        <div class="extra_products">
-                            <div class="extra_sweetener">
-                                <div class="inputs">
-                                    <input type="radio" name="radio01" id="sugar" value="sugar"><label class="sugar-label"
-                                        for="sugar">Sugar</label>
-                                    <input type="radio" name="radio01" id="honey" value="honey"><label class="honey-label"
-                                        for="honey">Honey</label>
-                                    <input type="radio" name="radio01" id="nosugar" value="nosugar"><label class="nosugar-label"
-                                        for="nosugar">None</label>
-                                </div>
-                            </div>
-                            <div class="extra_milk">
-                                <div class="inputs">
-                                    <input type="radio" name="radio01" id="diary" value="diary"><label class="diary-label four col"
-                                        for="diary">Diary</label>
-                                    <input type="radio" name="radio03" id="vegetal" value="vegetal"><label
-                                        class="vegetal-label four col" for="vegetal">Vegetal</label>
-                                    <input type="radio" name="radio03" id="nomilk" value="nomilk"><label
-                                        class="nomilk-label four col" for="nomilk">None</label>
-                                </div>
-                            </div>
-                            <div class="extra_caffeine">
-                                <div class="inputs">
-                                    <input type="radio" name="radio04" id="light" value="light"><label class="light-label four col"
-                                        for="light">Light</label>
-                                    <input type="radio" name="radio04" id="regular" value="regular"><label
-                                        class="regular-label four col" for="regular">Regular</label>
-                                    <input type="radio" name="radio04" id="strong" value="strong"><label
-                                        class="strong-label four col" for="strong">Intense</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="price">18 lei</div>
-                <div class="remove">
-                    <div class="icon-item"><i class="ri-delete-bin-line"></i></div>
-                </div>
+                <div class="add-to-cart"></div>
+
             </div>
-
-
-            <div class="section">
-                <div class="product">
-                    <div class="name">Iced Orange</div>
-                        <div class="extras">
-                            <div class="extra_products">
-                                <div class="extra_sweetener">
-                                    <div class="inputs">
-                                        <input type="radio" name="radio001" id="sugar" value="sugar001"><label class="sugar-label"
-                                            for="sugar">Sugar</label>
-                                        <input type="radio" name="radio001" id="honey" value="honey"><label class="honey-label"
-                                            for="honey">Honey</label>
-                                        <input type="radio" name="radio001" id="nosugar" value="nosugar"><label class="nosugar-label"
-                                            for="nosugar">None</label>
-                                    </div>
-                                </div>
-                                <div class="extra_milk">
-                                    <div class="inputs">
-                                        <input type="radio" name="radio002" id="diary" value="diary"><label class="diary-label four col"
-                                            for="diary">Diary</label>
-                                        <input type="radio" name="radio002" id="vegetal" value="vegetal"><label
-                                            class="vegetal-label four col" for="vegetal">Vegetal</label>
-                                        <input type="radio" name="radio002" id="nomilk" value="nomilk"><label
-                                            class="nomilk-label four col" for="nomilk">None</label>
-                                    </div>
-                                </div>
-                                <div class="extra_caffeine">
-                                    <div class="inputs">
-                                        <input type="radio" name="radio004" id="light" value="light"><label class="light-label four col"
-                                            for="light">Light</label>
-                                        <input type="radio" name="radio004" id="regular" value="regular"><label
-                                            class="regular-label four col" for="regular">Regular</label>
-                                        <input type="radio" name="radio04" id="strong" value="strong"><label
-                                            class="strong-label four col" for="strong">Intense</label>
-                                    </div>
-                                </div>
-                            </div>
-                    </div>
-                </div>
-                <div class="price">25 lei</div>
-                <div class="remove">
-                    <div class="icon-item"><i class="ri-delete-bin-line"></i></div>
-                </div>
-            </div>
-
-
-            <div class="section">
-                <div class="product">
-                    <div class="name">Matcha</div>
-                </div>
-                <div class="price">21 lei</div>
-                <div class="remove">
-                    <div class="icon-item"><i class="ri-delete-bin-line"></i></div>
-                </div>
-            </div>
-
-
-            <div class="section">
-                <div class="product">
-                    <div class="name">Earl Grey</div>
-                </div>
-                <div class="price">14 lei</div><div class="remove">
-                    <div class="icon-item"><i class="ri-delete-bin-line"></i></div>
-                </div>
-            </div>
-
 
             <div class="end-section">
                 <div class="total">

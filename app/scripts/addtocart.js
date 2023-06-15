@@ -1,14 +1,33 @@
-function addToCart(title, price) {
-    // Get the cart items from localStorage
-    let cartItems = localStorage.getItem('cartItems');
-    if (cartItems) {
-        // If cartItems exists, parse it from JSON and add the new item
-        cartItems = JSON.parse(cartItems);
-        cartItems.push({ title, price });
-    } else {
-        // If cartItems doesn't exist, create a new array with the new item
-        cartItems = [{ title, price }];
-    }
-    // Store the updated cart items in localStorage
+let cartItems = [];
+
+function addToCart(itemName, itemPrice) {
+    const storedCartItems = localStorage.getItem('cartItems');
+    const cartItems = storedCartItems ? JSON.parse(storedCartItems) : [];
+
+    const item = {
+        name: itemName,
+        price: itemPrice,
+    };
+    cartItems.push(item);
+    updateCart();
+    console.log("Item added to cart:", item);
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
 }
+
+function updateCart() {
+    const cartElement = document.querySelector(".icon-item .ri-shopping-bag-line");
+    if (cartElement) {
+        cartElement.setAttribute("data-count", cartItems.length);
+    }
+}
+
+window.onload = function () {
+    const cartButtons = document.querySelectorAll(".btn__icon");
+    cartButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+            const itemName = this.parentNode.parentNode.parentNode.querySelector(".text").textContent;
+            const itemPrice = this.parentNode.parentNode.parentNode.querySelector(".price").textContent;
+            addToCart(itemName, itemPrice);
+        });
+    });
+};
