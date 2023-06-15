@@ -48,19 +48,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
          echo json_encode($products);
      }
 
-       echo json_encode($product);
-    }else if ($_SERVER['REQUEST_URI'] === '/api/products/23') {
+
+    else if ($_SERVER['REQUEST_URI'] === '/api/products/23') {
              $product = ['id' => 23, 'name' => 'ceai de tei', 'price' => 20];
 
              header('Content-Type: application/json');
 
 
-
-    // POST orders // cu informatiile corespunzatoare (productId, preferences) => orderId
-    // orderId - comanda nr. <orderId> este in preparare
-
-    // GET orders/{id}
-    //
+    }
 
     else if ($_SERVER['REQUEST_URI'] === '/api/orders/45') {
         $order = [
@@ -76,14 +71,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         echo json_encode($order);
     }
 
-
-
-
-
     else {
         echo 'Ha ha ha! Nu primesti nimic!';
     }
- }
+   }
+
 
 /*
 header('HTTP/1.1 405 Method Not Allowed');
