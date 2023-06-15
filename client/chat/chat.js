@@ -8,6 +8,7 @@ function displayMessage(message) {
   }
   
   // Funcție pentru verificarea validității mesajului
+// Funcție pentru verificarea validității mesajului
 function isValidMessage(message) {
     const validOptions = ["/ceai", "/cafea", "/suc", "/apa"]; // Opțiunile valide
   
@@ -18,21 +19,40 @@ function isValidMessage(message) {
       // Verifică dacă opțiunea selectată se regăsește în opțiunile valide
       if (validOptions.includes("/" + selectedOption)) {
         return true; // Mesajul este valid
+      } else if (selectedOption === "cafea") {
+        // Dacă opțiunea selectată este "cafea", afișează subopțiunile valide
+        const subOptions = ["/costa", "/lavazza", "/doncaffe", "/jacobs"];
+  
+        // Verifică dacă mesajul conține o subopțiune validă
+        if (subOptions.includes(message)) {
+          return true; // Mesajul este valid
+        }
       }
     }
   
     return false; // Mesajul nu este valid
   }
   
+  // Funcție pentru tratarea mesajelor de tip "cafea"
+function handleCafeaMessage(message) {
+    const subOptions = ["/costa", "/lavazza", "/doncaffe", "/jacobs"];
+    const subOptionsMessage = "Alege una din opțiunile următoare:\n" + subOptions.join("\n");
   
+    // Afișează mesajul cu opțiunile de submeniu
+    displayMessage(subOptionsMessage);
+  }
   // Funcție pentru tratarea trimiterii unui mesaj
-  function sendMessage(event) {
+function sendMessage(event) {
     event.preventDefault();
     const messageInput = document.getElementById('message-input');
     const message = messageInput.value.trim(); // Elimină spațiile de la început și de la sfârșit
   
     if (isValidMessage(message)) { // Verifică dacă mesajul este valid
-      displayMessage(message);
+      if (message.startsWith("/vreau/cafea")) {
+        handleCafeaMessage(message); // Tratează mesajele de tip "cafea"
+      } else {
+        displayMessage(message); // Afișează mesajul în chat
+      }
     } else {
       displayErrorMessage('Mesajul nu este valid.'); // Afișează eroarea în chat
     }
