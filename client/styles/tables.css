@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+p {
+  font-family: 'Poppins', sans-serif;
+  font-size: larger;
+  text-align: center;
+}
+a {
+  font-family: 'Poppins', sans-serif;
+  color: #000;
+}
+a:hover {
+  font-family: 'Poppins', sans-serif;
+  color: #446349;
+}
+
+h1 {
+  text-align: center;
+}
+
+.unavailable {
+  pointer-events: none;
+  opacity: 0.3;
+  text-decoration: line-through;
+}
+
+#rect-table,
+#round-table {
+  cursor: pointer;
+  transition: fill 0.3s ease;
+}
+
+#rect-table:hover,
+#round-table:hover {
+  fill: #314731;
+}
+
+.table-container1,
+.table-container2,
+.table-container3 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+  margin: 50px auto;
+
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.table-shape svg {
+  width: 200px;
+  height: 180px;
+}
+
+#round-table {
+  fill: #5b7256;
+}
+
+#rect-table {
+  width: 90px;
+  height: 90px;
+  fill: #5b7256;
+}
+
+#seat {
+  fill: #273e2b;
+}
+
+.container .seating-area {
+  background-color: #c4d7c0;
+  padding: 30px;
+}
+
+.seating-image {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(tea-1.jpg);
+  height: 368px;
+}

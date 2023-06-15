@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+
+h1 {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+p {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  font-size: 20px;
+  align-items: center;
+  flex-direction: row;
+  font-family: 'Poppins', sans-serif;
+  justify-content: space-around;
+}
+
+.container {
+  padding: 10px;
+}
+
+.container .gallery {
+  background-color: #c4d7c0;
+  display: inline-flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.container .gallery2 {
+  background-color: #c4d7c0;
+  display: inline-flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.gallery img {
+  width: 200px;
+  height: 250px;
+  margin: 30px;
+  border-radius: 10px;
+}
+
+.gallery2 img {
+  width: 200px;
+  height: 250px;
+  margin: 30px 40px;
+  gap: 25px;
+  border-radius: 10px;
+}
+
+.pay-image {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+}
+
+.gallery-image {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(poetry-lovers.jpg);
+  height: 368px;
+  padding: 50px;
+}
+
+.landing .gallery-image .subtitle {
+  font-size: 20px;
+}
+
+.subtitle,
+.landing .subtitle {
+  font-size: 30px;
+}
