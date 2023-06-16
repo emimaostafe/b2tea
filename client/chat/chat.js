@@ -113,10 +113,6 @@ function handleCommand(message) {
 
         displayMessage("Ați ales să mai comandați ceva. Opțiuni: apa, ceai, cafea");
 
-      else
-
-        displayMessage("Vă rugăm să introduceți un mesaj de tipul Da sau Nu.");
-
   }
 
   else {
