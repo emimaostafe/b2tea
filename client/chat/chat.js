@@ -8,6 +8,8 @@ function displayMessage(message) {
   }
   
 
+
+
 // Funcție pentru verificarea validității mesajului
 function isValidMessage(message) {
     const validOptions = ["/ceai", "/cafea", "/suc", "/apa"]; // Opțiunile valide
@@ -32,22 +34,21 @@ function isValidMessage(message) {
     else {
       const selectedOption = message.split("/")[1];
 
-      // Verifică dacă opțiunea selectată se regăsește în opțiunile valide
       if (validOptions.includes("/" + selectedOption)) {
-        return true; // Mesajul este valid
+        return true;
       } else if (selectedOption === "cafea") {
-        // Dacă opțiunea selectată este "cafea", afișează subopțiunile valide
         const subOptions = ["/costa", "/lavazza", "/doncaffe", "/jacobs"];
-  
-        // Verifică dacă mesajul conține o subopțiune validă
         if (subOptions.includes(message)) {
-          return true; // Mesajul este valid
+          return true;
         }
+
       }
     }
   
     return false; // Mesajul nu este valid
   }
+
+
   
   // Funcție pentru tratarea mesajelor de tip "cafea"
 function handleCafeaMessage(message) {
@@ -57,6 +58,19 @@ function handleCafeaMessage(message) {
     // Afișează mesajul cu opțiunile de submeniu
     displayMessage(subOptionsMessage);
   }
+
+  // Funcție pentru tratarea mesajelor de tip "opțiuni pentru cafea"
+
+  function optionCafeaMessage(message) {
+
+    const subOptions = ["/intensitate", "/zahar", "/lapte"];
+    const subOptionsMessage = "Alege una din opțiunile următoare:\n" + subOptions.join("\n");
+
+    displayMessage(subOptionsMessage);
+
+  }
+
+
   // Funcție pentru tratarea trimiterii unui mesaj
 function sendMessage(event) {
     event.preventDefault();
@@ -75,6 +89,9 @@ function sendMessage(event) {
   
     messageInput.value = '';
   }
+
+
+
   
   // Funcție pentru afișarea unui mesaj de eroare în chat
   function displayErrorMessage(errorMessage) {
