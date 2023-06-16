@@ -13,7 +13,7 @@
         <div class="card" style="background-image: url(<?php echo $product['imageUrl']; ?>)">
             <div class="top top top_1">
                 <div class="actions">
-                    <div class="btn btn__icon" onclick="addToCart('Jasmine', '15 lei')">
+                    <div class="btn btn__icon" >
                         <i class="ri-shopping-cart-line"></i>
                     </div>
                 </div>

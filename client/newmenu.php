@@ -23,7 +23,7 @@
     /*    echo "<script>alert('" . "Test" . "');</script>"; */
 
 ?>
-
+<script src="../scripts/addtocart.js"></script>
 </body>
 </html>
 
