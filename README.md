@@ -32,6 +32,3 @@ GET /api/tables
 
 GET /api/orders
 GET /api/orders/{id}
-
-
-
