@@ -18,39 +18,53 @@ p {
 
 .container {
   padding: 10px;
+  width: 70%;
 }
 
 .container .gallery {
-  background-color: #c4d7c0;
+  background-color: #2d3d29;
   display: inline-flex;
   justify-content: space-around;
   flex-wrap: wrap;
   width: 100%;
+
 }
 
 .container .gallery2 {
-  background-color: #c4d7c0;
+  background-color: #2d3d29;
   display: inline-flex;
   justify-content: space-around;
   flex-wrap: wrap;
   width: 100%;
 }
 
-.gallery img {
-  width: 200px;
-  height: 250px;
+.container .gallery img {
+  width: 300px; /* Adjust the width to your desired size */
+  height: 400px; /* Adjust the height to your desired size */
+  object-fit: cover;
   margin: 30px;
   border-radius: 10px;
 }
 
+
 .gallery2 img {
-  width: 200px;
-  height: 250px;
-  margin: 30px 40px;
-  gap: 25px;
+  width: 300px; /* Adjust the width to your desired size */
+  height: 400px; /* Adjust the height to your desired size */
+  object-fit: cover;
+  margin: 30px;
+
   border-radius: 10px;
 }
+.gallery2 img,
+.gallery img{
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
 
+.gallery2 img:hover,
+.gallery img:hover{
+  transform: scale(1.1);
+}
 .pay-image {
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
 }
@@ -64,8 +78,35 @@ p {
 .landing .gallery-image .subtitle {
   font-size: 20px;
 }
+.container {
+  position: relative; /* Add position relative to the container */
+}
+
 
 .subtitle,
 .landing .subtitle {
   font-size: 30px;
+}
+#nextButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-size: 70px;
+  padding: 0px 20px;
+  color: #3f523b;
+  justify-content: center;
+  margin-right: 20%;
+}
+
+#nextButton::before {
+  content: '\2192';
+  display: block;
+}
+@media screen and (max-width: 450px) {
+  .gallery img,
+  .gallery2 img {
+
+    scale: 90%;
+  }
 }
