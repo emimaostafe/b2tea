@@ -59,16 +59,16 @@ function handleCafeaMessage(message) {
     displayMessage(subOptionsMessage);
   }
 
-  // Funcție pentru tratarea mesajelor de tip "opțiuni pentru cafea"
+  // Funcție pentru tratarea mesajelor de tip "opțiuni pentru cafea" (incercare)
 
-  function optionCafeaMessage(message) {
+  // function optionCafeaMessage(message) {
 
-    const subOptions = ["/intensitate", "/zahar", "/lapte"];
-    const subOptionsMessage = "Alege una din opțiunile următoare:\n" + subOptions.join("\n");
+  //   const subOptions = ["/intensitate", "/zahar", "/lapte"];
+  //   const subOptionsMessage = "Alege una din opțiunile următoare:\n" + subOptions.join("\n");
 
-    displayMessage(subOptionsMessage);
+  //   displayMessage(subOptionsMessage);
 
-  }
+  // }
 
 
   // Funcție pentru tratarea trimiterii unui mesaj
