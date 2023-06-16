@@ -23,11 +23,22 @@ $uri = explode( '/', $uri );
 
 $httpreq = new Request;
 
+
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
     if ($httpreq->getUri() === '/api/request') {
 
-        echo $httpreq->getCompleteHttpRequest();
+        //echo $httpreq->getCompleteHttpRequest();
+        // am nevoie doar de user agent, e singurul header care imi da informatii despre client
+        //$userAgent = $_SERVER['HTTP_USER_AGENT'];
+        //echo $userAgent;
+
+        if (isset($_SERVER['HTTP_REFERER'])) {
+            $referer = $_SERVER['HTTP_REFERER'];
+            echo $referer;
+        } else {
+            echo "Referer header not provided\n";
+        }
     
     }
 
