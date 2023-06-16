@@ -22,7 +22,7 @@
                 <div class="info">
                     <div class="title">
                         <div class="text"><?php echo $product["name"] ?></div>
-                        <div class="price"><?php echo $product["price"] ?></div>
+                        <div class="price"><?php echo $product["price"] ?> $</div>
                     </div>
                       <div class="description"><?php echo $product["description"] ?></div>
                 </div>

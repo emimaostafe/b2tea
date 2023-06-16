@@ -31,3 +31,10 @@ window.onload = function () {
         });
     });
 };
+// Add event listener to "Pay Now" button
+const payNowButton = document.getElementById('payNowButton');
+payNowButton.addEventListener('click', function () {
+    // Clear the cart items from local storage
+    localStorage.removeItem('cartItems');
+
+});
