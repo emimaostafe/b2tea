@@ -3,6 +3,7 @@
 
     $productService = new ProductsService();
     $products = $productService->getFavoriteProducts();
+    include("favorites_template.html");
 ?>
 
 <section>
