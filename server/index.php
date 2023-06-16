@@ -1,6 +1,7 @@
 <?php
 
 require_once('php/urlValidation.php');
+require_once('php/request.php');
 /* require_once('controllers/')
 
 use controllers\OrdersController;
@@ -20,11 +21,17 @@ $url = $_SERVER['REQUEST_URI'];
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 $uri = explode( '/', $uri );
 
+$httpreq = new Request;
+
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
-     if ($_SERVER['REQUEST_URI'] === '/api/products') {
+    if ($httpreq->getUri() === '/api/request') {
 
-        // $contoller = new ProductsController($dbConnection, )
+        echo $httpreq->getCompleteHttpRequest();
+    
+    }
+
+     if ($_SERVER['REQUEST_URI'] === '/api/products') {
 
          $products = [
              ['id' => 1, 'name' => 'Product 1', 'price' => 10.99],
@@ -37,24 +44,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
      }
 
      else if ($_SERVER['REQUEST_URI'] === '/api/products/favorites') {
-          $products = [
-             ['id' => 11, 'imageUrl' => 'https://i.ibb.co/xmc453j/travel-lover.jpg', 'name' => 'Forget Me Not', 'rating' => 4.3, 'description' => 'A delicate herbal tea with a subtle floral flavor, made from the blue blossoms of the forget-me-not plant.'],
-             ['id' => 12, 'imageUrl' => 'https://i.ibb.co/LJq2Tfg/iced-tea.jpg', 'name' => 'Iced Orange', 'rating' => 4.7, 'description' => 'A refreshing iced tea made with fresh orange slices and a touch of rosemary, creating a zesty and invigorating drink perfect for warm days.'],
-             ['id' => 13, 'imageUrl' => 'https://i.ibb.co/Gd0LgHm/sixteen-miles-out-lz-QCA9s-Wpw0-unsplash.jpg', 'name' => 'Apple Delight', 'rating' => 4.5, 'description' => 'A warming and aromatic tea made from dried apple pieces, infused with cinnamon and a hint of honey sweetness.'],
-             ['id' => 14, 'imageUrl' => 'https://i.ibb.co/FxcLkkZ/nu-ma-uita.jpg', 'name' => 'Travel Lover', 'rating' => 4.6, 'description' => 'A rustic, mysterious blend of spices and herbs, with a hint of mint and forest fruis notes, to awaken your senses and inspire your travels.']
-         ];
+        $products = [
+            ['id' => 11, 'imageUrl' => 'https://i.ibb.co/xmc453j/travel-lover.jpg', 'name' => 'Forget Me Not', 'rating' => 4.3, 'description' => 'A delicate herbal tea with a subtle floral flavor, made from the blue blossoms of the forget-me-not plant.'],
+            ['id' => 12, 'imageUrl' => 'https://i.ibb.co/LJq2Tfg/iced-tea.jpg', 'name' => 'Iced Orange', 'rating' => 4.7, 'description' => 'A refreshing iced tea made with fresh orange slices and a touch of rosemary, creating a zesty and invigorating drink perfect for warm days.'],
+            ['id' => 13, 'imageUrl' => 'https://i.ibb.co/Gd0LgHm/sixteen-miles-out-lz-QCA9s-Wpw0-unsplash.jpg', 'name' => 'Apple Delight', 'rating' => 4.5, 'description' => 'A warming and aromatic tea made from dried apple pieces, infused with cinnamon and a hint of honey sweetness.'],
+            ['id' => 14, 'imageUrl' => 'https://i.ibb.co/FxcLkkZ/nu-ma-uita.jpg', 'name' => 'Travel Lover', 'rating' => 4.6, 'description' => 'A rustic, mysterious blend of spices and herbs, with a hint of mint and forest fruis notes, to awaken your senses and inspire your travels.']
+        ];
 
-         header('Content-Type: application/json');
-         echo json_encode($products);
+        header('Content-Type: application/json');
+        echo json_encode($products);
      }
 
 
     else if ($_SERVER['REQUEST_URI'] === '/api/products/23') {
-             $product = ['id' => 23, 'name' => 'ceai de tei', 'price' => 20];
+        $product = ['id' => 23, 'name' => 'ceai de tei', 'price' => 20];
 
-             header('Content-Type: application/json');
-
-
+        header('Content-Type: application/json');
     }
 
     else if ($_SERVER['REQUEST_URI'] === '/api/orders/45') {
