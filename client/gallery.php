@@ -21,14 +21,7 @@
     require_once('components/navbar.html');
     require_once('pages/gallery/body.html');
     require_once('components/footer.html');
-
-    /*    echo "<script>alert('" . "Test" . "');</script>"; */
-
 ?>
-
-
-
-
 
 </body>
 

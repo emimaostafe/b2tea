@@ -17,12 +17,11 @@ p {
 }
 
 .container {
-  padding: 10px;
   width: 70%;
 }
 
 .container .gallery {
-  background-color: #997070;
+  background-color: #C9A9A6;
   display: inline-flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -31,7 +30,7 @@ p {
 }
 
 .container .gallery2 {
-  background-color: #997070;
+  background-color: #C9A9A6;
   display: inline-flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -52,7 +51,6 @@ p {
   height: 400px; /* Adjust the height to your desired size */
   object-fit: cover;
   margin: 30px;
-
   border-radius: 10px;
 }
 .gallery2 img,
@@ -65,23 +63,23 @@ p {
 .gallery img:hover{
   transform: scale(1.1);
 }
+
 .pay-image {
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url('../media/berry-tea.jpg');
-}
-
-.gallery-image {
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../media/berry-tea.jpg');
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url('../media/apple-spice.jpg');
   height: 368px;
-  padding: 50px;
 }
-
 .landing .gallery-image .subtitle {
   font-size: 20px;
+
 }
 .container {
   position: relative; /* Add position relative to the container */
 }
-
+.containerx{
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .subtitle,
 .landing .subtitle {
