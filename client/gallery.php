@@ -9,21 +9,27 @@
 
     <link rel="stylesheet" href="../styles/defaults.css">
     <link rel="stylesheet" href="../styles/home.css">
-    <link rel="stylesheet" href="../styles/favorites.css">
+    <link rel="stylesheet" href="../styles/gallery.css">
 
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- <script src='main.js'></script> -->
 </head>
+
 <body>
 
 <?php
     require_once('components/navbar.html');
-    require_once('pages/home/header.html');
-    require_once('pages/home/favorites.php');
+    require_once('pages/gallery/body.html');
     require_once('components/footer.html');
 
     /*    echo "<script>alert('" . "Test" . "');</script>"; */
 
 ?>
 
+
+
+
+
 </body>
+
 </html>

@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="landing bye-image">
+        <div class="title">PAYMENT</div>
+    </div>
+    <section>
+        <div class="succes=">
+                <div class="subtitle">How would you like to pay?</div>
+                <a href="/cardPay.php" class="pay-button" id="cardButton">Card</a>
+                <a href="/goodbye.php" class="pay-button" id="payNowButton">Cash</a>
+
+
+        </div>
+    </section>
+</div>
+<script>
+    // Add event listener to "Pay Now" button
+    const payNowButton = document.getElementById('payNowButton');
+    payNowButton.addEventListener('click', function () {
+        // Clear the cart items from local storage
+        localStorage.removeItem('cartItems');
+
+    });
+</script>

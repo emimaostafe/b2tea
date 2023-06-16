@@ -71,10 +71,7 @@ h1 {
 
 .sweetener,
 .milk,
-.caffeine {
-  justify-content: column;
-  padding: 15px;
-}
+
 
 .inputs {
   display: flex;
@@ -110,7 +107,7 @@ h1 {
   font-size: 18px;
   display: flex;
   flex-direction: column;
-  align-items: space-between;
+
   padding: 0px;
 }
 

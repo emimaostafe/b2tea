@@ -12,7 +12,7 @@
                         <div class="table-shape">
                             <svg>
                                 <!-- table -->
-                                <a href="./goodbye.html">
+                                <a href="./pay.php">
                                     <circle id="round-table4" r="45" cx="90" cy="90" />
                                     <text x="45%" y="53%" text-anchor="middle" font-size="20" fill="white">Table 1</text>
                                 </a>

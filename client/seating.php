@@ -17,12 +17,11 @@
 <body>
 
 <?php
-
-    require_once('pages/seating/header.php');
+    require_once('components/navbar.html');
+    require_once('pages/seating/header.html');
     require_once('pages/seating/seats.php');
-    require_once('pages/seating/footer.php');
-    require_once('pages/home/footer.php');
-
+    require_once('pages/seating/footer.html');
+    require_once('components/footer.html');
 ?>
 </body>
 </html>
