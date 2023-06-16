@@ -2,19 +2,17 @@
 <html>
 
 <head>
-    <title>payment page</title>
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <title>B2Tea</title>
+
     <link rel="stylesheet" href="../styles/defaults.css">
     <link rel="stylesheet" href="../styles/home.css">
-    <link rel="stylesheet" href="../styles/pay.css">
-
+    <link rel="stylesheet" href="../styles/gallery.css">
 
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet">
     <!-- <script src='main.js'></script> -->
-    <script src="../scripts/pay.js"></script>
-    <script src="../scripts/addtocart.js"></script>
-
 </head>
 
 <body>
@@ -30,12 +28,10 @@
                 </div>
 
                 <ul class="options">
-                    <li><a href="ml">Home</a></li>
-                    <li><a href="html">Menu</a></li>
-                    <li><a href="html">Serve In</a></li>
-                    <li><a href="html">Take Out</a></li>
-                    <li><a href="">Payment</a></li>
-                    <li><a href="html">Gallery</a></li>
+                    <li><a href="/index.php">Home</a></li>
+                    <li><a href="/newmenu.php">Menu</a></li>
+                    <li><a href="/pay.php">Payment</a></li>
+                    <li><a href="/gallery.php">Gallery</a></li>
                 </ul>
             </div>
 
@@ -43,7 +39,6 @@
                 <h5><span>&lt;code&gt;</span> brew</h5>
             </div>
             <div class="actions">
-                <!-- <div class="icon-item search"><i class="ri-search-line"></i></div> -->
                 <a href="" class="icon-item">
                     <i class="ri-shopping-bag-line"></i>
                 </a>
@@ -53,42 +48,48 @@
     </div>
 
     <div class="container">
-        <div class="landing pay-image">
-            <div class="title">MY ORDER</div>
+        <div class="landing gallery-image">
+            <div class="title">Gallery</div>
         </div>
     </div>
-
-    <div class="container">
-
-        <div class="receipt">
-
-            <div class="section">
-                <div class="add-to-cart"></div>
-
+    <section>
+        <div class="container">
+            <div class="gallery">
+                <img src="../media/image2.jpg" alt="Image 2">
+                <img src="../media/image3.jpg" alt="Image 3">
+                <img src="../media/image4.jpg" alt="Image 4">
+                <img src="../media/image5.jpg" alt="Image 5">
+                <img src="../media/image6.jpg" alt="Image 6">
+                <img src="../media/image7.jpg" alt="Image 7">
             </div>
-
-            <div class="end-section">
-                <div class="total">
-                    <div class="name">Total:</div>
-                </div>
-                <div class="total-price">78 lei</div>
-                
-            </div>
-            <section>
-                <div class="end-section">
-                    <div class="product">
-                        <div class="name">Date and time</div>
-                    </div>
-                    <div class="price">10/04/2023</div>
-                    <div class="price">10:31</div>
-                </div>
-            </section>
-
         </div>
+
         <section>
-            <a href="goodbye.html" class="pay-button">Pay Now</a>
+            <div class="container">
+                <div class="subtitle">Firefox & Pixel</div>
+                <p>Say hello to FireFox and Pixel, the charming cats who have made our tea shop their home.
+                    FireFox, with her vibrant orange coat and wild energy, is always ready to play and keep everyone on
+                    their
+                    toes.
+                    While FireFox is always ready for action (just like an orange cat), Pixel is a more laid-back cat
+                    who
+                    enjoys
+                    spending his days napping and lounging around the shop. Together, these two furry friends bring joy
+                    and
+                    warmth
+                    to our tea-loving community, and we couldn't imagine our shop without them.
+                </p>
+            </div>
         </section>
-    </div>
+
+        <div class="container">
+            <div class="gallery2">
+                <img src="../media/cat4.jpg" alt="Image 8">
+                <img src="../media/cat3.jpg" alt="Image 9">
+                <img src="../media/cat2.jpg" alt="Image 10">
+            </div>
+        </div>
+    </section>
 
     <section class="bg-primary">
         <div class="container">
@@ -100,10 +101,11 @@
                             Tech passionate girls <br>
                             Cozy & calm places seekers
                         </p>
-                        <p class="names">
+                        <p class="names"></p>
                         <p>Emima Ostafe <br>
                             Florentina Dumitriu <br>
-                            Flavia Vlaisan</p>
+                            Flavia Vlaisan
+                        </p>
                     </div>
                 </div>
                 <div class="footer-section">
@@ -122,14 +124,13 @@
                             <li><a href="html">Serve In</a></li>
                             <li><a href="html">Take Out</a></li>
                             <li><a href="">Payment</a></li>
-                            <li><a href="html">Gallery</a></li>
+                            <li><a href="/gallery.html">Gallery</a></li>
                         </ul>
                     </div>
                 </div>
             </footer>
         </div>
     </section>
-
 </body>
 
 </html>
