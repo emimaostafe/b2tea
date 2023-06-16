@@ -10,7 +10,7 @@ a {
 }
 a:hover {
   font-family: 'Poppins', sans-serif;
-  color: #446349;
+  color: #7F525D;
 }
 
 h1 {
@@ -23,15 +23,15 @@ h1 {
   text-decoration: line-through;
 }
 
-#rect-table,
+
 #round-table {
   cursor: pointer;
   transition: fill 0.3s ease;
 }
 
-#rect-table:hover,
+
 #round-table:hover {
-  fill: #314731;
+  fill: #550A35;
 }
 
 .table-container1,
@@ -53,17 +53,11 @@ h1 {
 }
 
 #round-table {
-  fill: #5b7256;
-}
-
-#rect-table {
-  width: 90px;
-  height: 90px;
-  fill: #5b7256;
+  fill: #7F525D;
 }
 
 #seat {
-  fill: #273e2b;
+  fill: #550A35;
 }
 
 .container .seating-area {
@@ -72,6 +66,7 @@ h1 {
 }
 
 .seating-image {
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(tea-1.jpg);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url('../media/perfect-matcha.jpg');
+
   height: 368px;
 }

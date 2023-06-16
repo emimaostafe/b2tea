@@ -22,7 +22,7 @@ p {
 }
 
 .container .gallery {
-  background-color: #2d3d29;
+  background-color: #997070;
   display: inline-flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -31,7 +31,7 @@ p {
 }
 
 .container .gallery2 {
-  background-color: #2d3d29;
+  background-color: #997070;
   display: inline-flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -66,11 +66,11 @@ p {
   transform: scale(1.1);
 }
 .pay-image {
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url('../media/berry-tea.jpg');
 }
 
 .gallery-image {
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(poetry-lovers.jpg);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../media/berry-tea.jpg');
   height: 368px;
   padding: 50px;
 }
@@ -92,9 +92,9 @@ p {
   border: none;
   cursor: pointer;
   font-family: 'Poppins', sans-serif;
-  font-size: 70px;
+  font-size: 100px;
   padding: 0px 20px;
-  color: #3f523b;
+  color: #7E354D;
   justify-content: center;
   margin-right: 20%;
 }

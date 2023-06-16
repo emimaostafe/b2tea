@@ -22,7 +22,7 @@ body {
     display: block;
     margin: 20px auto;
     padding: 20px;
-    background-color: #2d5432;
+    background-color: #997070;
     color: #fff;
     border: none;
     border-radius: 50px;
@@ -34,7 +34,7 @@ body {
 }
 
 .pay-button:hover {
-    background-color: #17391b;
+    background-color: #7F525D;
     align-self: center;
 }
 
@@ -161,12 +161,12 @@ input {
 
 
 .creditcard .grey {
-    fill: #1f4625;
+    fill: #7E354D;
 
 }
 
 .creditcard .greydark {
-    fill: #3f7d32;
+    fill: #7F525D;
 }
 
 /* FRONT OF CARD */
