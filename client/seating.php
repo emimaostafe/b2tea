@@ -9,6 +9,8 @@
 
     <link rel="stylesheet" href="../styles/defaults.css">
     <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="../styles/tables.css">
+
 
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet">
 </head>
@@ -16,12 +18,12 @@
 
 <?php
 
-    require_once('pages/menu/header.html');
-    require_once('pages/menu/products_menu.php');
-    require_once('pages/home/footer.html');
+    require_once('pages/seating/header.php');
+    require_once('pages/seating/seats.php');
+    require_once('pages/seating/footer.php');
+    require_once('pages/home/footer.php');
 
 ?>
-<script src="../scripts/addtocart.js"></script>
 </body>
 </html>
 
