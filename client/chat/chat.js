@@ -1,3 +1,6 @@
+let lastMessageFromClient = '';
+let commands = '/vreau';
+
 // Funcție pentru afișarea unui mesaj în chat
 function displayMessage(message) {
     const chatContainer = document.getElementById('chat-container');
@@ -7,12 +10,16 @@ function displayMessage(message) {
     chatContainer.appendChild(messageElement);
   }
   
+  function initializeChat() {
+    displayMessage("Bun venit! Vă punem la dispoziție următoarele opțiuni pentru comandă: apă, ceai, cafea. Tastați mai jos opțiunea dorită.");
+  }
+
 
 
 
 // Funcție pentru verificarea validității mesajului
-function isValidMessage(message) {
-    const validOptions = ["/ceai", "/cafea", "/suc", "/apa"]; // Opțiunile valide
+function isValidMessageForWhatIWant(message) {
+    const validOptions = ["ceai", "cafea", "suc", "apa"]; // Opțiunile valide
   
     // Verifică dacă mesajul începe cu "/vreau"
     if (message.startsWith("/vreau")) {
@@ -49,26 +56,63 @@ function isValidMessage(message) {
   }
 
 
-  
-  // Funcție pentru tratarea mesajelor de tip "cafea"
-function handleCafeaMessage(message) {
-    const subOptions = ["/costa", "/lavazza", "/doncaffe", "/jacobs"];
-    const subOptionsMessage = "Alege una din opțiunile următoare:\n" + subOptions.join("\n");
-  
-    // Afișează mesajul cu opțiunile de submeniu
-    displayMessage(subOptionsMessage);
+
+function handleCommand(message) {
+
+  if (lastMessageFromClient == ''){
+
+    if (message == "apa") {
+
+      commands = commands + '/' + message;
+      lastMessageFromClient = message;
+      displayMessage("Ați ales să comandați " + message + ". Comanda va ajunge în cel mai scurt timp la dumneavoastră. Doriți să mai comandați ceva?");
+
+    }
+
   }
 
-  // Funcție pentru tratarea mesajelor de tip "opțiuni pentru cafea" (incercare)
+  else {
 
-  // function optionCafeaMessage(message) {
+    if (message == "apa") {
 
-  //   const subOptions = ["/intensitate", "/zahar", "/lapte"];
-  //   const subOptionsMessage = "Alege una din opțiunile următoare:\n" + subOptions.join("\n");
+      commands = commands + '/' + message;
+      lastMessageFromClient = message;
+      displayMessage("Ați ales să comandați " + message + ". Comanda va ajunge în cel mai scurt timp la dumneavoastră. Doriți să mai comandați ceva?");
 
-  //   displayMessage(subOptionsMessage);
+    }
 
-  // }
+  }
+
+  if (lastMessageFromClient == "apa") {
+
+    if (message == "Nu")
+      displayMessage("Mulțumim! Comanda dumneavoastră este " + commands);
+
+    else 
+      if (message == "Da")
+
+        displayMessage("Ați ales să mai comandați ceva. Opțiuni: apa, ceai, cafea");
+
+      else
+
+        displayMessage("Vă rugăm să introduceți un mesaj de tipul Da sau Nu.");
+
+    }
+
+
+
+}
+
+
+  
+  // Funcție pentru tratarea mesajelor de tip "cafea"
+// function handleCafeaMessage(message) {
+//     const subOptions = ["/costa", "/lavazza", "/doncaffe", "/jacobs"];
+//     const subOptionsMessage = "Alege una din opțiunile următoare:\n" + subOptions.join("\n");
+  
+//     // Afișează mesajul cu opțiunile de submeniu
+//     displayMessage(subOptionsMessage);
+//   }
 
 
   // Funcție pentru tratarea trimiterii unui mesaj
@@ -76,16 +120,7 @@ function sendMessage(event) {
     event.preventDefault();
     const messageInput = document.getElementById('message-input');
     const message = messageInput.value.trim(); // Elimină spațiile de la început și de la sfârșit
-  
-    if (isValidMessage(message)) { // Verifică dacă mesajul este valid
-      if (message.startsWith("/vreau/cafea")) {
-        handleCafeaMessage(message); // Tratează mesajele de tip "cafea"
-      } else {
-        displayMessage(message); // Afișează mesajul în chat
-      }
-    } else {
-      displayErrorMessage('Mesajul nu este valid.'); // Afișează eroarea în chat
-    }
+    handleCommand(message);
   
     messageInput.value = '';
   }
@@ -102,6 +137,7 @@ function sendMessage(event) {
     chatContainer.appendChild(errorElement);
   }
   
+  document.addEventListener('DOMContentLoaded', initializeChat);
   const chatForm = document.getElementById('chat-form');
   chatForm.addEventListener('submit', sendMessage);
   
