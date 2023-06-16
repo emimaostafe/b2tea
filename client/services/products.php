@@ -8,7 +8,7 @@ class ProductsService extends BaseService {
     }
 
     public function baseUrl() {
-        return $this->$rootUrl . '/api/products';
+        return $this->rootUrl . '/api/products';
     }
 
     public function getProducts() {
