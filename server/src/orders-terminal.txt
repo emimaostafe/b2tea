@@ -1,0 +1,36 @@
+Bine ai venit în cafeneaua Terminal.
+
+Scrie o comandă: 
+
+/vreau 
+/vreau /ceai
+/vreau /cafea
+/vreau /suc
+/vreau /apa 
+
+/vreau /cafea 
+/vreau /cafea /costa
+/vreau /cafea /lavazza
+/vreau /cafea /doncaffe
+/vreau /cafea /jacobs
+
+/vreau /cafea /doncaffe 
+
+(dacă dorești și altceva la cafea, tastează ? )
+/vreau /cafea /doncaffe ? intensitate = 
+/vreau /cafea /doncaffe ? zahar = 
+/vreau /cafea /doncaffe ? lapte = 
+
+/vreau /cafea /doncaffe ? intensitate = 
+/vreau /cafea /doncaffe ? intensitate = slabă
+/vreau /cafea /doncaffe ? intensitate = medie
+/vreau /cafea /doncaffe ? intensitate = tare
+
+/vreau /cafea /doncaffe ? intensitate = medie
+(dacă dorești și altceva la cafea, tastează & )
+/vreau /cafea /doncaffe ? intensitate = medie & lapte 
+/vreau /cafea /doncaffe ? intensitate = medie & zahar 
+
+/vreau /cafea /doncaffe ? intensitate = medie & lapte = 50ml
+
+GET /api/orders 
