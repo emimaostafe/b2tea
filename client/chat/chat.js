@@ -130,7 +130,8 @@ function HandleCommand(message) {
                 lastMessageFromClient = message;
                 commands = commands + '/' + '? ' + message;
                 displayMessage ("Comanda primită!");
-                displayMessage(commands);
+                lastMessageFromClient = "primit";
+                displayMessage("Doriți să mai comandați ceva?");
               }
             }
 
@@ -147,8 +148,11 @@ function HandleCommand(message) {
                   displayMessage("Dacă doriți și lapte, tastați /lapte");
                   displayMessage("Dacă nu, tastați done");
                 }
-                if(lapte == true && zahar == true)
+                if(lapte == true && zahar == true){
                   displayMessage("Comandă primită!");
+                  lastMessageFromClient = "primit";
+                  displayMessage("Doriți să mai comandați ceva?");
+                }
 
               }
 
@@ -162,12 +166,17 @@ function HandleCommand(message) {
                     displayMessage("Dacă doriți și zahar, tastați /zahar");
                     displayMessage("Dacă nu, tastați done");
                   }
-                  if(lapte == true && zahar == true)
+                  if(lapte == true && zahar == true){
                     displayMessage("Comandă primită!");
+                    lastMessageFromClient = "primit";
+                    displayMessage("Doriți să mai comandați ceva?");
+                  }
                 }
                 else {
                   if (message == "done"){
                     displayMessage("Comandă primită!");
+                    lastMessageFromClient = "primit";
+                    displayMessage("Doriți să mai comandați ceva?");
                   }
                 }
               }
