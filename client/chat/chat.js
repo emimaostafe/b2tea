@@ -182,6 +182,77 @@ function HandleCommand(message) {
               }
              
             }
+
+            else {
+              if (lastMessageFromClient == "/vezi") {
+                if (message == "/produse") {
+
+                  displayMessage("Eu: " + message);
+                  lastMessageFromClient = message;
+                  commands = commands + message;
+                  displayMessage("Aici puteți vizualiza: /meniu, /stoc, /cos, /favorite");
+
+                }
+                else {
+                  if (message == "/mese-libere"){
+                    displayMessage("Eu: " + message);
+                    lastMessageFromClient = message;
+                    commands = commands + message;
+                    displayMessage("Rezolvat!");
+                    lastMessageFromClient = "primit";
+                    displayMessage("Doriți să realizați o altă comandă?");
+                  }
+
+                  else{
+                    if (message == "/galerie"){
+                      displayMessage("Eu: " + message);
+                      lastMessageFromClient = message;
+                      commands = commands + message;
+                      displayMessage("Rezolvat!");
+                      lastMessageFromClient = "primit";
+                      displayMessage("Doriți să realizați o altă comandă?");
+                    }
+                    else{
+
+                      if(message == "/nota-plata"){
+                        displayMessage("Eu: " + message);
+                        lastMessageFromClient = message;
+                        commands = commands + message;
+                        displayMessage("Rezolvat!");
+                        lastMessageFromClient = "primit";
+                        displayMessage("Doriți să realizați o altă comandă?");
+                      }
+
+                      else{
+                        if(message == "home"){
+                          displayMessage("Eu: " + message);
+                          lastMessageFromClient = message;
+                          commands = commands + message;
+                          displayMessage("Rezolvat!");
+                          lastMessageFromClient = "primit";
+                          displayMessage("Doriți să realizați o altă comandă?");
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+
+              else {
+                if (lastMessageFromClient == "/produse") {
+
+                  if (message == "/cos" || message == "/favorite" || message == "/meniu" || message == "/stoc"){
+                    displayMessage("Eu: " + message);
+                    lastMessageFromClient = message;
+                    commands = commands + message;
+                    displayMessage("Rezolvat!");
+                    lastMessageFromClient = "primit";
+                    displayMessage("Doriți să realizați o altă comandă?");
+
+                  }
+                }
+              }
+            }
           }
         }
       }
