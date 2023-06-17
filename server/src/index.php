@@ -16,8 +16,8 @@ require_once "config/route-handler.php";
 
 // Important: Uncomment these to easy test.
 
-// $method = "GET";
-// $url = "/api/products/favorites";
+//$method = "GET";
+//$url = "/api/products/favorites";
 
 echo $method . ": " . $url;
 
