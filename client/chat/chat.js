@@ -147,17 +147,6 @@ function handleCommand(message) {
 }
 
 
-  
-  // Funcție pentru tratarea mesajelor de tip "cafea"
-// function handleCafeaMessage(message) {
-//     const subOptions = ["/costa", "/lavazza", "/doncaffe", "/jacobs"];
-//     const subOptionsMessage = "Alege una din opțiunile următoare:\n" + subOptions.join("\n");
-  
-//     // Afișează mesajul cu opțiunile de submeniu
-//     displayMessage(subOptionsMessage);
-//   }
-
-
   // Funcție pentru tratarea trimiterii unui mesaj
 function sendMessage(event) {
     event.preventDefault();
