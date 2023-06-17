@@ -1,8 +1,11 @@
 let lastMessageFromClient = '';
 let commands = '';
-const teaList = [ " Jasmine\n ", " Sencha ", 
-" Matcha ", " Dragonwell ", " Gunpowder ", " White Tea ", 
-" Shou Mei ", " Ceylon White ", " Black Tea ", " Nimbu ", " Earl Grey ", " Darjeeling "];
+let zahar = false;
+let lapte = false;
+
+const teaList = [ "Jasmine", "Sencha", 
+"Matcha", "Dragonwell", "Gunpowder", "White Tea", 
+"Shou Mei", "Ceylon White", "Black Tea", "Nimbu", "Earl Grey", "Darjeeling"];
 
 // Funcție pentru afișarea unui mesaj în chat
 function displayMessage(message) {
@@ -23,6 +26,14 @@ function displayMessage(message) {
   }
   
   
+  function checkMessage(message) {
+    
+    for (let i = 0; i < teaList.length; i++) {
+      if(teaList[i] == message)
+        return true;
+    }
+    return false;
+  }
 
 function HandleCommand(message) {
 
@@ -53,7 +64,7 @@ function HandleCommand(message) {
 
     if (lastMessageFromClient == "/vreau") {
       if(message == "/ceai") {
-        
+
         displayMessage("Eu: " + message);
         lastMessageFromClient = message;
         commands = commands + message;
@@ -63,6 +74,7 @@ function HandleCommand(message) {
       }
       else{
         if (message == "/alcool"){
+
           displayMessage("Comandă primită!");
           lastMessageFromClient = "primit";
           displayMessage("Doriți să mai comandați ceva?");
@@ -78,11 +90,89 @@ function HandleCommand(message) {
         if (message == "Da"){
           lastMessageFromClient = '';
           commands = '';
+          zahar = false;
+          lapte = false;
           initializeChat();
         }
         else{
           if (message == "Nu"){
             displayMessage("Sperăm ca v-am fost de folos!");
+          }
+        }
+      }
+
+      else{
+        if (lastMessageFromClient == "/ceai") {
+          if (teaList.includes(message)){
+
+            displayMessage("Eu: " + message);
+            lastMessageFromClient = message;
+            commands = commands + '/' + message;
+            displayMessage("Dacă aveți și alte preferințe la ceai, tastați ?");
+            displayMessage("Dacă nu aveți preferințe, atunci tastați -");
+          }
+        }
+
+        else{
+          if (teaList.includes(lastMessageFromClient)){
+
+            if (message == "?"){
+              displayMessage("Eu: " + message);
+              lastMessageFromClient = message;
+              commands = commands + '/' + message;
+
+              displayMessage("Puteți alege următoarele opțiuni: /zahar, /lapte");
+            }
+            else {
+
+              if(message == "-"){
+                displayMessage("Eu: " + message);
+                lastMessageFromClient = message;
+                commands = commands + '/' + '? ' + message;
+                displayMessage ("Comanda primită!");
+                displayMessage(commands);
+              }
+            }
+
+          }
+          else{
+            
+            if (lastMessageFromClient == "?") {
+              if (message == "/zahar" && zahar == false) {
+
+                displayMessage("Eu: " + message);
+                commands = commands + message;
+                zahar = true;
+                if (lapte == false) {
+                  displayMessage("Dacă doriți și lapte, tastați /lapte");
+                  displayMessage("Dacă nu, tastați done");
+                }
+                if(lapte == true && zahar == true)
+                  displayMessage("Comandă primită!");
+
+              }
+
+              else {
+                if (message == "/lapte" && lapte == false) {
+
+                  displayMessage("Eu: " + message);
+                  commands = commands + message;
+                  lapte = true;
+                  if (zahar == false){
+                    displayMessage("Dacă doriți și zahar, tastați /zahar");
+                    displayMessage("Dacă nu, tastați done");
+                  }
+                  if(lapte == true && zahar == true)
+                    displayMessage("Comandă primită!");
+                }
+                else {
+                  if (message == "done"){
+                    displayMessage("Comandă primită!");
+                  }
+                }
+              }
+             
+            }
           }
         }
       }
