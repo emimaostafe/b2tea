@@ -1,5 +1,5 @@
 @font-face {
-  color: #17391b;
+  color: #ffffff;
   font-family: 'Poppins';
   src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLDz8Z1xlFQ.woff2);
 }
@@ -26,19 +26,12 @@
   font-family: 'Poppins';
   font-style: normal;
 
-  /* border: 1px solid red !important; */
 }
-/* 
-.subtitle {
-  font-family: 'Lora';
-  text-transform: none !important;
-  letter-spacing: 5px !important;
-  font-size: 46px !important;
-} */
+
 
 :root {
   --white: #f8fef0;
-  --primary: #17391b;
+  --primary: #252e25;
   --secondary: #aac49766;
   --grey: #d8d8d8;
 
@@ -57,7 +50,7 @@
 
 section {
   width: 100%;
-  padding: 100px 0;
+  padding: 70px 0;
 }
 
 a {
@@ -74,11 +67,6 @@ i:hover {
   color: var(--primary);
 }
 
-/* 
-a:hover {
-  color: var(--white);
-  border-color: var(--white);
-} */
 
 .pb-80 {
   padding-bottom: 80px;
@@ -101,7 +89,7 @@ a:hover {
 .container {
   margin-left: auto;
   margin-right: auto;
-
+  width: 100%;
 }
 
 /* #endregion */
@@ -128,7 +116,7 @@ a:hover {
 
 @media (min-width: 1200px) {
   .container {
-    width: 1024px;
+    width: 1150px;
   }
 }
 

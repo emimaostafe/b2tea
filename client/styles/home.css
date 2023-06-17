@@ -3,6 +3,7 @@ body {
   width: 100%;
   height: 100%;
   margin: 0;
+  background-color: #E1D9D1;
 }
 
 ul {
@@ -115,7 +116,7 @@ header {
   line-height: 38px;
   font-weight: 600;
   font-size: 25px;
-  color: #17391b;
+  color: #192219;
 }
 
 .actions {
@@ -210,7 +211,7 @@ header #menu-trigger:hover + .meniu-coborator,
 }
 
 .main-image {
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../media/home-official.jpg);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../media/trandafiri.jpg);
 }
 
 .menu-image {
@@ -233,61 +234,7 @@ header #menu-trigger:hover + .meniu-coborator,
 
 /* #endregion */
 
-/* #region Serving options */
-.serving {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 50px;
-}
 
-.option {
-  background-size: cover;
-  position: relative;
-  border-radius: var(--radius);
-  height: 256px;
-  width: 417px;
-  left: 0px;
-  cursor: pointer;
-  transition: var(--transition);
-}
-
-.option:hover {
-  opacity: 0.8;
-}
-
-.option .text a {
-  position: absolute;
-  left: 0%;
-  right: 0%;
-  top: 37.98%;
-  bottom: 37.5%;
-  font-weight: 600;
-  font-size: 65px;
-  line-height: 68px;
-  text-align: center;
-  color: #ffffff;
-}
-
-.serve-in {
-  background-image: linear-gradient(to top, rgba(200, 200, 200, 0.1), rgba(200, 200, 200, 0.1)), url(../media/serve-in.jpg);
-}
-
-.take-out {
-  background-image: linear-gradient(to top, rgba(200, 200, 200, 0.1), rgba(200, 200, 200, 0.1)), url(../media/take-out.jpg);
-}
-
-@media (min-width: 1200px) {
-  .serving {
-    justify-content: space-between;
-  }
-
-  .option {
-    height: 300px;
-    width: 477px;
-  }
-}
 
 /* #endregion */
 
@@ -407,82 +354,6 @@ header #menu-trigger:hover + .meniu-coborator,
 }
 
 .top_1 {
-  background-image: url('../media/JasmineTea.jpg');
-}
-.top_2 {
-  background-image: url('../media/Matcha.jpg');
-}
-.top_3 {
-  background-image: url('../media/Sencha.jpg');
-}
-.top_4 {
-  background-image: url('../media/Dragonwell.jpg');
-}
-.top_5 {
-  background-image: url('../media/Gunpowder.jpg');
-}
-.top_6 {
-  background-image: url('../media/Gyokuro.jpg');
-}
-.top_7 {
-  background-image: url('../media/SilverNeedle.png');
-}
-.top_8 {
-  background-image: url('../media/WhitePeony.jpg');
-}
-.top_9 {
-  background-image: url('../media/ShouMei.jpg');
-}
-.top_10 {
-  background-image: url('../media/DarjeelingWhite.jpg');
-}
-.top_11 {
-  background-image: url('../media/CeylonWhite.jpg');
-}
-.top_12 {
-  background-image: url('../media/AfricanWhite.jpg');
-}
-
-.top_13 {
-  background-image: url('../media/Assam.jpg');
-}
-
-.top_14 {
-  background-image: url('../media/Darjeeling.jpg');
-}
-
-.top_15 {
-  background-image: url('../media/EarlGrey.jpg');
-}
-
-.top_16 {
-  background-image: url('../media/Nimbu.jpg');
-}
-
-.top_17 {
-  background-image: url('../media/Keemun.jpg');
-}
-
-.top_18 {
-  background-image: url('../media/Pu-Erh.jpg');
-}
-
-.top_19 {
-  background-image: url('../media/nu-ma-uita.jpg');
-}
-.top_20 {
-  background-image: url('../media/iced-tea.jpg');
-}
-.top_21 {
-  background-image: url('../media/apple-spice.jpg');
-}
-.top_22 {
-  background-image: url('../media/travel-lover.jpg');
-}
-.top_23 {
-  background-image: url('../media/pear_tea.jpg');
-}
-.top_24 {
   background-image: url('../media/berry-tea.jpg');
 }
 
