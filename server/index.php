@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
      else if ($_SERVER['REQUEST_URI'] === '/api/products/favorites') {
           $products = [
-             ['id' => 11, 'imageUrl' => 'https://i.ibb.co/xmc453j/travel-lover.jpg', 'name' => 'Forget Me Not', 'rating' => 4.3, 'description' => 'A delicate herbal tea with a subtle floral flavor, made from the blue blossoms of the forget-me-not plant.'],
+             ['id' => 11, 'imageUrl' => 'https://i.ibb.co/xmc453j/travel-lover.jpg', 'name' => 'Forget Me Not', 'rating' => 5.0, 'description' => 'A delicate herbal tea with a subtle floral flavor, made from the blue blossoms of the forget-me-not plant.'],
              ['id' => 12, 'imageUrl' => 'https://i.ibb.co/LJq2Tfg/iced-tea.jpg', 'name' => 'Iced Orange', 'rating' => 4.7, 'description' => 'A refreshing iced tea made with fresh orange slices and a touch of rosemary, creating a zesty and invigorating drink perfect for warm days.'],
              ['id' => 13, 'imageUrl' => 'https://i.ibb.co/Gd0LgHm/sixteen-miles-out-lz-QCA9s-Wpw0-unsplash.jpg', 'name' => 'Apple Delight', 'rating' => 4.5, 'description' => 'A warming and aromatic tea made from dried apple pieces, infused with cinnamon and a hint of honey sweetness.'],
              ['id' => 14, 'imageUrl' => 'https://i.ibb.co/FxcLkkZ/nu-ma-uita.jpg', 'name' => 'Travel Lover', 'rating' => 4.6, 'description' => 'A rustic, mysterious blend of spices and herbs, with a hint of mint and forest fruis notes, to awaken your senses and inspire your travels.']

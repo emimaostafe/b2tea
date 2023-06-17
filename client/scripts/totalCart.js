@@ -1,3 +1,4 @@
+
 // Retrieve cart items from local storage
 const storedCartItems = localStorage.getItem('cartItems');
 const cartItems = storedCartItems ? JSON.parse(storedCartItems) : [];
@@ -17,13 +18,14 @@ if (addToCartContainer) {
         .map((item) => {
             const itemPrice = parseFloat(item.price);
             totalPrice += itemPrice;
-            return `<div>${item.name} - ${itemPrice} lei</div>`;
+            return `<div>${item.name} - ${itemPrice} $</div>`;
         })
         .join('');
 }
 if (totalPriceElement) {
     totalPriceElement.textContent = totalPrice + ' $';
 }
+
 // Add event listener to "Pay Now" button
 const payNowButton = document.getElementById('payNowButton');
 payNowButton.addEventListener('click', function () {
