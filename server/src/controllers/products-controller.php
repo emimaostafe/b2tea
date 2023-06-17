@@ -16,7 +16,6 @@ class ProductsController implements ControllerInterface
         $this->uri = $uri;
         $this->method = $method;
         $this->payload = $payload;
-
     }
 
     public function handle(): string
