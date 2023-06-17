@@ -1,5 +1,8 @@
 let lastMessageFromClient = '';
-let commands = '/vreau';
+let commands = '';
+const teaList = [ " Jasmine\n ", " Sencha ", 
+" Matcha ", " Dragonwell ", " Gunpowder ", " White Tea ", 
+" Shou Mei ", " Ceylon White ", " Black Tea ", " Nimbu ", " Earl Grey ", " Darjeeling "];
 
 // Funcție pentru afișarea unui mesaj în chat
 function displayMessage(message) {
@@ -10,140 +13,82 @@ function displayMessage(message) {
     chatContainer.appendChild(messageElement);
   }
 
-  function displayLinkMessage(linkText, url) {
-    const chatContainer = document.getElementById('chat-container');
-    const linkElement = document.createElement('li');
-    const link = document.createElement('a');
-    link.href = url;
-    link.target = '_blank'; // Deschide linkul într-un nou tab
-    link.textContent = linkText;
-    linkElement.appendChild(link);
-    chatContainer.appendChild(linkElement);
-  }
-  
   
   function initializeChat() {
-    displayMessage("Bun venit! Vă punem la dispoziție următoarele opțiuni pentru comandă: apă, ceai, cafea. Tastați mai jos opțiunea dorită.");
+
+    const chatElement = document.getElementById('chat-container');
+    chatElement.innerHTML = '';
+  
+    displayMessage( "Bun venit! Vă punem la dispoziție următoarele comenzi: /vreau, /vezi. Tastați mai jos comanda dorită.");
   }
-
-
-
- // Funcție pentru verificarea validității mesajului
-// function isValidMessageForWhatIWant(message) {
-//     const validOptions = ["ceai", "cafea", "suc", "apa"]; // Opțiunile valide
   
-//     // Verifică dacă mesajul începe cu "/vreau"
-//     if (message.startsWith("/vreau")) {
-//       const selectedOption = message.split("/")[2]; // Obține opțiunea selectată
-
-//       // Verifică dacă opțiunea selectată se regăsește în opțiunile valide
-//       if (validOptions.includes("/" + selectedOption)) {
-//         return true; // Mesajul este valid
-//       } else if (selectedOption === "cafea") {
-//         // Dacă opțiunea selectată este "cafea", afișează subopțiunile valide
-//         const subOptions = ["/costa", "/lavazza", "/doncaffe", "/jacobs"];
   
-//         // Verifică dacă mesajul conține o subopțiune validă
-//         if (subOptions.includes(message)) {
-//           return true; // Mesajul este valid
-//         }
-//       }
-//     }
-//     else {
-//       const selectedOption = message.split("/")[1];
 
-//       if (validOptions.includes("/" + selectedOption)) {
-//         return true;
-//       } else if (selectedOption === "cafea") {
-//         const subOptions = ["/costa", "/lavazza", "/doncaffe", "/jacobs"];
-//         if (subOptions.includes(message)) {
-//           return true;
-//         }
+function HandleCommand(message) {
 
-//       }
-//     }
-  
-//     return false; // Mesajul nu este valid
-//   }
+  if (lastMessageFromClient == '') {
 
+    if (message == "/vreau") {
 
-
-function handleCommand(message) {
-
-  if (lastMessageFromClient == ''){
-
-    if (message == "apa") {
-
-      commands = commands + '/' + message;
+      displayMessage("Eu: " + message);
       lastMessageFromClient = message;
-      displayMessage("Ați ales să comandați " + message + ". Comanda va ajunge în cel mai scurt timp la dumneavoastră. Doriți să mai comandați ceva?");
+      commands = commands + message;
+      displayMessage("Vă stăm la dispoziție cu urmatoarele opțiuni: /ceai, /alcool.");
 
     }
-
     else{
 
-      if (message == "ceai") {
+      if (message == '/vezi') {
 
-        commands = commands + '/' + message;
+        displayMessage("Eu: " + message);
         lastMessageFromClient = message;
-        displayMessage("Ați ales să comandați " + message + ". Vă rugăm să consultați pagina meniului și să alegeți ceaiul favorit.");
-        displayLinkMessage("Vizitează pagina meniului", "http://www.meniu.com/meniu");
+        commands = commands + message;
+        displayMessage("Vă stăm la dispoziție cu urmatoarele opțiuni: /produse, /mese-libere, /galerie, /home, /nota-plata.");
+
       }
     }
-
-  }
-
-  else {
-    if (message == "apa") {
-
-      commands = commands + '/' + message;
-      lastMessageFromClient = message;
-      displayMessage("Ați ales să comandați " + message + ". Comanda va ajunge în cel mai scurt timp la dumneavoastră. Doriți să mai comandați ceva?");
-    }
-
-  }
-
-  if (lastMessageFromClient == "apa") {
-
-    if (message == "Nu")
-      displayMessage("Mulțumim! Comanda dumneavoastră este " + commands);
-
-    else 
-      if (message == "Da")
-
-        displayMessage("Ați ales să mai comandați ceva. Opțiuni: apa, ceai, cafea");
-
   }
 
   else {
 
-    if (lastMessageFromClient == "ceai") {
+    if (lastMessageFromClient == "/vreau") {
+      if(message == "/ceai") {
+        
+        displayMessage("Eu: " + message);
+        lastMessageFromClient = message;
+        commands = commands + message;
 
-      if (message == "capșuni"){
-
-        commands = commands + '/' + message;
-        displayMessage("Ați comandat ceaiul de : " + message + ". Doriți să mai comandați ceva?");
+        displayMessage("Alegeți ceaiul pe care doriți să îl comandați:");
+        displayMessage(teaList);
+      }
+      else{
+        if (message == "/alcool"){
+          displayMessage("Comandă primită!");
+          lastMessageFromClient = "primit";
+          displayMessage("Doriți să mai comandați ceva?");
+        }
 
       }
+    }
 
-      if (message == "mere"){
+    else {
 
-        commands = commands + '/' + message;
-        displayMessage("Ați comandat ceaiul de : " + message + ". Doriți să mai comandați ceva?");
-      }
+      if (lastMessageFromClient == "primit") {
 
-      if (message == "Nu"){
-        displayMessage("Mulțumim! Comanda dumneavoastră este " + commands);
-      }
-
-      else {
-        if (message == "Da") {
-          displayMessage("Ați ales să mai comandați ceva. Opțiuni: apa, ceai, cafea");
+        if (message == "Da"){
+          lastMessageFromClient = '';
+          commands = '';
+          initializeChat();
+        }
+        else{
+          if (message == "Nu"){
+            displayMessage("Sperăm ca v-am fost de folos!");
+          }
         }
       }
+    }
   }
 
-}
 }
 
 
@@ -152,7 +97,7 @@ function sendMessage(event) {
     event.preventDefault();
     const messageInput = document.getElementById('message-input');
     const message = messageInput.value.trim(); // Elimină spațiile de la început și de la sfârșit
-    handleCommand(message);
+    HandleCommand(message);
   
     messageInput.value = '';
   }
