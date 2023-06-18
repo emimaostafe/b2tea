@@ -17,15 +17,13 @@ if (addToCartContainer) {
         .map((item) => {
             const itemPrice = parseFloat(item.price);
             totalPrice += itemPrice;
-            return `<div>${item.name} - ${itemPrice} $</div> <button class="remove-button">Remove</button></div>`;
+            return `<div>${item.name} - ${itemPrice} $</div>`;
         })
         .join('');
 }
 if (totalPriceElement) {
-    totalPriceElement.textContent = totalPrice + ' lei';
+    totalPriceElement.textContent = totalPrice + ' $';
 }
-
-
 // Add event listener to "Pay Now" button
 const payNowButton = document.getElementById('payNowButton');
 payNowButton.addEventListener('click', function () {

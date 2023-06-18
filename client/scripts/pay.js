@@ -1,8 +1,6 @@
 // Get all the "Add to Cart" buttons
 const addToCartButtons = document.querySelectorAll('.add-to-cart');
 
-
-
 // Add click event listeners to each button
 addToCartButtons.forEach((button) => {
     button.addEventListener('click', addToCart);
@@ -10,9 +8,8 @@ addToCartButtons.forEach((button) => {
 
 // Function to handle the "Add to Cart" button click
 function addToCart(event) {
-    const button = event.target;
-    const product = button.dataset.product;
-    const price = button.dataset.price;
+    const product = event.target.dataset.product;
+    const price = event.target.dataset.price;
 
     // Send an AJAX request to the server to add the item to the cart
     const xhr = new XMLHttpRequest();
@@ -41,4 +38,3 @@ function updateReceipt() {
     };
     xhr.send();
 }
-
