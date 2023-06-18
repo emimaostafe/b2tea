@@ -23,7 +23,9 @@ class ProductsService
     public function getAll(): string
     {
         $result = $this->database->query(ProductQueries::$getAll);
-        return $this->mapToArray($result);
+        $products = $this->mapToArray($result);
+        $jsonResponse = json_encode($products);
+        return substr($jsonResponse, strpos($jsonResponse, "["));
     }
 
     public function getById($id): string

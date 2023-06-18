@@ -58,4 +58,5 @@ class ProductsController implements ControllerInterface
     {
         return count($this->parts()) === 4 && $this->parts()[3] === 'favorites';
     }
+
 }

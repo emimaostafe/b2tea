@@ -1,6 +1,6 @@
 // Fetch products using AJAX
 var xhr = new XMLHttpRequest();
-xhr.open('GET', 'get-products.php', true);
+xhr.open('GET', "http://localhost:8123/api/products", true);
 xhr.onload = function() {
     if (xhr.status === 200) {
         var products = JSON.parse(xhr.responseText);
