@@ -2,6 +2,7 @@
 
 require_once 'controllers/controller.php';
 require_once 'controllers/products-controller.php';
+require_once 'controllers/orders-controller.php';
 
 class AvailableRoutes
 {

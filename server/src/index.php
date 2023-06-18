@@ -1,5 +1,7 @@
 <?php
 
+require_once "config/route-handler.php";
+
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
 header("Access-Control-Allow-Methods: OPTIONS,GET,POST,PUT,DELETE");
@@ -12,20 +14,18 @@ $url = $_SERVER['REQUEST_URI'];
 $requestBody = file_get_contents('php://input');
 $payload = json_decode($requestBody, true);
 
-require_once "config/route-handler.php";
 
-// Important: Uncomment these to easy test.
+$db = new Database();
 
-//$method = "GET";
-//$url = "/api/products/favorites";
+$insertQuery = "INSERT INTO Orders(table_id, user, products, total_price, date, time) VALUES 
+                (3, 'fdsafds', '3,4,5,2', 90, '2023-08-12', '10:30:00')";
 
-//echo $method . ": " . $url;
+$db->query($insertQuery);
 
-//$db = new Database();
-//$db->query($query);
 
 $routeHandler = new RouteHandler();
 $routeHandler->handle($url);
+
 
 if ($routeHandler->isValidController == 1) {
     $controller = new $routeHandler->controllerClass($url, $method, $payload);
@@ -35,20 +35,3 @@ if ($routeHandler->isValidController == 1) {
 } else {
     echo "Invalid route";
 }
-
-
-// require_once("repository/database.php");
-// $db = new Database();
-
-// $query = "";
-// $db->execute($query);
-
-
-// require_once "services/products-service.php";
-// $productsService = new ProductsService();
-// $products = $productsService->getAll();
-// echo json_encode($products);
-
-
-// $appController = new AppController();
-// $appController->handle($method, $uri);

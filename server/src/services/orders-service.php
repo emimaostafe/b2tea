@@ -1,25 +1,50 @@
 <?php
 
+require_once("domain/order.php");
+
+class OrderQueries 
+{
+
+    public static $getAll = "SELECT * from Orders";
+
+    public static $getById = "SELECT * from Orders WHERE id = ?";
+
+    public static $insertOrder = "INSERT INTO Orders (table_id, user, products, total_price, date, time) VALUES (?, ?, ?, ?, ?, ?)";
+
+}
+
 class OrdersService
 {
-    private $db;
+    private $database;
 
     public function __construct()
     {
-        $this->db = new Database();
+        $this->database = new Database();
     }
     
-    public function getAll()
+    public function getAll(): string
     {
-        $sql = "SELECT * FROM orders";
-        $result = $this->db->query($sql);
-        $teas = array();
+        $result = $this->database->query(OrderQueries::$getAll);
+        return $this->mapToArray($result);
+    }
 
+    public function getById($id): string
+    {
+        $result = $this->database->getById(OrderQueries::$getById, $id);
+        return $this->mapToArray($result);
+    }
+
+    public function insertOrder() {
+        // i have to map an object then to insert it into the database
+    }
+
+    private function mapToArray($result): string
+    {
+        $orders = array();
         while ($row = $result->fetch_assoc()) {
-            $teas[] = new TeaModel($row['id'], $row['userId'], $row['options']);
+            $orders[] = new Order($row['id'], $row['tableId'], $row['user'], $row['products'], $row['totalPrice'], $row['date'], $row['time']);
         }
 
-        return $teas;
+        return json_encode($orders);
     }
 }
-

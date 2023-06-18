@@ -1,9 +1,8 @@
-<?php
+<?php 
 
-require_once 'controllers/controller.php';
-require_once 'services/products-service.php';
+require_once "services/orders-service.php";
 
-class ProductsController implements ControllerInterface
+class OrdersController 
 {
     private $ordersService;
     private $uri;
@@ -18,13 +17,14 @@ class ProductsController implements ControllerInterface
         $this->payload = $payload;
     }
 
-    function handle($uri, $method, $payload = null) {
+    function handle() {
         switch($this->method) {
             case "GET":
-                //return $this->handleGet();
-            //case "POST": return post(payload);
-            //case "PUT": return put(id, payload);
-            default: break;
+                return $this->handleGet();
+            case "POST":
+                return $this->handlePost();
+            default:
+                return "Unresolved endpoint";
         }
     }
 
@@ -32,15 +32,22 @@ class ProductsController implements ControllerInterface
     {
         if ($this->isGetById()) {
             $id = $this->parts()[3];
-
-            return $this->productsService->getById($id);
+            return $this->ordersService->getById($id);
         }
 
-        if ($this->isGetFavorites()) {
-            return $this->productsService->getFavorites();
-        }
+        return $this->ordersService->getAll();
+    }
 
-        return $this->productsService->getAll();
+    function handlePost() {
+
+    }
+
+    function put() {
+
+    }
+
+    function delete() {
+
     }
 
     private function parts()
@@ -50,13 +57,7 @@ class ProductsController implements ControllerInterface
 
     private function isGetById()
     {
-        return count($this->parts()) === 4 && ($this->parts()[3]) > 0;
+        return count($this->parts()) === 4 && ($this->parts()[3] > 0);
     }
-
-    private function isGetFavorites()
-    {
-        return count($this->parts()) === 4 && end($this->parts()) === 'favorites';
-    }
-
 
 }
