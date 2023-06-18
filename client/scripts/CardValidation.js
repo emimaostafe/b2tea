@@ -76,3 +76,8 @@ function handlePayCardClick() {
 
 // Add a click event listener to the "Pay" button
 payCardButton.addEventListener("click", handlePayCardClick);
+payCardButton.addEventListener('click', function () {
+    // Clear the cart items from local storage
+    localStorage.removeItem('cartItems');
+
+});
