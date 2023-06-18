@@ -7,14 +7,6 @@ $query = "CREATE TABLE Products (
     rating INT(4)
 )";
 
-$ordersquery = "CREATE TABLE Orders (
-  id INT(11) AUTO_INCREMENT PRIMARY KEY,
-  products VARCHAR(255) NOT NULL,
-  total_price DECIMAL(10, 2),
-  table_id INT,
-  customers VARCHAR(255)
-)";
-
 $query = "CREATE TABLE ProductsMenu (
     id INT(11) AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
@@ -77,3 +69,12 @@ $query1 = "INSERT INTO Products (name, description, imageUrl, rating) VALUES ('J
 $query2 = "INSERT INTO Products (name, description, imageUrl, rating) VALUES ('Dragonwell', ' Dragonwell, also known as Longjing, is a renowned Chinese green tea.', 'image2.jpg', 4)";
 $query3 = "INSERT INTO Products (name, description, imageUrl, rating) VALUES ('Darjeeling', 'Darjeeling tea is a black tea variety grown in the Darjeeling region of India.', 'image3.jpg', 4.8)";
 $query4 = "INSERT INTO Products (name, description, imageUrl, rating) VALUES ('Ceylon White', 'Ceylon White tea is a premium white tea from Sri Lanka (formerly known as Ceylon).', 'image4.jpg', 4.9)";
+
+
+$ordersquery = "CREATE TABLE Orders (
+  id INT(11) AUTO_INCREMENT PRIMARY KEY,
+  products VARCHAR(255) NOT NULL,
+  total_price DECIMAL(10, 2),
+  table_id INT,
+  customers VARCHAR(255)
+)";
