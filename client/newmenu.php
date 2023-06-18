@@ -1,5 +1,3 @@
-
-
 <?php
     require_once('components/navbar.html');
     require_once('pages/menu/header.html');

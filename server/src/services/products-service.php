@@ -1,16 +1,21 @@
 <?php
 
 require_once("domain/product.php");
+require_once("domain/productMenu.php");
 
 class ProductQueries
 {
-    public static $getAll = "SELECT * FROM Products";
+    public static $getAll = "SELECT * FROM ProductsMenu";
     
-    public static $getById = "SELECT * FROM Products WHERE id = ?";
+    public static $getById = "SELECT * FROM ProductsMenu WHERE id = ?"; 
 
+<<<<<<< HEAD
     public static $getFavorites = "SELECT * FROM products ORDER BY rating DESC LIMIT 4";
 
 
+=======
+    public static $getFavorites = "SELECT * FROM Products ORDER BY rating DESC LIMIT 4";
+>>>>>>> 849dd0c61a7c4f68825afb83891f3d8b6659f5c8
 }
 
 class ProductsService
@@ -30,12 +35,19 @@ class ProductsService
         return substr($jsonResponse, strpos($jsonResponse, "["));
     }
 
+    public function getFavorites(): string
+    {
+        $result = $this->database->query(ProductQueries::$getFavorites);
+        return $this->mapToArrayFavorites($result);
+    }
+
     public function getById($id): string
     {
         $result = $this->database->getById(ProductQueries::$getById, $id);
         return $this->mapToArray($result);
     }
 
+<<<<<<< HEAD
   public function getFavorites(): string
   {
       $result = $this->database->query(ProductQueries::$getFavorites);
@@ -62,4 +74,25 @@ class ProductsService
   }
 
 
+=======
+    private function mapToArrayFavorites($result): string
+    {
+        $products = array();
+        while ($row = $result->fetch_assoc()) {
+            $products[] = new Product($row['id'], $row['name'], $row['description'], $row['imageUrl'], $row['rating']);
+        }
+
+        return json_encode($products);
+    }
+
+    private function mapToArray($result): string
+    {
+        $products = array();
+        while ($row = $result->fetch_assoc()) {
+            $products[] = new ProductMenu($row['id'], $row['name'], $row['imageUrl'], $row['price']);
+        }
+
+        return json_encode($products);
+    }
+>>>>>>> 849dd0c61a7c4f68825afb83891f3d8b6659f5c8
 }

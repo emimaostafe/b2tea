@@ -16,7 +16,6 @@ class ProductsController implements ControllerInterface
         $this->uri = $uri;
         $this->method = $method;
         $this->payload = $payload;
-
     }
 
     public function handle(): string
@@ -33,7 +32,6 @@ class ProductsController implements ControllerInterface
     {
         if ($this->isGetById()) {
             $id = $this->parts()[3];
-
             return $this->productsService->getById($id);
         }
 
@@ -51,7 +49,7 @@ class ProductsController implements ControllerInterface
 
     private function isGetById()
     {
-        return count($this->parts()) === 4 && intval($this->parts()[3]) > 0;
+        return count($this->parts()) === 4 && ($this->parts()[3] > 0);
     }
 
     private function isGetFavorites()

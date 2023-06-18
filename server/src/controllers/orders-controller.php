@@ -5,27 +5,26 @@ require_once 'services/products-service.php';
 
 class ProductsController implements ControllerInterface
 {
-    private $productsService;
+    private $ordersService;
     private $uri;
     private $method;
     private $payload;
-
+    
     public function __construct($uri, $method, $payload = null)
     {
-        $this->productsService = new ProductsService();
+        $this->ordersService = new OrdersService();
         $this->uri = $uri;
         $this->method = $method;
         $this->payload = $payload;
-
     }
 
-    public function handle(): string
-    {
-        switch ($this->method) {
+    function handle($uri, $method, $payload = null) {
+        switch($this->method) {
             case "GET":
-                return $this->handleGet();
-            default:
-                return "Unresolved endpoint";
+                //return $this->handleGet();
+            //case "POST": return post(payload);
+            //case "PUT": return put(id, payload);
+            default: break;
         }
     }
 
