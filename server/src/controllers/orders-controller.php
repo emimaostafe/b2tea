@@ -4,18 +4,25 @@ require_once "services/orders-service.php";
 
 class OrdersController 
 {
-    private $service;
+    private $ordersService;
+    private $uri;
+    private $method;
+    private $payload;
     
-    public function __construct()
+    public function __construct($uri, $method, $payload = null)
     {
-        $this->service = new OrdersService();
+        $this->ordersService = new OrdersService();
+        $this->uri = $uri;
+        $this->method = $method;
+        $this->payload = $payload;
     }
 
     function handle($uri, $method, $payload = null) {
-        switch(method) {
-            case "GET": return get();
-            case "POST": return post(payload);
-            case "PUT": return put(id, payload);
+        switch($this->method) {
+            case "GET":
+                //return $this->handleGet();
+            //case "POST": return post(payload);
+            //case "PUT": return put(id, payload);
             default: break;
         }
     }

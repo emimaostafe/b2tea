@@ -6,9 +6,9 @@ class ProductQueries
 {
     public static $getAll = "SELECT * FROM Products";
     
-    public static $getById = "SELECT * FROM Products WHERE id = ?";
+    public static $getById = "SELECT * FROM Products WHERE id = ?"; 
 
-    public static $getFavorites = "SELECT * FROM products ORDER BY rating DESC LIMIT 4";
+    public static $getFavorites = "SELECT * FROM Products ORDER BY rating DESC LIMIT 4";
 }
 
 class ProductsService
@@ -26,15 +26,15 @@ class ProductsService
         return $this->mapToArray($result);
     }
 
-    public function getById($id): string
-    {
-        $result = $this->database->getById(ProductQueries::$getById, $id);
-        return $this->mapToArray($result);
-    }
-
     public function getFavorites(): string
     {
         $result = $this->database->query(ProductQueries::$getFavorites);
+        return $this->mapToArray($result);
+    }
+
+    public function getById($id): string
+    {
+        $result = $this->database->getById(ProductQueries::$getById, $id);
         return $this->mapToArray($result);
     }
 
