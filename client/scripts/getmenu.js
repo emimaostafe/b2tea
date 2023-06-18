@@ -15,11 +15,12 @@ function populateTeaMenu(products) {
     products.forEach(function(product) {
         var card = document.createElement('div');
         card.className = 'card';
-        card.style.backgroundImage = 'url(' + product.imageUrl + ')';
 
         var top = document.createElement('div');
         top.className = 'top top_1';
+        top.style.backgroundImage = 'url(' + product.imageUrl + ')';
         card.appendChild(top);
+
 
         var actions = document.createElement('div');
         actions.className = 'actions';
@@ -59,6 +60,7 @@ function populateTeaMenu(products) {
         description.className = 'description';
         description.textContent = product.description;
         info.appendChild(description);
+        description.style.backgroundColor='black';
 
         cardsContainer.appendChild(card);
     });
