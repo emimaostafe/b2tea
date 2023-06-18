@@ -42,7 +42,7 @@ class OrdersService
     {
         $orders = array();
         while ($row = $result->fetch_assoc()) {
-            $orders[] = new Order($row['id'], $row['tableId'], $row['user'], $row['products'], $row['totalPrice'], $row['date'], $row['time']);
+            $orders[] = new Order($row['id'], $row['table_id'], $row['user'], $row['products'], $row['total_price'], $row['date'], $row['time']);
         }
 
         return json_encode($orders);

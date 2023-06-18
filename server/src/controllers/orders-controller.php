@@ -24,7 +24,7 @@ class OrdersController
             case "POST":
                 return $this->handlePost();
             default:
-                return "Unresolved endpoint";
+                return "Unresolved method";
         }
     }
 
@@ -33,13 +33,18 @@ class OrdersController
         if ($this->isGetById()) {
             $id = $this->parts()[3];
             return $this->ordersService->getById($id);
+        } else if ($this->isGetAll()) {
+            return $this->ordersService->getAll();
+        } else {
+            return "Unresolved endpoint";
         }
-
-        return $this->ordersService->getAll();
     }
 
     function handlePost() {
-
+        if ($this->isPostOrder()) {
+            $id = $this->parts()[3];
+            return $this->ordersService->insertOrder();
+        }
     }
 
     function put() {
@@ -60,4 +65,13 @@ class OrdersController
         return count($this->parts()) === 4 && ($this->parts()[3] > 0);
     }
 
+    private function isPostOrder()
+    {
+        return count($this->parts()) === 4 && ($this->parts()[3] > 0);
+    }
+
+    private function isGetAll()
+    {
+        return count($this->parts()) === 3;
+    }
 }
