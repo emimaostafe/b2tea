@@ -92,6 +92,17 @@ i:hover {
   width: 100%;
 }
 
+.remove-button {
+  margin-top: 5px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
 /* #endregion */
 
 /* #region Screen: from 768px to 1199px*/
