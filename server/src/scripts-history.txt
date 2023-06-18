@@ -71,10 +71,12 @@ $query3 = "INSERT INTO Products (name, description, imageUrl, rating) VALUES ('D
 $query4 = "INSERT INTO Products (name, description, imageUrl, rating) VALUES ('Ceylon White', 'Ceylon White tea is a premium white tea from Sri Lanka (formerly known as Ceylon).', 'image4.jpg', 4.9)";
 
 
-$ordersquery = "CREATE TABLE Orders (
+$ordersQuery = "CREATE TABLE Orders (
   id INT(11) AUTO_INCREMENT PRIMARY KEY,
+  table_id INT,
+  user VARCHAR(100),
   products VARCHAR(255) NOT NULL,
   total_price DECIMAL(10, 2),
-  table_id INT,
-  customers VARCHAR(255)
+  date DATE,
+  time TIME
 )";

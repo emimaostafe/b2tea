@@ -15,10 +15,13 @@ $requestBody = file_get_contents('php://input');
 $payload = json_decode($requestBody, true);
 
 
-$query = "";
-
 $db = new Database();
-$db->query($query);
+
+$insertQuery = "INSERT INTO Orders(table_id, user, products, total_price, date, time) VALUES 
+                (3, 'fdsafds', '3,4,5,2', 90, '2023-08-12', '10:30:00')";
+
+$db->query($insertQuery);
+
 
 $routeHandler = new RouteHandler();
 $routeHandler->handle($url);

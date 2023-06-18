@@ -9,7 +9,7 @@ class OrderQueries
 
     public static $getById = "SELECT * from Orders WHERE id = ?";
 
-    public static $insertOrder = "INSERT VALUES () into Orders";
+    public static $insertOrder = "INSERT INTO Orders (table_id, user, products, total_price, date, time) VALUES (?, ?, ?, ?, ?, ?)";
 
 }
 
