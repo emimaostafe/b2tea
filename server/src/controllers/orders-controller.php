@@ -39,7 +39,7 @@ class OrdersController
     }
 
     function handlePost() {
-
+        // extrag informatiile din body-ul mesajului si apoi adaug obiectul in baza de date
     }
 
     function put() {
