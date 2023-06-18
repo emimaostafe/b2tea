@@ -48,4 +48,3 @@ class OrdersService
         return json_encode($orders);
     }
 }
-
