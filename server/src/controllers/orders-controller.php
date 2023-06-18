@@ -17,21 +17,28 @@ class OrdersController
         $this->payload = $payload;
     }
 
-    function handle($uri, $method, $payload = null) {
+    function handle() {
         switch($this->method) {
             case "GET":
-                //return $this->handleGet();
-            //case "POST": return post(payload);
-            //case "PUT": return put(id, payload);
-            default: break;
+                return $this->handleGet();
+            case "POST":
+                return $this->handlePost();
+            default:
+                return "Unresolved endpoint";
         }
     }
 
-    function get() {
-        return $service->getAll();
+    private function handleGet(): string
+    {
+        if ($this->isGetById()) {
+            $id = $this->parts()[3];
+            return $this->ordersService->getById($id);
+        }
+
+        return $this->ordersService->getAll();
     }
 
-    function post() {
+    function handlePost() {
 
     }
 
@@ -42,4 +49,15 @@ class OrdersController
     function delete() {
 
     }
+
+    private function parts()
+    {
+        return explode("/", $this->uri);
+    }
+
+    private function isGetById()
+    {
+        return count($this->parts()) === 4 && ($this->parts()[3] > 0);
+    }
+
 }

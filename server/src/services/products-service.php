@@ -9,8 +9,8 @@ class ProductQueries
     
     public static $getById = "SELECT * FROM ProductsMenu WHERE id = ?"; 
 
-    public static $getFavorites = "SELECT * FROM Products";
-    //ORDER BY rating DESC LIMIT 4"
+    public static $getFavorites = "SELECT * FROM ProductsORDER BY rating DESC LIMIT 4";
+
 }
 
 class ProductsService
@@ -33,7 +33,7 @@ class ProductsService
         $result = $this->database->query(ProductQueries::$getFavorites);
         return $this->mapToArrayFavorites($result);
     }
-    
+
     public function getById($id): string
     {
         $result = $this->database->getById(ProductQueries::$getById, $id);
