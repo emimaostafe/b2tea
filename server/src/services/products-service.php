@@ -1,12 +1,13 @@
 <?php
 
 require_once("domain/product.php");
+require_once("domain/productMenu.php");
 
 class ProductQueries
 {
-    public static $getAll = "SELECT * FROM Products";
+    public static $getAll = "SELECT * FROM ProductsMenu";
     
-    public static $getById = "SELECT * FROM Products WHERE id = ?"; 
+    public static $getById = "SELECT * FROM ProductsMenu WHERE id = ?"; 
 
     public static $getFavorites = "SELECT * FROM Products ORDER BY rating DESC LIMIT 4";
 }
@@ -29,7 +30,7 @@ class ProductsService
     public function getFavorites(): string
     {
         $result = $this->database->query(ProductQueries::$getFavorites);
-        return $this->mapToArray($result);
+        return $this->mapToArrayFavorites($result);
     }
 
     public function getById($id): string
@@ -38,11 +39,21 @@ class ProductsService
         return $this->mapToArray($result);
     }
 
-    private function mapToArray($result): string
+    private function mapToArrayFavorites($result): string
     {
         $products = array();
         while ($row = $result->fetch_assoc()) {
             $products[] = new Product($row['id'], $row['name'], $row['description'], $row['imageUrl'], $row['rating']);
+        }
+
+        return json_encode($products);
+    }
+
+    private function mapToArray($result): string
+    {
+        $products = array();
+        while ($row = $result->fetch_assoc()) {
+            $products[] = new ProductMenu($row['id'], $row['name'], $row['imageUrl'], $row['price']);
         }
 
         return json_encode($products);

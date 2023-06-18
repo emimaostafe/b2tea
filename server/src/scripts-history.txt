@@ -15,6 +15,27 @@ $ordersquery = "CREATE TABLE Orders (
   customers VARCHAR(255)
 )";
 
+$query = "CREATE TABLE ProductsMenu (
+    id INT(11) AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    imageUrl VARCHAR(128),
+    price INT(4)
+)";
+
+
+$query1 = "INSERT INTO Products (name, description, imageUrl) VALUES ('Jasmine', 'https://i.ibb.co/Qbpx2H6/earl-grey.jpg', 12)";
+$query2 = "INSERT INTO Products (name, description, imageUrl) VALUES ('Sencha', 'https://i.ibb.co/XZCRLTV/Gyokuro.jpg', 15)";
+$query3 = "INSERT INTO Products (name, description, imageUrl) VALUES ('Matcha', 'https://i.ibb.co/R2T7JBg/cat1.jpg', 20)";
+$query4 = "INSERT INTO Products (name, description, imageUrl) VALUES ('Dragonwell', 'https://i.ibb.co/Qbpx2H6/earl-grey.jpg', 15)";
+$query5 = "INSERT INTO Products (name, description, imageUrl) VALUES ('Gunpowder', 'https://i.ibb.co/LJq2Tfg/iced-tea.jpg', 12)";
+$query6 = "INSERT INTO Products (name, description, imageUrl) VALUES ('Show Mei', 'https://i.ibb.co/jTrpDHs/gallery-image.jpg', 16)";
+$query7 = "INSERT INTO Products (name, description, imageUrl) VALUES ('Black tea', 'https://i.ibb.co/pjjLZ1P/ceai.jpg', 10)";
+$query8 = "INSERT INTO Products (name, description, imageUrl) VALUES ('White tea', 'https://i.ibb.co/QMCpTs5/cana-sticla-ceai.jpg', 11)";
+$query9 = "INSERT INTO Products (name, description, imageUrl) VALUES ('Ceylon white', 'https://i.ibb.co/Qbpx2H6/earl-grey.jpg', 15)";
+$query10 = "INSERT INTO Products (name, description, imageUrl) VALUES ('Nimbu', 'https://i.ibb.co/cbRpZ7s/EarlGrey.jpg', 18)";
+$query11 = "INSERT INTO Products (name, description, imageUrl) VALUES ('Earl grey', 'https://i.ibb.co/Qbpx2H6/earl-grey.jpg', 12)";
+$query12 = "INSERT INTO Products (name, description, imageUrl) VALUES ('Darjeeling', 'https://i.ibb.co/9sLPHF5/Darjeeling.jpg', 16)";
+
 
 $query1 = "INSERT INTO Products (name, description, imageUrl) VALUES ('Product 1', 'Description 1', 'image1.jpg', 4.6)";
 $query2 = "INSERT INTO Products (name, description, imageUrl) VALUES ('Product 2', 'Description 2', 'image2.jpg', 4)";
@@ -23,5 +44,32 @@ $query4 = "INSERT INTO Products (name, description, imageUrl) VALUES ('Product 4
 $query5 = "INSERT INTO Products (name, description, imageUrl) VALUES ('Product 5', 'Description 5', 'image5.jpg', 4)";
 
 
-INSERT INTO Orders (customer, products, total_price, customers)
-VALUES ('John Doe', '[{"id": 1, "name": "Product 1"}, {"id": 2, "name": "Product 2"}]', 100.50, '["customer1", "customer2"]');
+$query1 = "INSERT INTO Products (name, description, imageUrl) VALUES ('Product 1', 'Description 1', 'image1.jpg', 10)";
+$query2 = "INSERT INTO Products (name, description, imageUrl) VALUES ('Product 2', 'Description 2', 'image2.jpg', 12)";
+$query3 = "INSERT INTO Products (name, description, imageUrl) VALUES ('Product 3', 'Description 3', 'image3.jpg', 20)";
+$query4 = "INSERT INTO Products (name, description, imageUrl) VALUES ('Product 4', 'Description 4', 'image4.jpg', 13)";
+$query5 = "INSERT INTO Products (name, description, imageUrl) VALUES ('Product 5', 'Description 5', 'image5.jpg', 15)";
+
+$query1 = "INSERT INTO ProductsMenu (name, imageUrl, price) VALUES ('Jasmine', 'https://i.ibb.co/Qbpx2H6/earl-grey.jpg', 12)";
+$query2 = "INSERT INTO ProductsMenu (name, imageUrl, price) VALUES ('Sencha', 'https://i.ibb.co/XZCRLTV/Gyokuro.jpg', 15)";
+$query3 = "INSERT INTO ProductsMenu (name, imageUrl, price) VALUES ('Matcha', 'https://i.ibb.co/R2T7JBg/cat1.jpg', 20)";
+$query4 = "INSERT INTO ProductsMenu (name, imageUrl, price) VALUES ('Dragonwell', 'https://i.ibb.co/Qbpx2H6/earl-grey.jpg', 15)";
+$query5 = "INSERT INTO ProductsMenu (name, imageUrl, price) VALUES ('Gunpowder', 'https://i.ibb.co/LJq2Tfg/iced-tea.jpg', 12)";
+$query6 = "INSERT INTO ProductsMenu (name, imageUrl, price) VALUES ('Show Mei', 'https://i.ibb.co/jTrpDHs/gallery-image.jpg', 16)";
+$query7 = "INSERT INTO ProductsMenu (name, imageUrl, price) VALUES ('Black tea', 'https://i.ibb.co/pjjLZ1P/ceai.jpg', 10)";
+$query8 = "INSERT INTO ProductsMenu (name, imageUrl, price) VALUES ('White tea', 'https://i.ibb.co/QMCpTs5/cana-sticla-ceai.jpg', 11)";
+$query9 = "INSERT INTO ProductsMenu (name, imageUrl, price) VALUES ('Ceylon white', 'https://i.ibb.co/Qbpx2H6/earl-grey.jpg', 15)";
+$query10 = "INSERT INTO ProductsMenu (name, imageUrl, price) VALUES ('Nimbu', 'https://i.ibb.co/cbRpZ7s/EarlGrey.jpg', 18)";
+$query11 = "INSERT INTO ProductsMenu (name, imageUrl, price) VALUES ('Earl grey', 'https://i.ibb.co/Qbpx2H6/earl-grey.jpg', 12)";
+$query12 = "INSERT INTO ProductsMenu (name, imageUrl, price) VALUES ('Darjeeling', 'https://i.ibb.co/9sLPHF5/Darjeeling.jpg', 16)";
+
+$query = "DROP TABLE Products";
+
+$query = "CREATE TABLE Products (
+    id INT(11) AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    description VARCHAR(255),
+    imageUrl VARCHAR(128),
+    rating INT(4),
+)";
+

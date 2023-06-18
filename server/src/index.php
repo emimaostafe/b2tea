@@ -21,6 +21,9 @@ require_once "config/route-handler.php";
 
 //echo $method . ": " . $url;
 
+//$db = new Database();
+//$db->query($query);
+
 $routeHandler = new RouteHandler();
 $routeHandler->handle($url);
 
