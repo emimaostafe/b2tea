@@ -30,37 +30,11 @@ window.onload = function () {
             addToCart(itemName, itemPrice);
         });
     });
-
-    const receiptData = localStorage.getItem('receiptData');
-    if (receiptData) {
-        const { items, total, date } = JSON.parse(receiptData);
-        displayReceipt(items, total, date);
-        localStorage.removeItem('receiptData');
-    }
 };
+// Add event listener to "Pay Now" button
+const payNowButton = document.getElementById('payNowButton');
+payNowButton.addEventListener('click', function () {
+    // Clear the cart items from local storage
+    localStorage.removeItem('cartItems');
 
-function displayReceipt(items, total, date) {
-    const receiptElement = document.getElementById('receipt');
-    receiptElement.innerHTML = `
-        <h2>Receipt</h2>
-        <div class="receipt-info">
-            <div class="receipt-data">
-                <strong>Date and Time:</strong> ${date}
-            </div>
-            <div class="receipt-data">
-                <strong>Total:</strong> ${total}
-            </div>
-        </div>
-        <div class="receipt-items">
-            <h3>Items:</h3>
-            <ul id="receipt-items-list"></ul>
-        </div>
-    `;
-
-    const receiptItemsList = document.getElementById('receipt-items-list');
-    items.forEach(function (item) {
-        const li = document.createElement('li');
-        li.textContent = item.name + ' - ' + item.price;
-        receiptItemsList.appendChild(li);
-    });
-}
+});
