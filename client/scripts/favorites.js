@@ -35,7 +35,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
 
                 var cardHtml = `
+                    <a href="newmenu.php">
                     <div class="favorite-card" style="background-image: url(${product.imageUrl})">
+                    
                         <div class="fav-top"></div>
                         <div class="favorite-bottom">
                             <div class="fav-info">

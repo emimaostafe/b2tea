@@ -9,6 +9,8 @@ class ProductQueries
     public static $getById = "SELECT * FROM Products WHERE id = ?";
 
     public static $getFavorites = "SELECT * FROM products ORDER BY rating DESC LIMIT 4";
+
+
 }
 
 class ProductsService

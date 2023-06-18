@@ -23,22 +23,7 @@
   transition: var(--transition);
 }
 
-.fcard1 {
-  background-image: url(https://i.ibb.co/xmc453j/nu-ma-uita.jpg);
-}
 
-.fcard2 {
-  background-image: url(https://ibb.co/7RT63Fp);
-
-}
-
-.fcard3 {
-  background-image: url(https://ibb.co/XSgHxhR);
-}
-
-.fcard4 {
-  background-image: url(../media/travel-lover.jpg);
-}
 
 .favorite-card:hover {
   cursor: pointer;

@@ -51,7 +51,7 @@ class ProductsController implements ControllerInterface
 
     private function isGetById()
     {
-        return count($this->parts()) === 4 && intval($this->parts()[3]) > 0;
+        return count($this->parts()) === 4 && ($this->parts()[3]) > 0;
     }
 
     private function isGetFavorites()
