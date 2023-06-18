@@ -1,0 +1,45 @@
+
+h1{
+    color:white ;
+}
+/* Stilizare pentru chat */
+#chat-container {
+    list-style-type: none;
+    padding: 10px;
+    background-color: black;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 500px;
+    overflow-y: auto;
+}
+
+/* Stilizare pentru mesaje */
+.message {
+    padding:10px;
+    margin: auto;
+    margin-bottom: 10px;
+    background-color:black;
+    border-radius: 5px;
+    color: white;
+}
+
+/* Stilizare pentru formularul de chat */
+#chat-form {
+    margin-top: 20px;
+}
+
+/* Stilizare pentru inputul de mesaj */
+#message-input {
+    width: 200px;
+    padding: 5px;
+}
+
+/* Stilizare pentru butonul de trimite */
+#chat-form button {
+    padding: 5px 10px;
+    background-color:black;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
