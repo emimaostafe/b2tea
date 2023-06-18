@@ -1,24 +1,6 @@
 // Retrieve cart items from local storage
 const storedCartItems = localStorage.getItem('cartItems');
-const removeButtons = document.querySelectorAll('.remove-button');
 const cartItems = storedCartItems ? JSON.parse(storedCartItems) : [];
-
-removeButtons.forEach((button) => {
-    button.addEventListener('click', removeFromCart);
-});
-
-function removeFromCart(event) {
-    const index = event.target.dataset.index;
-
-    // Eliminați produsul din coș pe baza indexului
-    cartItems.splice(index, 1);
-
-    // Actualizați stocarea locală a elementelor de coș
-    localStorage.setItem('cartItems', JSON.stringify(cartItems));
-
-    // Actualizați chitanța și totalul
-    updateReceipt();
-}
 
 // Update the HTML with the cart items
 const addToCartContainer = document.querySelector('.add-to-cart');
@@ -32,13 +14,12 @@ const totalPriceElement = document.querySelector('.total-price');
 let totalPrice = 0;
 if (addToCartContainer) {
     addToCartContainer.innerHTML = cartItems
-    .map((item, index) => {
-        const itemPrice = parseFloat(item.price);
-        totalPrice += itemPrice;
-        return `<div>${item.name} - ${itemPrice} $ <button class="remove-button" data-index="${index}">Remove</button></div>`;
-    })
-    .join('');
-
+        .map((item) => {
+            const itemPrice = parseFloat(item.price);
+            totalPrice += itemPrice;
+            return `<div>${item.name} - ${itemPrice} $</div> <button class="remove-button">Remove</button></div>`;
+        })
+        .join('');
 }
 if (totalPriceElement) {
     totalPriceElement.textContent = totalPrice + ' lei';
