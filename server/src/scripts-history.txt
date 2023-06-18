@@ -80,3 +80,10 @@ $ordersQuery = "CREATE TABLE Orders (
   date DATE,
   time TIME
 )";
+
+
+$tablesquery = "CREATE TABEL Orders (
+    id INT(11) AUTO_INCREMENT,
+    table_id INT,
+    disponibilitate BOOLEAN
+)
