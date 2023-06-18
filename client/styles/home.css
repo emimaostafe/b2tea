@@ -289,17 +289,6 @@ header #menu-trigger:hover + .meniu-coborator,
   border-radius: var(--radius);
 }
 
-.tea-1 {
-  background-image: url('../media/cana-sticla-ceai.jpg');
-}
-
-.tea-2 {
-  background-image: url('../media/iced-tea.jpg');
-}
-
-.tea-3 {
-  background-image: url('../media/filtru-ceai.jpg');
-}
 
 @media (min-width: 768px) {
   .favorites .cards {
