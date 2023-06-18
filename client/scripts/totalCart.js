@@ -17,7 +17,7 @@ if (addToCartContainer) {
         .map((item) => {
             const itemPrice = parseFloat(item.price);
             totalPrice += itemPrice;
-            return `<div>${item.name} - ${itemPrice} lei</div>`;
+            return `<div>${item.name} - ${itemPrice} $</div>`;
         })
         .join('');
 }
@@ -30,4 +30,18 @@ payNowButton.addEventListener('click', function () {
     // Clear the cart items from local storage
     localStorage.removeItem('cartItems');
 
+    // Send cart items to the server
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', 'submit-order.php', true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.onload = function() {
+        if (xhr.status === 200) {
+            // Handle successful response from the server
+            console.log('Order submitted successfully!');
+        } else {
+            // Handle error response from the server
+            console.error('Failed to submit order.');
+        }
+    };
+    xhr.send(JSON.stringify(cartItems));
 });
