@@ -4,7 +4,7 @@ $query = "CREATE TABLE Products (
     name VARCHAR(255) NOT NULL,
     description VARCHAR(255),
     imageUrl VARCHAR(128),
-    rating INT(4),
+    rating INT(4)
 )";
 
 $ordersquery = "CREATE TABLE Orders (
@@ -40,8 +40,8 @@ $query12 = "INSERT INTO Products (name, description, imageUrl) VALUES ('Darjeeli
 $query1 = "INSERT INTO Products (name, description, imageUrl) VALUES ('Product 1', 'Description 1', 'image1.jpg', 4.6)";
 $query2 = "INSERT INTO Products (name, description, imageUrl) VALUES ('Product 2', 'Description 2', 'image2.jpg', 4)";
 $query3 = "INSERT INTO Products (name, description, imageUrl) VALUES ('Product 3', 'Description 3', 'image3.jpg', 4)";
-$query4 = "INSERT INTO Products (name, description, imageUrl) VALUES ('Product 4', 'Description 4', 'image4.jpg', 4)";
-$query5 = "INSERT INTO Products (name, description, imageUrl) VALUES ('Product 5', 'Description 5', 'image5.jpg', 4)";
+$query4 = "INSERT INTO Products (name, description, imageUrl) VALUES ('Product 4', 'Description 4', 'image4.jpg', 2)";
+$query5 = "INSERT INTO Products (name, description, imageUrl) VALUES ('Product 5', 'Description 5', 'image5.jpg', 2)";
 
 
 $query1 = "INSERT INTO Products (name, description, imageUrl) VALUES ('Product 1', 'Description 1', 'image1.jpg', 10)";
@@ -63,13 +63,17 @@ $query10 = "INSERT INTO ProductsMenu (name, imageUrl, price) VALUES ('Nimbu', 'h
 $query11 = "INSERT INTO ProductsMenu (name, imageUrl, price) VALUES ('Earl grey', 'https://i.ibb.co/Qbpx2H6/earl-grey.jpg', 12)";
 $query12 = "INSERT INTO ProductsMenu (name, imageUrl, price) VALUES ('Darjeeling', 'https://i.ibb.co/9sLPHF5/Darjeeling.jpg', 16)";
 
-$query = "DROP TABLE Products";
+$querydel = "DROP TABLE Products";
 
 $query = "CREATE TABLE Products (
     id INT(11) AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     description VARCHAR(255),
     imageUrl VARCHAR(128),
-    rating INT(4),
+    rating FLOAT(4)
 )";
 
+$query1 = "INSERT INTO Products (name, description, imageUrl, rating) VALUES ('Jasmine', 'Jasmine tea is a fragrant and delicate tea infused with the scent of jasmine flowers.', 'image1.jpg', 4.7)";
+$query2 = "INSERT INTO Products (name, description, imageUrl, rating) VALUES ('Dragonwell', ' Dragonwell, also known as Longjing, is a renowned Chinese green tea.', 'image2.jpg', 4)";
+$query3 = "INSERT INTO Products (name, description, imageUrl, rating) VALUES ('Darjeeling', 'Darjeeling tea is a black tea variety grown in the Darjeeling region of India.', 'image3.jpg', 4.8)";
+$query4 = "INSERT INTO Products (name, description, imageUrl, rating) VALUES ('Ceylon White', 'Ceylon White tea is a premium white tea from Sri Lanka (formerly known as Ceylon).', 'image4.jpg', 4.9)";
