@@ -1,8 +1,9 @@
-<?php 
+<?php
 
-require_once "services/orders-service.php";
+require_once 'controllers/controller.php';
+require_once 'services/products-service.php';
 
-class OrdersController 
+class ProductsController implements ControllerInterface
 {
     private $ordersService;
     private $uri;
@@ -42,12 +43,14 @@ class OrdersController
 
     }
 
-    function put() {
-
+    private function isGetById()
+    {
+        return count($this->parts()) === 4 && ($this->parts()[3]) > 0;
     }
 
-    function delete() {
-
+    private function isGetFavorites()
+    {
+        return count($this->parts()) === 4 && end($this->parts()) === 'favorites';
     }
 
     private function parts()
