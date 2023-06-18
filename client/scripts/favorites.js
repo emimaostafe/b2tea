@@ -3,15 +3,24 @@ document.addEventListener("DOMContentLoaded", function() {
 
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-            var products = JSON.parse(xhr.responseText);
-            renderFavoriteProducts(products);
+        if (xhr.readyState === 4) {
+            console.log("API response:", xhr.responseText);
+            if (xhr.status === 200) {
+                try {
+                    var products = JSON.parse(xhr.responseText);
+                    console.log("Parsed products:", products);
+                    renderFavoriteProducts(products);
+                } catch (error) {
+                    console.error("Error parsing JSON:", error);
+                }
+            } else {
+                console.error("API request failed. Status:", xhr.status);
+            }
         }
     };
 
-    xhr.open("GET", "get_favorite_products.php", true);
+    xhr.open("GET", "http://localhost:8123/api/products/favorites", true);
     xhr.send();
-
     function renderFavoriteProducts(products) {
         var favoritesHtml = "";
 

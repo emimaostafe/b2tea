@@ -1,38 +1,63 @@
-<?php 
+<?php
 
-require_once "services/orders-service.php";
+require_once 'controllers/controller.php';
+require_once 'services/products-service.php';
 
-class OrdersController 
+class ProductsController implements ControllerInterface
 {
-    private $service;
-    
-    public function __construct()
+    private $productsService;
+    private $uri;
+    private $method;
+    private $payload;
+
+    public function __construct($uri, $method, $payload = null)
     {
-        $this->service = new OrdersService();
+        $this->productsService = new ProductsService();
+        $this->uri = $uri;
+        $this->method = $method;
+        $this->payload = $payload;
+
     }
 
-    function handle($uri, $method, $payload = null) {
-        switch(method) {
-            case "GET": return get();
-            case "POST": return post(payload);
-            case "PUT": return put(id, payload);
-            default: break;
+    public function handle(): string
+    {
+        switch ($this->method) {
+            case "GET":
+                return $this->handleGet();
+            default:
+                return "Unresolved endpoint";
         }
     }
 
-    function get() {
-        return $service->getAll();
+    private function handleGet(): string
+    {
+        if ($this->isGetById()) {
+            $id = $this->parts()[3];
+
+            return $this->productsService->getById($id);
+        }
+
+        if ($this->isGetFavorites()) {
+            return $this->productsService->getFavorites();
+        }
+
+        return $this->productsService->getAll();
     }
 
-    function post() {
-
+    private function parts()
+    {
+        return explode("/", $this->uri);
     }
 
-    function put() {
-
+    private function isGetById()
+    {
+        return count($this->parts()) === 4 && intval($this->parts()[3]) > 0;
     }
 
-    function delete() {
-
+    private function isGetFavorites()
+    {
+        return count($this->parts()) === 4 && end($this->parts()) === 'favorites';
     }
+
+
 }

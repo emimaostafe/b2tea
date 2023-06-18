@@ -32,19 +32,30 @@ class ProductsService
         return $this->mapToArray($result);
     }
 
-    public function getFavorites(): string
-    {
-        $result = $this->database->query(ProductQueries::$getFavorites);
-        return $this->mapToArray($result);
-    }
+  public function getFavorites(): string
+  {
+      $result = $this->database->query(ProductQueries::$getFavorites);
+      $products = $this->mapToArray($result);
+      $jsonResponse = json_encode($products);
+      return substr($jsonResponse, strpos($jsonResponse, "["));
+  }
 
-    private function mapToArray($result): string
-    {
-        $products = array();
-        while ($row = $result->fetch_assoc()) {
-            $products[] = new Product($row['id'], $row['name'], $row['description'], $row['imageUrl'], $row['rating']);
-        }
 
-        return json_encode($products);
-    }
+  private function mapToArray($result): array
+  {
+      $products = array();
+      while ($row = $result->fetch_assoc()) {
+          $products[] = array(
+              'id' => $row['id'],
+              'name' => $row['name'],
+              'description' => $row['description'],
+              'imageUrl' => $row['imageUrl'],
+              'rating' => $row['rating']
+          );
+      }
+
+      return $products;
+  }
+
+
 }

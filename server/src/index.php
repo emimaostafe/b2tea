@@ -19,7 +19,7 @@ require_once "config/route-handler.php";
 //$method = "GET";
 //$url = "/api/products/favorites";
 
-echo $method . ": " . $url;
+//echo $method . ": " . $url;
 
 $routeHandler = new RouteHandler();
 $routeHandler->handle($url);
