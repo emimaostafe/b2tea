@@ -270,19 +270,41 @@ function HandleCommand(message) {
                                         displayMessage(commands);
                                         lastMessageFromClient = "primit";
                                         displayMessage("Doriți să realizați o altă comandă?");
-
                                     }
                                 }
+                            
                             }
                         }
                     }
                 }
+                
             }
+
         }
     }
 
+    updateReceiptSecondary(buildURL(commands, delimiter));
 }
 
+
+function updateReceiptSecondary(uri) {
+  const xhr = new XMLHttpRequest();
+  xhr.open('GET', uri, true);
+  xhr.onload = function () {
+    if (xhr.status === 200) {
+      const product = JSON.parse(xhr.responseText);
+      const receipt = document.querySelector('.receipt');
+        receipt.innerHTML = `
+        <div>
+          <h3>${product.name}</h3>
+          <p>Price: $${product.price}</p>
+          <p>Description: ${product.description}</p>
+        </div>
+      `;
+    }
+  };
+  xhr.send();
+}
 
 // Funcție pentru tratarea trimiterii unui mesaj
 function sendMessage(event) {
@@ -295,9 +317,6 @@ function sendMessage(event) {
 }
 
 
-
-
-// Funcție pentru afișarea unui mesaj de eroare în chat
 function displayErrorMessage(errorMessage) {
     const chatContainer = document.getElementById('chat-container');
     const errorElement = document.createElement('li');
@@ -309,3 +328,88 @@ function displayErrorMessage(errorMessage) {
 document.addEventListener('DOMContentLoaded', initializeChat);
 const chatForm = document.getElementById('chat-form');
 chatForm.addEventListener('submit', sendMessage);
+
+
+function splitString(inputString, delimiter) {
+    return inputString.split(delimiter);
+  }
+  
+  const delimiter = '/';
+
+  function buildURL(inputString, delimiter) {
+    const result = splitString(inputString, delimiter);
+  
+    let url = 'https://localhost:8123/api';
+  
+    if (result[0] === 'vreau') {
+      url += '/products';
+    }
+  
+    url += `/${result[1]}`;
+  
+    switch (result[2]) {
+        case 'Jasmine':
+        {
+            url += '/1';
+            break;
+        }
+        case 'Sencha':
+        {
+            url += '/2';
+            break;
+        }
+        case 'Matcha':
+        {
+            url += '/3';
+            break;
+        }
+        case 'Dragonwell':
+        {
+            url += '/4';
+            break;
+        }
+        case 'Gunpowder':
+        {
+            url += '/5';
+            break;
+        }
+        case 'Show Mei':
+        {
+            url += '/6';
+            break;
+        }
+        case 'Black tea':
+        {
+            url += '/7';
+            break;
+        }case 'White tea':
+        {
+            url += '/8';
+            break;
+        }
+        case 'Ceylon white':
+        {
+            url += '/9';
+            break;
+        }
+        case 'Nimbu':
+        {
+            url += '/10';
+            break;
+        }
+        case 'Earl grey':
+        {
+            url += '/11';
+            break;
+        }
+        case 'Darjeeling':
+        {
+            url += '/37';
+            break;
+        }
+        default:
+            break;
+    }
+  
+    return url;
+}
