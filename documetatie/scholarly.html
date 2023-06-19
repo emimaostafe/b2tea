@@ -110,22 +110,16 @@
             performanță scalabilitate. Se pot ajusta ușor dimensiunea bazei de date și resursele alocate în funcție de necesități, astfel că aplicația funcționează în mod eficient chiar si cand volumul de date si traficul utilizatorilor este ridicat.
         </p>
         <p>
-            Design-ul arhitectural al aplicatiei este MVC(Model - View - Controller) pentru a modulariza aplicatia si a usura
-            scrierea de cod. Partea de Model este asociata parii de <b>server</b> a aplicatiei care face interogari si preia date din
-            baza de date. Partea de View este asociata tot a celei de <b>server</b> unde o parte din endpoint-uri ofera template-ul html
-            cerut dar si alte fisiere statice cum ar fi: fisiere javascript, css, imagini, etc. In final partea de Controller este
-            asociata partii <b>proxy</b> care face un request catre template-ul aplicatiei apeland un enpoint de la partea de <b>server</b>
-            , preia datele necesare pentru a le atasa template-ului(oferite de microserviciul <b>auth</b>), le imbina folosing o functie
-            specializata in python si returneaza pagina utilizatorului. Ca un mic exemplu, templetizand footer-url si topbar-ul separandu-le
-            de paginile care le folosesc, modificare lor se propaga peste tot pe site deoarece la randare sunt preluate componentele si imbinate
-            pentru a face o pagina intraga.
+            Design-ul arhitectural al aplicatiei este MVC (Mode - View - Controller) pentru a structura eficient aplicatia si a usura
+            scrierea de cod. Modelul contine 3 componente principale: controllerele se ocupa de partea de rutare, apleand serviciile 
+            corespunzatoare, in functie de requestul primit. Serviciile, folosind modele ale entitatilor principale ale aplicatiei,
+            comunica cu baza de date, executa operatii asupra ei si returneaza resursele cerute. Acestea sunt trimise in final catre client.
         </p>
         <p>
-            Frontend-ul este scris in HTML5, CSS3 si Javascript fara a folosi alte librarii. Pentru o experianta mai
-            buna aplicatia va folosi fontul Roboto oferit de Google Fonts impreuna cu packetul de iconite.
+            Componenta client este scrisa in HTML5, CSS si JavaScript fara a folosi alte librarii.
         </p>
         <p>
-            Pentru backend se va folosi php. Arhitectura folosita este MVC.
+            Pentru backend se va folosi PHP. Arhitectura utilizata este MVC.
         </p>
     </section>
 
@@ -133,7 +127,7 @@
         <h3>Interfete de comunicare</h3>
     
         <p>
-            Aplicatia detine enpointuri de tip Rest pe care aplicatia le foloseste prin AJAX.
+            Aplicatia detine enpointuri de tip Rest pe care aplicatia le apeleaza prin AJAX.
             Formatul de trimitere/primire este JSON:
             /api/products
             /api/products/{id}
@@ -164,7 +158,7 @@
         <h3>Tipul comenzii</h3>
         <p>
             Utilizatorul va avea posibilitatea de a alege dintre optiunile "serve in" si "take out" prin selectarea
-            butonului respectiv. In functie de aceasta alegere, el va fi redirectionat catre o pagina urmatoare.
+            butonului respectiv, dupa ce adauga un set de produse in cos si doreste sa efectueze o comanda. In functie de aceasta alegere, el va fi redirectionat catre o pagina de plata.
         </p>
     </section>
     <section id="disponibilitate_locuri">
@@ -179,13 +173,14 @@
         <h3>Adaugare produse in cos</h3>
         <p>
             Utilizatorul acceseaza pagina unde are la dispozitie meniul oferit de ceainarie ce contine pretul si detaliile despre produs. 
-            Acesta poate vizualiza si adauga produse in cos.
+            Acesta poate vizualiza si adauga produse in cos, prin apasarea iconitei care indica un cos. De asemenea, se pot adauga produse
+            prin scrierea unei comenzi care respesta structura /vreau/ceai/sortiment .. in caseta indicata din pagina "Costumize Order".
         </p>
     </section>
     <section id="vizualizare_cos">
         <h3>Vizualizare cos</h3>
         <p>
-            Utilizatorul are posibilitatea de a verifica produsele adaugate in cos precum si suma totala pe care o are de achitat. 
+            Utilizatorul are posibilitatea de a vizualiza produsele adaugate in cos precum si suma prodselor de achitat. 
         </p>
     </section>
     <section id="efectuare_plata">
@@ -197,7 +192,11 @@
     <section id="Comanda">
         <h3>Detalii</h3>
         <p>
-           Aplicatia pune la dispozitie utilizatorului posibilitatea de a "crea" diverite comenzi cu ajutorul unui terminal.
+           Aplicatia pune la dispozitie utilizatorului posibilitatea de naviga intre paginile aplicatiei sau de a accesa anumite resurse
+           (de a adauga produse in cos) prin construirea unei comenzi intr-o caseta de input in pagina "Costumize order".
+           Aceasta comanda respecta structura unui URI, insa este mai sugestiva din punct de vedere al limbajului utilizat.
+           Scrierea comenzii este constransa de parametrii permisi pentru o anumita sectiune a comenzii, astfel ca utilizatorul va putea
+           construi o comanda corecta. Aceasta functionalitate scoate in evidenta arhitectura REST a aplicatiei.
         </p>
     </section>
 
@@ -215,7 +214,7 @@
       <p>  <a href="https://www.w3schools.com/css/default.asp" target="_blank">Tutorial CSS</a>   </p>
       <p>  <a href="https://www.pexels.com/" target="_blank">Imagini</a>   </p>
       <p>  <a href="https://profs.info.uaic.ro/~busaco/teach/courses/web/web-projects.html" target="_blank">Site-ul cursului Tehnologii Web</a> </p>
-      <p>  <a href="https://ro.pinterest.com/" target="_blank">Inspiratie pentru poze</a> </p>
+      <p>  <a href="https://ro.pinterest.com/" target="_blank">Inspiratie pentru design</a> </p>
     </ul>
 </section>
 
