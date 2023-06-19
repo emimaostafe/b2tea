@@ -44,7 +44,7 @@ function HandleCommand(message) {
             displayMessage("Eu: " + message);
             lastMessageFromClient = message;
             commands = commands + message;
-            displayMessage("Vă stăm la dispoziție cu urmatoarele opțiuni: /ceai, /alcool.");
+            displayMessage("Vă stăm la dispoziție cu urmatoarele opțiuni: /ceai");
 
         }
         else{
