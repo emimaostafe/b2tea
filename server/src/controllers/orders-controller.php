@@ -39,7 +39,7 @@ class OrdersController
     }
 
     function handlePost() {
-
+        $this->ordersService->insertOrder();
     }
 
     function put() {
