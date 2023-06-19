@@ -6,6 +6,7 @@
   row-gap: var(--size-xl);
 }
 
+
 .favorite-card {
   background-size: cover;
   background-repeat: no-repeat;
@@ -23,7 +24,22 @@
   transition: var(--transition);
 }
 
+.fcard1 {
+  background-image: url(../media/nu-ma-uita.jpg);
+}
 
+.fcard2 {
+  background-image: url(../media/iced-tea.jpg);
+
+}
+
+.fcard3 {
+  background-image: url(../media/apple-spice.jpg);
+}
+
+.fcard4 {
+  background-image: url(../media/travel-lover.jpg);
+}
 
 .favorite-card:hover {
   cursor: pointer;
