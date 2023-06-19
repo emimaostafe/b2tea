@@ -19,19 +19,7 @@ Emima Ostafe, Dumitriu Oana Florentina, Vlaișan Flavia
 
 Tehnologii Web - FII UAIC - 2023
 ---
-nice to have ENDPOINTS:
 
-GET /api/products
-GET /api/products/{id}
-
-POST /api/products
-
-PUT /api/products/{id}
-
-GET /api/tables
-
-GET /api/orders
-GET /api/orders/{id}
 
 
 
