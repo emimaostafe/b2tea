@@ -103,10 +103,6 @@ i:hover {
   margin-bottom: 5px;
 }
 
-/* #endregion */
-
-/* #region Screen: from 768px to 1199px*/
-
 @media (min-width: 768px) {
   .container {
     width: 700px;
@@ -120,6 +116,25 @@ i:hover {
     width: 25%;
   }
 }
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  display: none;
+}
+
+.show-popup {
+  display: block;
+}
+
 
 /* #endregion */
 

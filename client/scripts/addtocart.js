@@ -1,16 +1,22 @@
 let cartItems = [];
-
 function addToCart(itemName, itemPrice) {
     const item = {
-        name: itemName,
-        price: itemPrice,
+      name: itemName,
+      price: itemPrice,
     };
     cartItems.push(item);
     updateCart();
     console.log("Item added to cart:", item);
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
-}
-
+  
+    // Afisarea popup-ului
+    const popup = document.getElementById('popup');
+    popup.classList.add('show-popup');
+    setTimeout(function() {
+      popup.classList.remove('show-popup');
+    }, 6000); 
+  }
+  
 function updateCart() {
     const cartElement = document.querySelector(".icon-item .ri-shopping-bag-line");
     if (cartElement) {
@@ -27,7 +33,7 @@ window.onload = function () {
         button.addEventListener("click", function () {
             const itemName = this.parentNode.parentNode.parentNode.querySelector(".text").textContent;
             const itemPrice = this.parentNode.parentNode.parentNode.querySelector(".price").textContent;
-            addToCart(itemName, itemPrice);
+
         });
     });
 };
