@@ -13,11 +13,6 @@ $url = $_SERVER['REQUEST_URI'];
 $requestBody = file_get_contents('php://input');
 $payload = json_decode($requestBody, true);
 
-$cartitems = json_decode($requestBody);
-echo json_encode($cartitems);
-$cartItems = json_decode($requestBody, true);
-echo json_encode($cartItems);
-
 $routeHandler = new RouteHandler();
 $routeHandler->handle($url);
 

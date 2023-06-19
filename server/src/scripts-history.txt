@@ -87,3 +87,6 @@ $tablesquery = "CREATE TABEL Orders (
     table_id INT,
     disponibilitate BOOLEAN
 )
+
+$insertQuery = "INSERT INTO Orders (table_id, user, products, total_price, date, time) 
+                VALUES (3, 'fdsafds', '3,4,5,2', 90, '2023-08-12', '10:30:00')";

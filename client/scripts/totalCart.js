@@ -25,25 +25,31 @@ if (totalPriceElement) {
 }
 
 const payNowButton = document.getElementById('payNowButton');
+payNowButton.addEventListener('click', function () {
+  localStorage.removeItem('cartItems');
 
-payNowButton.addEventListener('click', function ()
-{
-    localStorage.removeItem('cartItems');
+  const url = 'http://localhost:8123/api/products'; // Update the URL
+  const headers = {
+    'Content-Type': 'application/json'
+  };
 
-    const xhr = new XMLHttpRequest();
-    xhr.open('POST', 'http://localhost:8123/api/orders', true); 
-    xhr.setRequestHeader('Content-Type', 'application/json');
-    xhr.onload = function() {
-        if (xhr.status === 200) {
-            console.log('Order submitted successfully!');
-        } else {
-            console.error('Failed to submit order.');
-        }
-    };
-    
-    // Data to send to the server
-    const cartItems = JSON.parse(localStorage.getItem('cartItems'));
-    const jsonPayload = JSON.stringify(cartItems);
-    
-    xhr.send(jsonPayload);
+  // Data to send to the server
+  const cartItems = JSON.parse(localStorage.getItem('cartItems'));
+  const jsonPayload = JSON.stringify(cartItems);
+
+  fetch(url, {
+    method: 'POST',
+    headers: headers,
+    body: jsonPayload
+  })
+    .then(function (response) {
+      if (response.ok) {
+        console.log('Order submitted successfully!');
+      } else {
+        console.error('Failed to submit order.');
+      }
+    })
+    .catch(function (error) {
+      console.error('Error:', error);
+    });
 });

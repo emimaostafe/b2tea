@@ -35,7 +35,10 @@ class OrdersService
     }
 
     public function insertOrder() {
-        // i have to map an object then to insert it into the database
+        $insertQuery = "INSERT INTO Orders (table_id, user, products, total_price, date, time) 
+        VALUES (3, 'fdsafds', '3,4,5,2', 90, '2023-08-12', '10:30:00')";
+        $db = new Database();
+        $db->query($insertQuery);
     }
 
     private function mapToArray($result): string
